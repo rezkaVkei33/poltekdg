@@ -21,11 +21,11 @@
                                 Tentang <i class="fas fa-chevron-down ml-1 text-xs"></i>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="<?= base_url('base/sambutan'); ?>">Sambutan</a> 
-                                <a href="<?= base_url('base/sejarah'); ?>">Sejarah</a> 
-                                <a href="<?= base_url('base/visi_misi'); ?>">Visi & Misi</a>
-                                <a href="<?= base_url('base/renstra'); ?>">Renstra</a> 
-                                <a href="<?= base_url('base/dosen'); ?>">Dosen</a>
+                                <a href="<?= base_url('bsambutan'); ?>">Sambutan</a> 
+                                <a href="<?= base_url('bsejarah'); ?>">Sejarah</a> 
+                                <a href="<?= base_url('bvisi_misi'); ?>">Visi & Misi</a>
+                                <a href="<?= base_url('brenstra'); ?>">Renstra</a> 
+                                <a href="<?= base_url('bdosen'); ?>">Dosen</a>
                             </div>
                         </div>
 
@@ -34,7 +34,7 @@
                                 Program Studi <i class="fas fa-chevron-down ml-1 text-xs"></i>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="<?= base_url('base/prodi_si') ?>">D3 Sistem Informasi</a>
+                                <a href="<?= base_url('bprodi_si') ?>">D3 Sistem Informasi</a>
                                 <a href="<?= base_url('base/prodi_ph') ?>">D3 Perhotelan</a>
                             </div>
                         </div>
