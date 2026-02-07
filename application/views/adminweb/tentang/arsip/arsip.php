@@ -1,4 +1,3 @@
-
 <?php $this->load->view('adminweb/header'); ?>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- navbar -->
@@ -127,9 +126,6 @@
 
 
 <!-- end card -->
-
-      <!-- footer -->
-       <?php $this->load->view('adminweb/footer'); ?>
        
       </div>
       <!-- end konten -->

@@ -1,49 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <?php $this->load->view('adminweb/styles'); ?>
-  <title>
-    <?= isset($title) ? $title : 'Berita - Poltek DG' ?>
-</title> 
-  
-  <link rel="stylesheet" href="<?= base_url('material-dashboard/assets/css/material-dashboard.css'); ?>">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    .modal-dialog {
-      width: 500px;
-      resize: both;
-      overflow: auto;
-    }
-  </style>
-<style>
-    /* Pastikan modal berada di atas segalanya */
-  .modal {
-    z-index: 2000;
-  }
-
-  .modal-backdrop {
-    z-index: 1900;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  /* Blur sidebar saat modal terbuka (opsional) */
-  body.modal-open .sidenav {
-    filter: blur(10px);
-    pointer-events: none;
-  }
-
-</style>
-</head>
-
-
-<body class="g-sidenav-show  bg-gray-100">
-  
-  <?php $this->load->view('adminweb/sidebar'); ?>
-  
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+<?php $this->load->view('adminweb/header'); ?>
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- navbar -->
     <?php $this->load->view('adminweb/navbar'); ?>
 
@@ -165,12 +121,7 @@
 </div>
 <!-- Modal Tambah Sambutan -->
 </div>
-
-
 <!-- end card -->
-
-      <!-- footer -->
-       <?php $this->load->view('adminweb/footer'); ?>
        
       </div>
       <!-- end konten -->
@@ -229,6 +180,5 @@
       });
     </script>
 
-</body>
-
-</html>
+<!-- footer -->
+<?php $this->load->view('adminweb/footer'); ?>
