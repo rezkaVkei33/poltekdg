@@ -1,0 +1,45 @@
+/* ===== POLTEKDG NAVBAR ===== */
+.navbar-poltekdg {
+  background-color: #ffecb3;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  z-index: 1050;
+}
+
+.navbar-poltekdg .navbar-brand span {
+  font-weight: 700;
+  color: #5d4037;
+}
+
+.navbar-poltekdg .nav-link {
+  color: #5d4037;
+  font-weight: 500;
+  padding: .75rem 1rem;
+}
+
+.navbar-poltekdg .nav-link:hover {
+  background-color: rgba(0,0,0,.05);
+  border-radius: 6px;
+}
+
+/* Dropdown */
+.navbar-poltekdg .dropdown-menu {
+  border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar-poltekdg .navbar-collapse {
+    background-color: #ffecb3;
+    padding: .5rem;
+  }
+
+  .navbar-poltekdg .dropdown-menu {
+    box-shadow: none;
+  }
+}
+
+/* Body offset */
+body {
+  padding-top: 76px;
+}

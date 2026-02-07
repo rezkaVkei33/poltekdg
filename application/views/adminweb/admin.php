@@ -6,6 +6,7 @@
   <title><?= isset($title) ? $title : 'Admin - Poltek DG' ?></title> 
   
   <link rel="stylesheet" href="<?= base_url('material-dashboard/assets/css/material-dashboard.css'); ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/custom/styles.css'); ?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     .modal-dialog {
@@ -88,6 +89,7 @@
     <?php $this->load->view('adminweb/scripts'); ?>
 
     <script src="<?= base_url('material-dashboard/assets/js/core/popper.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/custom/scripts.js'); ?>"></script>
     
     <script>
         document.querySelectorAll('.trim-text').forEach(cell => {
