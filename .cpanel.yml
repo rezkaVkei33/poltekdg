@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/poltekdg/arsippdg.my.id
+    - /bin/cp -R * $DEPLOYPATH
