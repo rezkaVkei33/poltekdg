@@ -21,11 +21,11 @@
                                 Tentang <i class="fas fa-chevron-down ml-1 text-xs"></i>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="<?= base_url('bsambutan'); ?>">Sambutan</a> 
-                                <a href="<?= base_url('bsejarah'); ?>">Sejarah</a> 
-                                <a href="<?= base_url('bvisi_misi'); ?>">Visi & Misi</a>
-                                <a href="<?= base_url('brenstra'); ?>">Renstra</a> 
-                                <a href="<?= base_url('bdosen'); ?>">Dosen</a>
+                                <a href="<?= site_url('bsambutan'); ?>">Sambutan</a> 
+                                <a href="<?= site_url('bsejarah'); ?>">Sejarah</a> 
+                                <a href="<?= site_url('bvisi_misi'); ?>">Visi & Misi</a>
+                                <a href="<?= site_url('brenstra'); ?>">Renstra</a> 
+                                <a href="<?= site_url('bdosen'); ?>">Dosen</a>
                             </div>
                         </div>
 
