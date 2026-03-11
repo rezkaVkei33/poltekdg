@@ -2,7 +2,7 @@
             <section class="relative py-10 sm:py-14 md:py-16 lg:py-24">
                 <!-- Background Image with Orange Overlay -->
                 <div class="absolute inset-0 h-full w-full">
-                    <img src="<?= base_url('assets/images/banner01.jpg') ?>" alt="Politeknik Darma Ganesha" class="w-full h-full object-cover object-center min-h-[220px] sm:min-h-[320px] md:min-h-[400px]">
+                    <img src="#" alt="Politeknik Darma Ganesha" class="w-full h-full object-cover object-center min-h-[220px] sm:min-h-[320px] md:min-h-[400px]">
                     <div class="absolute inset-0 bg-gradient-to-r from-orange-600 via-amber-500 to-orange-400 opacity-80"></div>
                 </div>
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
