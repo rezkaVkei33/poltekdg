@@ -4,7 +4,7 @@
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-amber-100 to-orange-200  rounded-lg flex items-center justify-center">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center">
                             <img src="<?= base_url('assets/images/LogoPoltek.png') ?>" alt="Logo Politeknik Darma Ganesha" class="w-8 h-8 object-contain">
                         </div>
                         <div class="hidden sm:block">
@@ -22,7 +22,6 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a href="<?= site_url('base/sambutan'); ?>">Sambutan</a> 
-                                <a href="<?= site_url('base/sejarah'); ?>">Sejarah</a> 
                                 <a href="<?= site_url('base/visi_misi'); ?>">Visi & Misi</a>
                                 <a href="<?= site_url('base/renstra'); ?>">Renstra</a> 
                                 <a href="<?= site_url('base/dosen'); ?>">Dosen</a>
@@ -74,7 +73,6 @@
                             <div id="tentang" class="mobile-dropdown pl-4">
                                 <a href="<?= site_url('base/sambutan') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Sambutan</a>
                                 <a href="<?= site_url('base/sejarah') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Sejarah</a>
-                                <a href="<?= site_url('base/visi_misi') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Visi & Misi</a>
                                 <a href="<?= site_url('base/renstra') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Renstra</a>
                                 <a href="<?= site_url('base/dosen') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Dosen</a>
                             </div>
