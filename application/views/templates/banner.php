@@ -1,6 +1,6 @@
 <section class="section main-banner" id="top" data-section="section1">
-      
-          <img src="<?= base_url('assets/images/banner01.jpg') ?>" alt="Gambar_banner" class="img-fluid w-100">  
+      <?php #base_url('assets/images/banner01.jpg') ?>
+          <img src="" alt="Gambar_banner" class="img-fluid w-100">  
       <div class="video-overlay header-text">
           <div class="container">
             <div class="row">

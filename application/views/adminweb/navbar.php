@@ -28,7 +28,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="<?= base_url('sambutan'); ?>">Sambutan</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('sejarah'); ?>">Sejarah</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Sejarah</a></li> -->
             <li><a class="dropdown-item" href="<?= base_url('vmts'); ?>">Visi & Misi</a></li>
             <li><a class="dropdown-item" href="<?= base_url('renstra'); ?>">Renstra</a></li>
             <li><a class="dropdown-item" href="<?= base_url('dosen'); ?>">Dosen</a></li>
