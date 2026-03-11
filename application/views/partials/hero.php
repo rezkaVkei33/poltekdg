@@ -29,7 +29,7 @@
                         <div class="relative mt-8 lg:mt-0 z-10">
                             <div class="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 transform rotate-0 md:rotate-3 hover:rotate-0 transition-transform duration-300">
                                 <div class="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-4 sm:p-6 text-center">
-                                    <img src="<?= base_url('assets/images/banner01.jpg') ?>" alt="Politeknik Darma Ganesha" class="w-full h-auto rounded-xl shadow-lg mx-auto" style="max-width:320px; min-width:180px;">
+                                    <img src="#" alt="Politeknik Darma Ganesha" class="w-full h-auto rounded-xl shadow-lg mx-auto" style="max-width:320px; min-width:180px;">
                                 </div>
                             </div>
                         </div>
