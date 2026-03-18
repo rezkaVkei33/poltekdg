@@ -22,7 +22,6 @@ $route['admin'] = 'admin/index';
 
 // halaman base
 $route['bsambutan'] = 'base/sambutan';
-$route['bsejarah'] = 'base/sejarah';
 $route['bvisi_misi'] = 'base/visi_misi';
 $route['brenstra'] = 'base/renstra';
 $route['bdosen'] = 'base/dosen';

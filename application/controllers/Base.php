@@ -26,14 +26,6 @@ class Base extends CI_Controller {
         $this->load->view('base/sambutan', $data);
 
     }
-    public function sejarah()
-    {
-        $data['title'] = 'Sejarah - Poltek DG';
-        $data['subtitle'] = 'Sejarah Berdiri';
-        $data['data_sejarah'] = $this->Base_model->get_sejarah(); 
-        $this->load->view('base/sejarah', $data);
-
-    }
     public function kalender()
     {
         $data['title'] = 'Kalender - Poltek DG';
