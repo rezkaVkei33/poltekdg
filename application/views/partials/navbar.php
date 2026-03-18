@@ -72,7 +72,6 @@
                             </button>
                             <div id="tentang" class="mobile-dropdown pl-4">
                                 <a href="<?= site_url('base/sambutan') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Sambutan</a>
-                                <a href="<?= site_url('base/sejarah') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Sejarah</a>
                                 <a href="<?= site_url('base/renstra') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Renstra</a>
                                 <a href="<?= site_url('base/dosen') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Dosen</a>
                             </div>
