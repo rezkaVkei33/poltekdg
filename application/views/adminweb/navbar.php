@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-poltekdg">
-  <div class="container-fluid px-4">
+  <div class="container">
 
     <!-- LOGO -->
-    <a class="navbar-brand d-flex align-items-center gap-2" href="<?= base_url('admin'); ?>">
-      <img src="<?= base_url('assets/images/LogoPoltek.png'); ?>" width="36">
-      <span>PoltekDG</span>
+    <a class="navbar-brand d-flex align-items-center" href="<?= base_url('admin'); ?>">
+      <img src="<?= base_url('assets/images/LogoPoltek.png'); ?>" width="34" class="me-2">
+      <span class="fw-semibold">PoltekDG</span>
     </a>
 
     <!-- TOGGLER -->
@@ -14,8 +14,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="poltekNavbar">
-      <ul class="navbar-nav ms-auto">
+    <!-- MENU -->
+    <div class="collapse navbar-collapse justify-content-center" id="poltekNavbar">
+
+      <ul class="navbar-nav align-items-center gap-lg-2">
 
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('admin'); ?>">Dashboard</a>
@@ -23,9 +25,14 @@
 
         <!-- PROFIL -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             Profil
           </a>
+
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="<?= base_url('sambutan'); ?>">Sambutan</a></li>
             <li><a class="dropdown-item" href="<?= base_url('vmts'); ?>">Visi & Misi</a></li>
@@ -36,9 +43,14 @@
 
         <!-- AKADEMIK -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             Akademik
           </a>
+
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="<?= base_url('kalender'); ?>">Kalender Akademik</a></li>
             <li><a class="dropdown-item" href="<?= base_url('prodi'); ?>">Program Studi</a></li>
@@ -48,9 +60,14 @@
 
         <!-- EVENT -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             Event
           </a>
+
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="<?= base_url('pengumuman'); ?>">Pengumuman</a></li>
             <li><a class="dropdown-item" href="<?= base_url('berita'); ?>">Berita</a></li>
@@ -59,16 +76,20 @@
           </ul>
         </li>
 
-        <!-- KONTAK -->
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('kontak'); ?>">Kontak</a>
         </li>
 
         <!-- AKUN -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             Akun
           </a>
+
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="<?= base_url('register'); ?>">Register</a></li>
             <li><a class="dropdown-item text-danger" href="<?= base_url('login/logout'); ?>">Keluar</a></li>
