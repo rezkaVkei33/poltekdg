@@ -1,102 +1,77 @@
+<!-- Navbar dengan posisi terpusat -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-poltekdg">
-  <div class="container">
-
-    <!-- LOGO -->
-    <a class="navbar-brand d-flex align-items-center" href="<?= base_url('admin'); ?>">
-      <img src="<?= base_url('assets/images/LogoPoltek.png'); ?>" width="34" class="me-2">
-      <span class="fw-semibold">PoltekDG</span>
-    </a>
-
-    <!-- TOGGLER -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#poltekNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- MENU -->
-    <div class="collapse navbar-collapse justify-content-center" id="poltekNavbar">
-
-      <ul class="navbar-nav align-items-center gap-lg-2">
-
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('admin'); ?>">Dashboard</a>
-        </li>
-
-        <!-- PROFIL -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"
-             href="#"
-             role="button"
-             data-bs-toggle="dropdown"
-             aria-expanded="false">
-            Profil
-          </a>
-
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?= base_url('sambutan'); ?>">Sambutan</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('vmts'); ?>">Visi & Misi</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('renstra'); ?>">Renstra</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('dosen'); ?>">Dosen</a></li>
-          </ul>
-        </li>
-
-        <!-- AKADEMIK -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"
-             href="#"
-             role="button"
-             data-bs-toggle="dropdown"
-             aria-expanded="false">
-            Akademik
-          </a>
-
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?= base_url('kalender'); ?>">Kalender Akademik</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('prodi'); ?>">Program Studi</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('arsip'); ?>">Arsip</a></li>
-          </ul>
-        </li>
-
-        <!-- EVENT -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"
-             href="#"
-             role="button"
-             data-bs-toggle="dropdown"
-             aria-expanded="false">
-            Event
-          </a>
-
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?= base_url('pengumuman'); ?>">Pengumuman</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('berita'); ?>">Berita</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('kegiatan'); ?>">Kegiatan</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('galeri'); ?>">Galeri</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('kontak'); ?>">Kontak</a>
-        </li>
-
-        <!-- AKUN -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"
-             href="#"
-             role="button"
-             data-bs-toggle="dropdown"
-             aria-expanded="false">
-            Akun
-          </a>
-
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="<?= base_url('register'); ?>">Register</a></li>
-            <li><a class="dropdown-item text-danger" href="<?= base_url('login/logout'); ?>">Keluar</a></li>
-          </ul>
-        </li>
-
-      </ul>
+    <div class="container-fluid px-4">
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="dashboardActive(); return false;">
+            <img src="<?= base_url('assets/images/LogoPoltek.png'); ?>" width="36" alt="LogoPoltek" style="border-radius: 10px;">
+            <span>PoltekDG</span>
+        </a>
+        
+        <!-- TOGGLER (untuk mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#poltekNavbar" aria-controls="poltekNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="poltekNavbar">
+            <ul class="navbar-nav ms-auto me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="dashboardActive();return false;">Dashboard</a>
+                </li>
+                
+                <!-- PROFIL - Dropdown Hover -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Profil
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="profilDropdown">
+                        <li><a class="dropdown-item" href="<?= base_url('sambutan'); ?>" onclick="showAlert('Sambutan');return false;">Sambutan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('visi-misi'); ?>" onclick="showAlert('Visi & Misi');return false;">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('renstra'); ?>" onclick="showAlert('Renstra');return false;">Renstra</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('dosen'); ?>" onclick="showAlert('Dosen');return false;">Dosen</a></li>
+                    </ul>
+                </li>
+                
+                <!-- AKADEMIK - Dropdown Hover -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Akademik
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="akademikDropdown">
+                        <li><a class="dropdown-item" href="<?= base_url('kalender-akademik'); ?>" onclick="showAlert('Kalender Akademik');return false;">Kalender Akademik</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('program-studi'); ?>" onclick="showAlert('Program Studi');return false;">Program Studi</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('arsip'); ?>" onclick="showAlert('Arsip');return false;">Arsip</a></li>
+                    </ul>
+                </li>
+                
+                <!-- EVENT - Dropdown Hover -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="eventDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Event
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="eventDropdown">
+                        <li><a class="dropdown-item" href="<?= base_url('pengumuman'); ?>" onclick="showAlert('Pengumuman');return false;">Pengumuman</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('berita'); ?>" onclick="showAlert('Berita');return false;">Berita</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('kegiatan'); ?>" onclick="showAlert('Kegiatan');return false;">Kegiatan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('galeri'); ?>" onclick="showAlert('Galeri');return false;">Galeri</a></li>
+                    </ul>
+                </li>
+                
+                <!-- KONTAK -->
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('kontak'); ?>" onclick="showAlert('Kontak');return false;">Kontak</a>
+                </li>
+                
+                <!-- AKUN - Dropdown Hover -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="akunDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Akun
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="akunDropdown">
+                        <li><a class="dropdown-item" href="<?= base_url('register'); ?>" onclick="showAlert('Register');return false;">Register</a></li>
+                        <li><a class="dropdown-item text-danger" href="<?= base_url('logout'); ?>" onclick="logoutAlert();return false;">Keluar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
