@@ -6,4 +6,4 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Google Font: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url('admin-page/assets/css/material-dashboard.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('admin-page/assets/styles.css') ?>">
