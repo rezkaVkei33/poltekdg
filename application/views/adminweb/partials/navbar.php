@@ -24,10 +24,10 @@
                         Profil
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="profilDropdown">
-                        <li><a class="dropdown-item" href="<?= base_url('sambutan'); ?>" onclick="showAlert('Sambutan');return false;">Sambutan</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('visi-misi'); ?>" onclick="showAlert('Visi & Misi');return false;">Visi & Misi</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('renstra'); ?>" onclick="showAlert('Renstra');return false;">Renstra</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('dosen'); ?>" onclick="showAlert('Dosen');return false;">Dosen</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('sambutan'); ?>">Sambutan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('visi-misi'); ?>">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('renstra'); ?>">Renstra</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('dosen'); ?>">Dosen</a></li>
                     </ul>
                 </li>
                 
@@ -37,9 +37,9 @@
                         Akademik
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="akademikDropdown">
-                        <li><a class="dropdown-item" href="<?= base_url('kalender-akademik'); ?>" onclick="showAlert('Kalender Akademik');return false;">Kalender Akademik</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('program-studi'); ?>" onclick="showAlert('Program Studi');return false;">Program Studi</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('arsip'); ?>" onclick="showAlert('Arsip');return false;">Arsip</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('kalender-akademik'); ?>">Kalender Akademik</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('program-studi'); ?>">Program Studi</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('arsip'); ?>">Arsip</a></li>
                     </ul>
                 </li>
                 
@@ -49,10 +49,10 @@
                         Event
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="eventDropdown">
-                        <li><a class="dropdown-item" href="<?= base_url('pengumuman'); ?>" onclick="showAlert('Pengumuman');return false;">Pengumuman</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('berita'); ?>" onclick="showAlert('Berita');return false;">Berita</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('kegiatan'); ?>" onclick="showAlert('Kegiatan');return false;">Kegiatan</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('galeri'); ?>" onclick="showAlert('Galeri');return false;">Galeri</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('pengumuman'); ?>">Pengumuman</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('berita'); ?>">Berita</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('kegiatan'); ?>">Kegiatan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('galeri'); ?>">Galeri</a></li>
                     </ul>
                 </li>
                 
@@ -67,8 +67,8 @@
                         Akun
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="akunDropdown">
-                        <li><a class="dropdown-item" href="<?= base_url('register'); ?>" onclick="showAlert('Register');return false;">Register</a></li>
-                        <li><a class="dropdown-item text-danger" href="<?= base_url('logout'); ?>" onclick="logoutAlert();return false;">Keluar</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('register'); ?>">Register</a></li>
+                        <li><a class="dropdown-item text-danger" href="<?= base_url('logout'); ?>">Keluar</a></li>
                     </ul>
                 </li>
             </ul>
