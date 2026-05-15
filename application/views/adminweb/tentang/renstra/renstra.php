@@ -42,10 +42,10 @@
                 <?php if(!empty($renstra)) : ?>
                     <?php foreach($renstra as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $data->judul; ?></td>
-                        <td class="trim-text"><?= $data->isi; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td data-label="Judul"><?= $data->judul; ?></td>
+                        <td class="trim-text" data-label="Deskripsi"><?= $data->isi; ?></td>
+                        <td data-label="Dokumen">
                            <?php if (!empty($data->file_upload)): ?>
                             <a href="<?= base_url('uploads/renstra/' . $data->file_upload); ?>" class="btn btn-info" target="_blank">
                                 <i class="bi bi-box-arrow-up-right me-1"></i> Lihat
@@ -58,8 +58,8 @@
                             <span class="text-danger">Tidak ada dokumen.</span>
                         <?php endif; ?>
                         </td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
-                        <td class="text-center">
+                        <td data-label="Tanggal Update"><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('renstra/ubah_renstra/' . $data->id_renstra); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

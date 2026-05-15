@@ -43,29 +43,29 @@
                 <?php if(!empty($vmts)) : ?>
                     <?php foreach($vmts as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td class="trim-text"><?= $data->nama_vm; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td class="trim-text" data-label="Judul VM"><?= $data->nama_vm; ?></td>
+                        <td data-label="Visi">
                             <div class="text-truncate" style="max-width: 150px;">
                                 <?= $data->visi; ?>
                             </div>
                         </td>
-                        <td>
+                        <td data-label="Misi">
                             <div class="text-truncate" style="max-width: 150px;">
                                 <?= $data->misi; ?>
                             </div>
                         </td>
-                        <td>
+                        <td data-label="tujuan">
                             <div class="text-truncate" style="max-width: 150px;">
                                 <?= $data->tujuan; ?>
                             </div>
                         </td>
-                        <td>
+                        <td data-label="Strategi">
                             <div class="text-truncate" style="max-width: 150px;">
                                 <?= $data->strategi; ?>
                             </div>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('vmts/ubah_vmts/' . $data->id_vm); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

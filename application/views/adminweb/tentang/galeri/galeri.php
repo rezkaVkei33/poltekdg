@@ -43,19 +43,19 @@
                 <?php if(!empty($galeri)) : ?>
                     <?php foreach($galeri as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $data->judul; ?></td>
-                        <td class="trim-text"><?= $data->deskripsi; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td data-label="Judul"><?= $data->judul; ?></td>
+                        <td class="trim-text" data-label="Deskripsi"><?= $data->deskripsi; ?></td>
+                        <td data-label="Gambar">
                           <?php if(!empty($data->gambar)): ?>
                             <img src="<?= base_url('uploads/galeri/'.$data->gambar); ?>" alt="Gambar_galeri" class="img-fluid" style="max-width: 100px;">
                             <?php else: ?>
                               Tidak ada gambar
                           <?php endif; ?>
                         </td>
-                        <td><?= $data->status; ?></td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_upload)); ?></td>
-                        <td class="text-center">
+                        <td data-label="Status"><?= $data->status; ?></td>
+                        <td data-label="Tanggal Update"><?= date('d-m-Y', strtotime($data->tanggal_upload)); ?></td>
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('galeri/ubah_galeri/' . $data->id_galeri); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

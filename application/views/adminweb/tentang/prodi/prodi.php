@@ -42,18 +42,18 @@
                 <?php if(!empty($prodi)) : ?>
                     <?php foreach($prodi as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $data->nama_prodi; ?></td>
-                        <td class="trim-text"><?= $data->deskripsi; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td data-label="Program Studi"><?= $data->nama_prodi; ?></td>
+                        <td class="trim-text" data-label="Deskripsi"><?= $data->deskripsi; ?></td>
+                        <td data-label="Gambar">
                             <?php if(!empty($data->gambar)): ?>
                             <img src="<?= base_url('uploads/prodi/'.$data->gambar); ?>" alt="Gambar_prodi" class="img-fluid" style="max-width: 100px;">
                             <?php else: ?>
                             Tidak ada gambar
                             <?php endif; ?>
                         </td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
-                        <td class="text-center">
+                        <td data-label="Tanggal Update"><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('prodi/ubah_prodi/' . $data->id_prodi); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

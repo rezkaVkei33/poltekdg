@@ -43,24 +43,24 @@
                   <?php if (!empty($sambutan)) : ?>
                     <?php foreach ($sambutan as $data) : ?>
                   <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td class="trim-text"><?= $data->teks_sambutan; ?></td>
-                        <td><?= $data->tempat; ?></td>
-                        <td><?= $data->tanda_tangan; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td class="trim-text" data-label="Teks Sambutan"><?= $data->teks_sambutan; ?></td>
+                        <td data-label="Tempat"><?= $data->tempat; ?></td>
+                        <td data-label="Tanda Tangan"><?= $data->tanda_tangan; ?></td>
+                        <td data-label="Gambar">
                           <?php if ($data->gambar): ?>
                           <img src="<?= base_url('uploads/sambutan/' . $data->gambar) ?>" width="100">
                           <?php else: ?>
                             <small>Tidak ada gambar.</small>
                           <?php endif; ?>
                         </td>
-                        <td>
+                        <td data-label="Tanggal Update">
                           <?php
                             $tanggal = new DateTime($data->tanggal_update);
                             echo $tanggal->format('d F Y');
                           ?>
                         </td>
-                        <td> 
+                        <td data-label="Aksi"> 
                           <a href="<?= base_url('sambutan/ubah_sambutan/' . $data->id_sambutan); ?>" class="btn btn-warning btn-sm">
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

@@ -43,19 +43,19 @@
                 <?php if(!empty($kegiatan)) : ?>
                     <?php foreach($kegiatan as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $data->nama_kegiatan; ?></td>
-                        <td class="trim-text"><?= $data->deskripsi; ?></td>
-                        <td><?= $data->lokasi; ?></td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td data-label="Nama Kegiatan"><?= $data->nama_kegiatan; ?></td>
+                        <td class="trim-text" data-label="Deskripsi"><?= $data->deskripsi; ?></td>
+                        <td data-label="lokasi"><?= $data->lokasi; ?></td>
+                        <td data-label="Tanggal Update"><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
+                        <td data-label="Gambar">
                             <?php if(!empty($data->gambar)): ?>
                                 <img src="<?= base_url('uploads/kegiatan/'.$data->gambar); ?>" alt="Gambar_berita" class="img-fluid " style="max-width: 100px;">
                             <?php else: ?>
                             Tidak ada gambar
                             <?php endif; ?>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('kegiatan/ubah_kegiatan/' . $data->id_kegiatan); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

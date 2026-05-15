@@ -44,20 +44,20 @@
                 <?php if(!empty($berita)) : ?>
                     <?php foreach($berita as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $data->judul; ?></td>
-                        <td class="trim-text"><?= $data->isi; ?></td>
-                        <td><?= $data->penulis; ?></td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_terbit)); ?></td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td data-label="Judul"><?= $data->judul; ?></td>
+                        <td class="trim-text" data-label="Deskripsi"><?= $data->isi; ?></td>
+                        <td data-label="Penulis"><?= $data->penulis; ?></td>
+                        <td data-label="Tanggal Terbit"><?= date('d-m-Y', strtotime($data->tanggal_terbit)); ?></td>
+                        <td data-label="Tanggal Update"><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
+                        <td data-label="Gambar">
                             <?php if(!empty($data->gambar)): ?>
                                 <img src="<?= base_url('uploads/berita/'.$data->gambar); ?>" alt="Gambar_berita" class="img-fluid " style="max-width: 100px;">
                             <?php else: ?>
                             Tidak ada gambar
                             <?php endif; ?>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('berita/ubah_berita/' . $data->id_berita); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

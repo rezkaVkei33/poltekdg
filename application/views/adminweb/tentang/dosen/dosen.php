@@ -43,19 +43,19 @@
                 <?php if(!empty($dosen)) : ?>
                     <?php foreach($dosen as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td class="trim-text"><?= $data->nama; ?></td>
-                        <td><?= $data->bidang_keahlian; ?></td>
-                        <td><?= $data->prodi; ?></td>
-                        <td><?= $data->status; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td class="trim-text" data-label="Nama Dosen"><?= $data->nama; ?></td>
+                        <td data-label="Bidang Keahlian"><?= $data->bidang_keahlian; ?></td>
+                        <td data-label="Prodi"><?= $data->prodi; ?></td>
+                        <td data-label="Status"><?= $data->status; ?></td>
+                        <td data-label="Gambar">
                             <?php if(!empty($data->gambar)): ?>
                             <img src="<?= base_url('uploads/dosen/'.$data->gambar); ?>" alt="Gambar Sejarah" class="img-fluid" style="max-width: 100px;">
                             <?php else: ?>
                             Tidak ada gambar
                             <?php endif; ?>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('dosen/ubah_dosen/' . $data->id_dosen); ?>" class="btn btn-warning btn-sm">
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

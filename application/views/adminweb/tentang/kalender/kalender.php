@@ -43,19 +43,19 @@
                 <?php if(!empty($kalender_akademik)) : ?>
                     <?php foreach($kalender_akademik as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $data->judul; ?></td>
-                        <td class="trim-text"><?= $data->deskripsi; ?></td>
-                        <td><?= $data->tahun_akademik; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td data-label="Judul"><?= $data->judul; ?></td>
+                        <td class="trim-text" data-label="Deskripsi"><?= $data->deskripsi; ?></td>
+                        <td data-label="Tahun Akademik"><?= $data->tahun_akademik; ?></td>
+                        <td data-label="Gambar">
                             <?php if(!empty($data->gambar)): ?>
                             <img src="<?= base_url('uploads/kalender/'.$data->gambar); ?>" alt="Gambar_kalender" class="img-fluid" style="max-width: 100px;">
                             <?php else: ?>
                             Tidak ada gambar
                             <?php endif; ?>
                         </td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
-                        <td class="text-center">
+                        <td data-label="Tanggal Update"><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('kalender/ubah_kalender/' . $data->id_kalender); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

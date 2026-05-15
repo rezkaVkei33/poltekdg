@@ -40,10 +40,10 @@
                 <?php if(!empty($kontak)) : ?>
                     <?php foreach($kontak as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $data->judul_kontak; ?></td>
-                        <td><?= $data->isi_kontak; ?></td>
-                        <td class="text-center">
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td data-label="Kontak"><?= $data->judul_kontak; ?></td>
+                        <td data-label="Isi Kontak"><?= $data->isi_kontak; ?></td>
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('kontak/ubah_kontak/' . $data->id_kontak); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

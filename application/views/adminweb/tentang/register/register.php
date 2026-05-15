@@ -36,11 +36,11 @@
                                     <?php if (!empty($users)): ?>
                                         <?php foreach ($users as $user): ?>
                                     <tr>
-                                      <td class="text-center"><?= $no++; ?></td>
-                                      <td><?= $user->nama_lengkap; ?></td>
-                                      <td><?= $user->username; ?></td>
-                                      <td><?= $user->role; ?></td>
-                                      <td>
+                                      <td class="text-center" data-label="No"><?= $no++; ?></td>
+                                      <td data-label="Nama Lengkap"><?= $user->nama_lengkap; ?></td>
+                                      <td data-label="Username"><?= $user->username; ?></td>
+                                      <td data-label="Role"><?= $user->role; ?></td>
+                                      <td data-label="Aksi">
                                         <a href="<?= base_url('register/edit/' . $user->id); ?>" class="btn btn-warning btn-sm">
                                           <i class="bi bi-pencil-square me-1"></i>
                                         Ubah</a>

@@ -42,18 +42,18 @@
                 <?php if(!empty($sejarah)) : ?>
                     <?php foreach($sejarah as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td class="trim-text"><?= $data->teks_sejarah; ?></td>
-                        <td><?= $data->nama_penulis; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td class="trim-text" data-label="Teks Sejarah"><?= $data->teks_sejarah; ?></td>
+                        <td data-label="Nama penulis"><?= $data->nama_penulis; ?></td>
+                        <td data-label="Gambar">
                             <?php if(!empty($data->gambar)): ?>
                             <img src="<?= base_url('uploads/sejarah/'.$data->gambar); ?>" alt="Gambar Sejarah" class="img-fluid" style="max-width: 100px;">
                             <?php else: ?>
                             Tidak ada gambar
                             <?php endif; ?>
                         </td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
-                        <td class="text-center">
+                        <td data-label="Tanggal Update"><?= date('d-m-Y', strtotime($data->tanggal_update)); ?></td>
+                        <td class="text-center" data-label="Aksi">
                             <a href=" <?= base_url('sejarah/ubah_sejarah/' . $data->id_sejarah); ?>" class="btn btn-warning btn-sm">
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah
