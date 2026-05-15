@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <?php $this->load->view('adminweb/partials/styles'); ?>
-  <title>
-    <?= isset($title) ? $title : 'Admin - Poltek DG' ?>
-  </title>
-</head>
-<body>
-
-<?php $this->load->view('adminweb/partials/navbar'); ?>
+<?php $this->load->view('adminweb/partials/header'); ?>
 
 <!-- Main konten -->
 <main class="admin-landing container my-4">
@@ -154,6 +144,3 @@
     </div>
 </main>
 <?php $this->load->view('adminweb/partials/footer'); ?>
-<?php $this->load->view('adminweb/partials/scripts'); ?>
-</body>
-</html>

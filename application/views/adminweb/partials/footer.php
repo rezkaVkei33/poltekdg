@@ -11,3 +11,7 @@
         </div>
     </div>
 </footer>
+
+<?php $this->load->view('adminweb/partials/scripts'); ?>
+</body>
+</html>
