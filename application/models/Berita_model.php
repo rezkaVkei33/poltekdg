@@ -22,4 +22,10 @@ class Berita_model extends CI_Model {
         $this->db->where('id_berita', $id);
         return $this->db->delete('berita');
     }
+
+    // berita count
+    public function count_berita()
+    {
+        return $this->db->count_all('berita');
+    }
 }

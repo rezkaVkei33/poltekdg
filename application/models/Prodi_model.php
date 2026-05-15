@@ -20,4 +20,10 @@ class Prodi_model extends CI_Model {
         $this->db->where('id_prodi', $id);
         return $this->db->delete('prodi');
     }
+
+    // Prodi count 
+    public function count_prodi()
+    {
+        return $this->db->count_all('prodi');
+    }
 }

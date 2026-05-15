@@ -26,4 +26,10 @@ class Galeri_model extends CI_Model {
         $this->db->where('id_galeri', $id);
         return $this->db->delete('galeri');
     }
+
+    // galeri count
+    public function count_galeri()
+    {
+        return $this->db->count_all('galeri');
+    }
 }

@@ -23,7 +23,7 @@
                     <i class="bi bi-newspaper"></i>
                 </div>
                 <div>
-                    <h5 class="mb-0 fw-bold" style="color:#ac751f;">24</h5>
+                    <h5 class="mb-0 fw-bold" style="color:#ac751f;"><?= $total_berita ?></h5>
                     <span class="small text-secondary">Berita & Event</span>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                     <i class="bi bi-people"></i>
                 </div>
                 <div>
-                    <h5 class="mb-0 fw-bold" style="color:#ac751f;">18</h5>
+                    <h5 class="mb-0 fw-bold" style="color:#ac751f;"><?= $total_dosen ?></h5>
                     <span class="small text-secondary">Dosen Aktif</span>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                     <i class="bi bi-journal-bookmark-fill"></i>
                 </div>
                 <div>
-                    <h5 class="mb-0 fw-bold" style="color:#ac751f;">7</h5>
+                    <h5 class="mb-0 fw-bold" style="color:#ac751f;"><?= $total_prodi ?></h5>
                     <span class="small text-secondary">Program Studi</span>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <i class="bi bi-images"></i>
                 </div>
                 <div>
-                    <h5 class="mb-0 fw-bold" style="color:#ac751f;">142</h5>
+                    <h5 class="mb-0 fw-bold" style="color:#ac751f;"><?= $total_galeri ?></h5>
                     <span class="small text-secondary">Galeri Media</span>
                 </div>
             </div>
@@ -118,27 +118,27 @@
     <!-- Shortcut menu -->
     <div class="row mt-5 g-3">
         <div class="col-6 col-md-3 text-center">
-            <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;" onclick="showAlert('Kelola Berita');">
-                <i class="bi bi-file-post fs-3" style="color:#c6882f;"></i>
-                <p class="mb-0 mt-2 fw-medium small">Kelola Berita</p>
+            <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;">
+                <a href="<?= base_url('berita') ?>"><i class="bi bi-file-post fs-3" style="color:#c6882f;"></i>
+                <p class="mb-0 mt-2 fw-medium small">Kelola Berita</p></a>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
-            <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important;" onclick="showAlert('Kelola Galeri');">
-                <i class="bi bi-camera fs-3" style="color:#c6882f;"></i>
-                <p class="mb-0 mt-2 fw-medium small">Galeri Foto</p>
+            <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;">
+                <a href="<?= base_url('galeri') ?>"><i class="bi bi-camera fs-3" style="color:#c6882f;"></i>
+                <p class="mb-0 mt-2 fw-medium small">Galeri Foto</p></a>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
-            <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important;" onclick="showAlert('Data Prodi');">
-                <i class="bi bi-diagram-3 fs-3" style="color:#c6882f;"></i>
-                <p class="mb-0 mt-2 fw-medium small">Program Studi</p>
+            <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;">
+                <a href="<?= base_url('prodi') ?>"><i class="bi bi-diagram-3 fs-3" style="color:#c6882f;"></i>
+                <p class="mb-0 mt-2 fw-medium small">Program Studi</p></a>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
-            <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important;" onclick="showAlert('Manajemen Dosen');">
-                <i class="bi bi-person-badge fs-3" style="color:#c6882f;"></i>
-                <p class="mb-0 mt-2 fw-medium small">Dosen & Staff</p>
+            <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;">
+                <a href="<?= base_url('dosen') ?>"><i class="bi bi-person-badge fs-3" style="color:#c6882f;"></i>
+                <p class="mb-0 mt-2 fw-medium small">Dosen & Staff</p></a>
             </div>
         </div>
     </div>
