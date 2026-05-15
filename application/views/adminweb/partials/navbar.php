@@ -25,7 +25,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="profilDropdown">
                         <li><a class="dropdown-item" href="<?= base_url('sambutan'); ?>">Sambutan</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('visi-misi'); ?>">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('vmts'); ?>">Visi & Misi</a></li>
                         <li><a class="dropdown-item" href="<?= base_url('renstra'); ?>">Renstra</a></li>
                         <li><a class="dropdown-item" href="<?= base_url('dosen'); ?>">Dosen</a></li>
                     </ul>
@@ -37,8 +37,8 @@
                         Akademik
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="akademikDropdown">
-                        <li><a class="dropdown-item" href="<?= base_url('kalender-akademik'); ?>">Kalender Akademik</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('program-studi'); ?>">Program Studi</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('kalender'); ?>">Kalender Akademik</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('prodi'); ?>">Program Studi</a></li>
                         <li><a class="dropdown-item" href="<?= base_url('arsip'); ?>">Arsip</a></li>
                     </ul>
                 </li>
