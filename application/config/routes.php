@@ -16,6 +16,7 @@ $route['pengumuman'] = 'pengumuman';
 $route['berita'] = 'berita';
 $route['arsip'] = 'arsip';
 $route['kontak'] = 'kontak';
+$route['kunjungan'] = 'kunjungan';
 $route['vmts'] = 'vmts';
 $route['login'] = 'login/index';
 $route['logout'] = 'login/logout';

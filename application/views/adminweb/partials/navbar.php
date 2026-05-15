@@ -28,7 +28,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-poltekdg admin-navbar-gradient">
     <div class="container-fluid px-4">
         <!-- LOGO -->
-        <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="dashboardActive(); return false;">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="<?= base_url('admin'); ?>">
             <img src="<?= base_url('assets/images/LogoPoltek.png'); ?>" width="36" alt="LogoPoltek" style="border-radius: 10px;">
             <span>PoltekDG</span>
         </a>
@@ -83,8 +83,18 @@
                 </li>
                 
                 <!-- KONTAK -->
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('kontak'); ?>">Kontak</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="kontakDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Kontak
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="kontakDropdown">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('kontak'); ?>">Kontak</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('kunjungan'); ?>">Kunjungan Web</a>
+                        </li>
+                    </ul>
                 </li>
                 
                 <!-- AKUN - Dropdown Hover -->
