@@ -1,5 +1,5 @@
 <!-- Navbar dengan posisi terpusat -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-poltekdg">
+<nav class="navbar navbar-expand-lg fixed-top navbar-poltekdg" style="border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, #0d6efd, #6f42c1) 1;">
     <div class="container-fluid px-4">
         <!-- LOGO -->
         <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="dashboardActive(); return false;">
