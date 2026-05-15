@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="poltekNavbar">
             <ul class="navbar-nav ms-auto me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="dashboardActive();return false;">Dashboard</a>
+                    <a class="nav-link" href="<?= base_url('admin'); ?>">Dashboard</a>
                 </li>
                 
                 <!-- PROFIL - Dropdown Hover -->
@@ -58,7 +58,7 @@
                 
                 <!-- KONTAK -->
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('kontak'); ?>" onclick="showAlert('Kontak');return false;">Kontak</a>
+                    <a class="nav-link" href="<?= base_url('kontak'); ?>">Kontak</a>
                 </li>
                 
                 <!-- AKUN - Dropdown Hover -->

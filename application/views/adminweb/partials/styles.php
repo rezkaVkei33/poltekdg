@@ -7,3 +7,4 @@
     <!-- Google Font: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('admin-page/assets/styles.css') ?>">
+    <link rel="icon" type="image/png" href="<?= base_url('assets/images/LogoPoltek.png') ?>">
