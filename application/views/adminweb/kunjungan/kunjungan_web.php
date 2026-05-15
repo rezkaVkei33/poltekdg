@@ -16,7 +16,8 @@
     <?php endif; ?>
 
     <div class="card-vanilla p-4">
-        <div class="row g-3">
+        <!-- Summary Cards -->
+        <div class="row g-3 mb-4">
             <div class="col-md-6">
                 <div class="card p-3 h-100">
                     <h6 class="text-muted">Total Visitor</h6>
@@ -31,19 +32,33 @@
             </div>
         </div>
 
-        <div class="mt-4 card p-3">
-            <h5 class="mb-3">Visitor Mingguan</h5>
-            <canvas id="weeklyChart"></canvas>
+        <!-- Statistics Section -->
+        <div class="row g-3 mb-4">
+            <!-- Statistik Mingguan (Kanan) -->
+            <div class="col-lg-6 order-lg-2">
+                <div class="card p-3 h-100">
+                    <h5 class="mb-3">Statistik Mingguan</h5>
+                    <canvas id="weeklyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Statistik Bulanan (Kiri) -->
+            <div class="col-lg-6 order-lg-1">
+                <div class="card p-3 h-100">
+                    <h5 class="mb-3">Statistik Bulanan</h5>
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </div>
         </div>
 
-        <div class="mt-4 card p-3">
-            <h5 class="mb-3">Visitor Bulanan</h5>
-            <canvas id="monthlyChart"></canvas>
-        </div>
-
-        <div class="mt-4 card p-3">
-            <h5 class="mb-3">Visitor Tahunan</h5>
-            <canvas id="yearlyChart"></canvas>
+        <!-- Statistik Tahunan (Full Width - Center) -->
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card p-3">
+                    <h5 class="mb-3">Statistik Tahunan</h5>
+                    <canvas id="yearlyChart"></canvas>
+                </div>
+            </div>
         </div>
     </div>
 </main>

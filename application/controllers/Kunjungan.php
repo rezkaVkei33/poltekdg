@@ -17,9 +17,12 @@ class Kunjungan extends MY_Controller {
 
         $labels_week = [];
         $data_week = [];
+        $days_of_week = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum\'at', 'Sabtu'];
 
         foreach($weekly as $row){
-            $labels_week[] = date('d M', strtotime($row->tanggal));
+            $day_index = date('w', strtotime($row->tanggal));
+            $day_name = $days_of_week[$day_index];
+            $labels_week[] = $day_name;
             $data_week[] = $row->total;
         }
 
@@ -29,23 +32,22 @@ class Kunjungan extends MY_Controller {
         $labels_month = [];
         $data_month = [];
 
+        $bulan = [
+            1 => 'Januari',
+            2 => 'Februari',
+            3 => 'Maret',
+            4 => 'April',
+            5 => 'Mei',
+            6 => 'Juni',
+            7 => 'Juli',
+            8 => 'Agustus',
+            9 => 'September',
+            10 => 'Oktober',
+            11 => 'November',
+            12 => 'Desember'
+        ];
+
         foreach($monthly as $row){
-
-            $bulan = [
-                1 => 'Jan',
-                2 => 'Feb',
-                3 => 'Mar',
-                4 => 'Apr',
-                5 => 'Mei',
-                6 => 'Jun',
-                7 => 'Jul',
-                8 => 'Agu',
-                9 => 'Sep',
-                10 => 'Okt',
-                11 => 'Nov',
-                12 => 'Des'
-            ];
-
             $labels_month[] = $bulan[$row->bulan];
             $data_month[] = $row->total;
         }

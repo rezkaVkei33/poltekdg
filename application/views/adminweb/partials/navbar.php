@@ -88,10 +88,10 @@
                         Kontak
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="kontakDropdown">
-                        <li class="nav-item">
+                        <li class="dropdown-item">
                             <a class="nav-link" href="<?= base_url('kontak'); ?>">Kontak</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="dropdown-item">
                             <a class="nav-link" href="<?= base_url('kunjungan'); ?>">Kunjungan Web</a>
                         </li>
                     </ul>
