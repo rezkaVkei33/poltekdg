@@ -64,7 +64,7 @@ class Kunjungan extends MY_Controller {
         }
 
         $data = array(
-            'title' => 'Kunjungan',
+            'title' => 'Admin - Poltek DG',
             'total_visitor' => $this->Visitor_model->total_visitor(),
             'visitor_today' => $this->Visitor_model->visitor_hari_ini(),
 
