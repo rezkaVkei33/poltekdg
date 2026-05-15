@@ -119,25 +119,25 @@
     <div class="row mt-5 g-3">
         <div class="col-6 col-md-3 text-center">
             <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;">
-                <a href="<?= base_url('berita') ?>"><i class="bi bi-file-post fs-3" style="color:#c6882f;"></i>
+                <a href="<?= base_url('berita') ?>" class="small text-decoration-none" style="color:#b87a2a;" ><i class="bi bi-file-post fs-3" style="color:#c6882f;"></i>
                 <p class="mb-0 mt-2 fw-medium small">Kelola Berita</p></a>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
             <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;">
-                <a href="<?= base_url('galeri') ?>"><i class="bi bi-camera fs-3" style="color:#c6882f;"></i>
+                <a href="<?= base_url('galeri') ?>" class="small text-decoration-none" style="color:#b87a2a;" ><i class="bi bi-camera fs-3" style="color:#c6882f;"></i>
                 <p class="mb-0 mt-2 fw-medium small">Galeri Foto</p></a>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
             <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;">
-                <a href="<?= base_url('prodi') ?>"><i class="bi bi-diagram-3 fs-3" style="color:#c6882f;"></i>
+                <a href="<?= base_url('prodi') ?>" class="small text-decoration-none" style="color:#b87a2a;" ><i class="bi bi-diagram-3 fs-3" style="color:#c6882f;"></i>
                 <p class="mb-0 mt-2 fw-medium small">Program Studi</p></a>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
             <div class="p-3 rounded-4 bg-white bg-opacity-60 shadow-sm" style="background:#fffcf3!important; cursor:pointer;">
-                <a href="<?= base_url('dosen') ?>"><i class="bi bi-person-badge fs-3" style="color:#c6882f;"></i>
+                <a href="<?= base_url('dosen') ?>" class="small text-decoration-none" style="color:#b87a2a;" ><i class="bi bi-person-badge fs-3" style="color:#c6882f;"></i>
                 <p class="mb-0 mt-2 fw-medium small">Dosen & Staff</p></a>
             </div>
         </div>
