@@ -8,7 +8,7 @@
             <p class="text-muted" style="color: #b68b40 !important;" id="pageSubtitle">Kelola, tambah, edit, dan hapus data dengan mudah</p>
         </div>
         <div>
-            <a class="btn btn-poltek" href="<?= base_url('arsip/tambah_arsip'); ?>">
+            <a class="btn btn-primary bg-gradient-info" href="<?= base_url('arsip/tambah_arsip'); ?>">
                 <i class="bi bi-plus-circle me-2"></i>Tambah Data
             </a>
         </div>
