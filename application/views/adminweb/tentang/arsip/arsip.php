@@ -22,6 +22,53 @@
     <?php endif; ?>
 
     <!-- Table Card -->
+    <style>
+      .table-responsive-custom {
+        overflow-x: auto;
+      }
+      @media (max-width: 767.98px) {
+        .table-responsive-custom table,
+        .table-responsive-custom thead,
+        .table-responsive-custom tbody,
+        .table-responsive-custom th,
+        .table-responsive-custom td,
+        .table-responsive-custom tr {
+          display: block;
+        }
+        .table-responsive-custom thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+        .table-responsive-custom tr {
+          margin-bottom: 1rem;
+          border: 1px solid #ddd;
+          padding: 0.75rem;
+        }
+        .table-responsive-custom td {
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%;
+          white-space: normal;
+          text-align: left;
+        }
+        .table-responsive-custom td::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 45%;
+          padding: 0.75rem;
+          white-space: normal;
+          font-weight: 600;
+          color: #7a561f;
+          content: attr(data-label);
+        }
+        .table-responsive-custom td:last-child {
+          border-bottom: 0;
+        }
+      }
+    </style>
     <div class="card-vanilla p-4">
         <div class="table-responsive-custom">
             <table id="dataTable" class="table table-hover align-middle" style="width:100%">
@@ -40,10 +87,10 @@
                 <?php if(!empty($arsip)) : ?>
                     <?php foreach($arsip as $data): ?>
                         <tr>
-                        <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $data->nama_dokumen; ?></td>
-                        <td class="trim-text"><?= $data->keterangan; ?></td>
-                        <td>
+                        <td class="text-center" data-label="No"><?= $no++; ?></td>
+                        <td data-label="Nama Dokumen"><?= $data->nama_dokumen; ?></td>
+                        <td class="trim-text" data-label="Keterangan"><?= $data->keterangan; ?></td>
+                        <td data-label="File">
                           <?php if (!empty($data->file_upload)): ?>
                             <a href="<?= base_url('uploads/arsip/' . $data->file_upload); ?>" class="btn btn-info" target="_blank">
                                 <i class="bi bi-box-arrow-up-right me-1"></i> Lihat
@@ -56,8 +103,8 @@
                             <span class="text-danger">Tidak ada dokumen.</span>
                         <?php endif; ?>
                         </td>
-                        <td><?= date('d-m-Y', strtotime($data->tanggal_upload)); ?></td>
-                        <td class="text-center">
+                        <td data-label="Tanggal Update"><?= date('d-m-Y', strtotime($data->tanggal_upload)); ?></td>
+                        <td class="text-center" data-label="Aksi">
                             <a href="<?= base_url('arsip/ubah_arsip/' . $data->id_arsip); ?>" class="btn btn-warning btn-sm"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah

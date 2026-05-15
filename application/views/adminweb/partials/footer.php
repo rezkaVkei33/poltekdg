@@ -17,10 +17,10 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 mb-2 mb-md-0">
-                <span>© 2025 <strong>Rezka Apriyandi</strong> | Politeknik Darma Ganesha</span>
+                <span>© <?php echo date('Y'); ?> <strong>Rezka Apriyandi</strong> | Politeknik Darma Ganesha</span>
             </div>
             <div class="col-md-6 text-md-end">
-                <span><i class="bi bi-envelope"></i> darmaganeshapoliteknik@gmail.com | <i class="bi bi-telephone"></i> (0411) 123456</span>
+                <span><i class="bi bi-envelope"></i> darmaganeshapoliteknik@gmail.com | <i class="bi bi-telephone"></i>+62 831-7534-7795</span>
             </div>
         </div>
     </div>
