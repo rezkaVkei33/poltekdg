@@ -4,11 +4,10 @@
     <!-- Header Section -->
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
         <div>
-            <h2 class="fw-semibold" style="color: #7a561f;" id="pageTitle">DATA SAMBUTAN</h2>
-            <p class="text-muted" style="color: #b68b40 !important;" id="pageSubtitle">Kelola, tambah, edit, dan hapus data dengan mudah</p>
+            <h2 class="fw-semibold" style="color: #023c5e;" id="pageTitle">DATA SAMBUTAN</h2>
         </div>
         <div>
-            <a class="btn btn-poltek" href="<?= base_url('sambutan/tambah_sambutan'); ?>">
+            <a class="btn btn-primary bg-gradient-info" href="<?= base_url('sambutan/tambah_sambutan'); ?>">
         <i class="bi bi-plus-circle me-2"></i>
         Tambah Data
       </a>
@@ -61,7 +60,7 @@
                           ?>
                         </td>
                         <td data-label="Aksi"> 
-                          <a href="<?= base_url('sambutan/ubah_sambutan/' . $data->id_sambutan); ?>" class="btn btn-warning btn-sm">
+                          <a href="<?= base_url('sambutan/ubah_sambutan/' . $data->id_sambutan); ?>" class="btn btn-warning btn-sm text-white">
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah
                           </a>

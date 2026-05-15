@@ -4,11 +4,10 @@
     <!-- Header Section -->
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
         <div>
-            <h2 class="fw-semibold" style="color: #7a561f;" id="pageTitle">DATA VMTS</h2>
-            <p class="text-muted" style="color: #b68b40 !important;" id="pageSubtitle">Kelola, tambah, edit, dan hapus data dengan mudah</p>
+            <h2 class="fw-semibold" style="color: #023c5e;" id="pageTitle">DATA VMTS</h2>
         </div>
         <div>
-            <a class="btn btn-poltek" href="<?= base_url('vmts/tambah_vmts'); ?>">
+            <a class="btn btn-primary bg-gradient-info" href="<?= base_url('vmts/tambah_vmts'); ?>">
         <i class="bi bi-plus-circle me-2"></i>
         Tambah Data
       </a>
@@ -66,7 +65,7 @@
                             </div>
                         </td>
                         <td class="text-center" data-label="Aksi">
-                            <a href="<?= base_url('vmts/ubah_vmts/' . $data->id_vm); ?>" class="btn btn-warning btn-sm"> 
+                            <a href="<?= base_url('vmts/ubah_vmts/' . $data->id_vm); ?>" class="btn btn-warning btn-sm text-white"> 
                             <i class="bi bi-pencil-square me-1"></i>
                             Ubah
                             </a>

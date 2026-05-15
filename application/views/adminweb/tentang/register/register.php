@@ -4,8 +4,7 @@
     <!-- Header Section -->
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
         <div>
-            <h2 class="fw-semibold" style="color: #7a561f;" id="pageTitle">Data Pengguna</h2>
-            <p class="text-muted" style="color: #b68b40 !important;" id="pageSubtitle">Lengkapi form berikut sesuai data yang dibutuhkan</p>
+            <h2 class="fw-semibold" style="color: #023c5e;" id="pageTitle">Data Pengguna</h2>
         </div>
     </div>
 
@@ -41,7 +40,7 @@
                                       <td data-label="Username"><?= $user->username; ?></td>
                                       <td data-label="Role"><?= $user->role; ?></td>
                                       <td data-label="Aksi">
-                                        <a href="<?= base_url('register/edit/' . $user->id); ?>" class="btn btn-warning btn-sm">
+                                        <a href="<?= base_url('register/edit/' . $user->id); ?>" class="btn btn-warning btn-sm text-white">
                                           <i class="bi bi-pencil-square me-1"></i>
                                         Ubah</a>
                                         <a href="" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus_user-<?= $user->id; ?>">
