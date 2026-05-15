@@ -1,5 +1,31 @@
+<style>
+    .navbar-poltekdg.admin-navbar-gradient {
+        background: linear-gradient(135deg, #06162f 0%, #0b2d66 48%, #4a1d95 100%) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+        box-shadow: 0 10px 26px rgba(6, 22, 47, 0.22);
+    }
+
+    .admin-navbar-gradient .navbar-brand,
+    .admin-navbar-gradient .navbar-brand span,
+    .admin-navbar-gradient .navbar-nav .nav-link {
+        color: #f8fbff !important;
+        background: none;
+        -webkit-text-fill-color: #f8fbff;
+    }
+
+    .admin-navbar-gradient .navbar-nav .nav-link:hover,
+    .admin-navbar-gradient .navbar-nav .nav-link:focus {
+        background-color: rgba(255, 255, 255, 0.14);
+        color: #ffffff !important;
+    }
+
+    .admin-navbar-gradient .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.35);
+    }
+</style>
+
 <!-- Navbar dengan posisi terpusat -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-poltekdg" style="border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, #0d6efd, #6f42c1) 1;">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-poltekdg admin-navbar-gradient">
     <div class="container-fluid px-4">
         <!-- LOGO -->
         <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="dashboardActive(); return false;">
