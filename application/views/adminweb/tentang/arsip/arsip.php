@@ -4,7 +4,7 @@
     <!-- Header Section -->
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
         <div>
-            <h2 class="fw-semibold" style="color: #7a561f;" id="pageTitle">Manajemen Data Dosen</h2>
+            <h2 class="fw-semibold" style="color: #7a561f;" id="pageTitle">DATA ARSIP</h2>
             <p class="text-muted" style="color: #b68b40 !important;" id="pageSubtitle">Kelola, tambah, edit, dan hapus data dengan mudah</p>
         </div>
         <div>
@@ -46,11 +46,11 @@
                         <td>
                           <?php if (!empty($data->file_upload)): ?>
                             <a href="<?= base_url('uploads/arsip/' . $data->file_upload); ?>" class="btn btn-info" target="_blank">
-                                <i class="material-symbols-rounded opacity-5" style="font-size: 14px;">open_in_new</i> Lihat
+                                <i class="bi bi-box-arrow-up-right me-1"></i> Lihat
                             </a>
                             <br>
                             <a href="<?= base_url('uploads/arsip/' . $data->file_upload); ?>" download class="btn btn-success">
-                                <i class="material-symbols-rounded opacity-5" style="font-size: 14px;">download</i> Unduh
+                                <i class="bi bi-download me-1"></i> Unduh
                             </a>
                         <?php else: ?>
                             <span class="text-danger">Tidak ada dokumen.</span>
@@ -59,11 +59,11 @@
                         <td><?= date('d-m-Y', strtotime($data->tanggal_upload)); ?></td>
                         <td class="text-center">
                             <a href="<?= base_url('arsip/ubah_arsip/' . $data->id_arsip); ?>" class="btn btn-warning btn-sm"> 
-                            <i class="material-symbols-rounded opacity-5">edit</i>
+                            <i class="bi bi-pencil-square me-1"></i>
                             Ubah
                             </a>
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus_arsip-<?= $data->id_arsip; ?>"> 
-                            <i class="material-symbols-rounded opacity-5">delete</i>
+                            <i class="bi bi-trash me-1"></i>
                             Hapus
                             </button>
 
@@ -77,7 +77,7 @@
                                   </div>
                                   <div class="modal-body text-center">
                                     <p>Apakah Anda yakin ingin <br>
-                                    menghapus File Renstra dari <strong><?= $data->nama_dokumen; ?></strong>?</p>
+                                    menghapus File Arsip dari <strong><?= $data->nama_dokumen; ?></strong>?</p>
                                   </div>
                                   <div class="modal-footer">
                                     <a href="<?= base_url('arsip/hapus_arsip/' . $data->id_arsip); ?>" class="btn btn-danger">Ya, Hapus</a> 
@@ -111,36 +111,6 @@
         });
       </script>
 
-      <!-- modal geser dengan kursor-->
-      <script>
-        // Ambil elemen modal
-        const modal = document.querySelector('.modal-dialog');
-        const header = document.getElementById('modalHeader');
-      
-        let isDragging = false;
-        let offsetX, offsetY;
-      
-        header.style.cursor = 'move';
-      
-        header.addEventListener('mousedown', (e) => {
-          isDragging = true;
-          offsetX = e.clientX - modal.offsetLeft;
-          offsetY = e.clientY - modal.offsetTop;
-        });
-      
-        document.addEventListener('mousemove', (e) => {
-          if (isDragging) {
-            modal.style.position = 'absolute';
-            modal.style.margin = 0;
-            modal.style.left = `${e.clientX - offsetX}px`;
-            modal.style.top = `${e.clientY - offsetY}px`;
-          }
-        });
-      
-        document.addEventListener('mouseup', () => {
-          isDragging = false;
-        });
-      </script>
     <script>
       // Inisialisasi semua modal
       var myModal = document.querySelectorAll('.modal');
