@@ -1,141 +1,106 @@
-<?php $this->load->view('adminweb/header'); ?>
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-    <!-- navbar -->
-    <?php $this->load->view('adminweb/navbar'); ?>
-
-    <div class="container-fluid py-2">
-      <div class="row mb-4">
-          <div class="card">
-            <div class="card-header pb-0">
-              <div class="row">
-                <div class="row">
-                  <div class="ms-3">
-                    <h3 class="mb-0 h4 font-weight-bolder">DATA ARSIP POLTEKDG</h3>
-                    </p>
-                    
-                    <!-- Message -->
-                     <?php if($this->session->flashdata('success')): ?>
-                      <div class="alert alert-success text-white alert-dismissible fade show" role="alert">
-                        <?= $this->session->flashdata('success'); ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                      </div>
-                    <?php endif; ?>
-                   
-              </div>
-            </div>
-          </div>
+<?php $this->load->view('adminweb/partials/header'); ?>
+<!-- Main Content -->
+<main class="admin-landing container my-4">
+    <!-- Header Section -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-semibold" style="color: #7a561f;" id="pageTitle">Manajemen Data Dosen</h2>
+            <p class="text-muted" style="color: #b68b40 !important;" id="pageSubtitle">Kelola, tambah, edit, dan hapus data dengan mudah</p>
         </div>
-        <div class="card-body px-0 pb-2">
-        <div class="table-responsive">
-                
-          <!-- konten -->
-
-
-          <!-- Table -->
-    <div class="container">
-      <a class="btn btn-success btn-sm" href="<?= base_url('arsip/tambah_arsip'); ?>">
-        <i class="material-symbols-rounded opacity-5">add</i>
-        Tambah Data
-      </a>
+        <div>
+            <a class="btn btn-poltek" href="<?= base_url('arsip/tambah_arsip'); ?>">
+                <i class="bi bi-plus-circle me-2"></i>Tambah Data
+            </a>
+        </div>
     </div>
-    <div class="table-responsive">
-    <table class="table align-items-center mb-0">
-      <thead>
-        <tr>
-          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
-          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Dokumen</th>
-          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Keterangan</th>
-          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">File</th>
-          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal Update</th>
-          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-center">Aksi</th>
-      </tr>
-    </thead>
-    <tbody>
-    <?php $no=1; ?>
-    <?php if(!empty($arsip)) : ?>
-        <?php foreach($arsip as $data): ?>
-            <tr>
-            <td class="text-center"><?= $no++; ?></td>
-            <td><?= $data->nama_dokumen; ?></td>
-            <td class="trim-text"><?= $data->keterangan; ?></td>
-            <td>
-               <?php if (!empty($data->file_upload)): ?>
-                <a href="<?= base_url('uploads/arsip/' . $data->file_upload); ?>" class="btn btn-info" target="_blank">
-                    <i class="material-symbols-rounded opacity-5" style="font-size: 14px;">open_in_new</i> Lihat
-                </a>
-                <br>
-                <a href="<?= base_url('uploads/arsip/' . $data->file_upload); ?>" download class="btn btn-success">
-                    <i class="material-symbols-rounded opacity-5" style="font-size: 14px;">download</i> Unduh
-                </a>
-            <?php else: ?>
-                <span class="text-danger">Tidak ada dokumen.</span>
-            <?php endif; ?>
-            </td>
-            <td><?= date('d-m-Y', strtotime($data->tanggal_upload)); ?></td>
-            <td class="text-center">
-                <a href="<?= base_url('arsip/ubah_arsip/' . $data->id_arsip); ?>" class="btn btn-warning btn-sm"> 
-                <i class="material-symbols-rounded opacity-5">edit</i>
-                Ubah
-                </a>
-                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus_arsip-<?= $data->id_arsip; ?>"> 
-                <i class="material-symbols-rounded opacity-5">delete</i>
-                Hapus
-                </button>
+     <!-- Message -->
+    <?php if($this->session->flashdata('success')): ?>
+     <div class="alert alert-success text-white alert-dismissible fade show" role="alert">
+       <?= $this->session->flashdata('success'); ?>
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>
+    <?php endif; ?>
 
-              <!-- Modal Hapus Sambutan -->
-            <div class="modal fade" id="hapus_arsip-<?= $data->id_arsip; ?>" tabindex="-1" aria-labelledby="modalLabel>" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header bg-danger text-white">
-                        <h5 class="modal-title text-white" id="modalLabel">HAPUS ARSIP</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-                      </div>
-                      <div class="modal-body text-center">
-                        <p>Apakah Anda yakin ingin <br>
-                        menghapus File Renstra dari <strong><?= $data->nama_dokumen; ?></strong>?</p>
-                      </div>
-                      <div class="modal-footer">
-                        <a href="<?= base_url('arsip/hapus_arsip/' . $data->id_arsip); ?>" class="btn btn-danger">Ya, Hapus</a> 
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              <!-- End Modal Hapus Arsip -->
-            </td>
-            </tr>
-        <?php endforeach; ?>
-        <?php else: ?>
-            <tr>
-                <td colspan="6" class="text-center text-danger ">Tidak ada data Arsip.</td>
-            </tr>
-        <?php endif; ?>
-    </tbody>
-  </table>
-  </div>
-  <!-- End Table -->
-        
-  <!-- end konten -->
-     
-</div>
-</div>
-</div>
-</div>
-<!-- Modal Tambah Sambutan -->
-</div>
+    <!-- Table Card -->
+    <div class="card-vanilla p-4">
+        <div class="table-responsive-custom">
+            <table id="dataTable" class="table table-hover align-middle" style="width:100%">
+                <thead style="background-color: #fef8ef; color: #7a561f;">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Dokumen</th>
+                        <th>Keterangan</th>
+                        <th>File</th>
+                        <th>Tanggal Update</th>
+                        <th style="width: 120px;">Aksi</th>
+                    </tr>
+                </thead>
+                 <tbody>
+                <?php $no=1; ?>
+                <?php if(!empty($arsip)) : ?>
+                    <?php foreach($arsip as $data): ?>
+                        <tr>
+                        <td class="text-center"><?= $no++; ?></td>
+                        <td><?= $data->nama_dokumen; ?></td>
+                        <td class="trim-text"><?= $data->keterangan; ?></td>
+                        <td>
+                          <?php if (!empty($data->file_upload)): ?>
+                            <a href="<?= base_url('uploads/arsip/' . $data->file_upload); ?>" class="btn btn-info" target="_blank">
+                                <i class="material-symbols-rounded opacity-5" style="font-size: 14px;">open_in_new</i> Lihat
+                            </a>
+                            <br>
+                            <a href="<?= base_url('uploads/arsip/' . $data->file_upload); ?>" download class="btn btn-success">
+                                <i class="material-symbols-rounded opacity-5" style="font-size: 14px;">download</i> Unduh
+                            </a>
+                        <?php else: ?>
+                            <span class="text-danger">Tidak ada dokumen.</span>
+                        <?php endif; ?>
+                        </td>
+                        <td><?= date('d-m-Y', strtotime($data->tanggal_upload)); ?></td>
+                        <td class="text-center">
+                            <a href="<?= base_url('arsip/ubah_arsip/' . $data->id_arsip); ?>" class="btn btn-warning btn-sm"> 
+                            <i class="material-symbols-rounded opacity-5">edit</i>
+                            Ubah
+                            </a>
+                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus_arsip-<?= $data->id_arsip; ?>"> 
+                            <i class="material-symbols-rounded opacity-5">delete</i>
+                            Hapus
+                            </button>
 
+                          <!-- Modal Hapus Sambutan -->
+                        <div class="modal fade" id="hapus_arsip-<?= $data->id_arsip; ?>" tabindex="-1" aria-labelledby="modalLabel>" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                  <div class="modal-header bg-danger text-white">
+                                    <h5 class="modal-title text-white" id="modalLabel">HAPUS ARSIP</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                                  </div>
+                                  <div class="modal-body text-center">
+                                    <p>Apakah Anda yakin ingin <br>
+                                    menghapus File Renstra dari <strong><?= $data->nama_dokumen; ?></strong>?</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <a href="<?= base_url('arsip/hapus_arsip/' . $data->id_arsip); ?>" class="btn btn-danger">Ya, Hapus</a> 
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          <!-- End Modal Hapus Arsip -->
+                        </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="6" class="text-center text-danger ">Tidak ada data Arsip.</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
 
-<!-- end card -->
-       
-      </div>
-      <!-- end konten -->
-    
-    
-    </main>
-    <?php $this->load->view('adminweb/scripts'); ?>
-
-    <script src="<?= base_url('material-dashboard/assets/js/core/popper.min.js'); ?>"></script>
-    
     <script>
         document.querySelectorAll('.trim-text').forEach(cell => {
           const maxLength = 20; // Panjang maksimal teks
@@ -183,5 +148,5 @@
         new bootstrap.Modal(modal);
       });
     </script>
-    <!-- footer -->
-     <?php $this->load->view('adminweb/footer'); ?>
+
+<?php $this->load->view('adminweb/partials/footer'); ?>
