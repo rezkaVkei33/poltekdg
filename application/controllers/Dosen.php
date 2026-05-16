@@ -11,7 +11,7 @@ class Dosen extends MY_Controller {
 
     public function index() {
         $keyword = trim((string) $this->input->get('q', TRUE));
-        $per_page = 4;
+        $per_page = 10;
         $total_rows = $this->Dosen_model->count_filtered($keyword);
         $offset = $this->admin_pagination_offset($total_rows, $per_page);
 
