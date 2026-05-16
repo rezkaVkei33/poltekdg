@@ -10,7 +10,11 @@ class Sejarah extends MY_Controller {
     }
 
     public function index(){
-        $data['sejarah'] = $this->Sejarah_model->get_all();
+        $data = [
+            'title' => 'Sejarah - Poltek DG',
+            'subtitle' => 'Sejarah',
+            'sejarah' => $this->Sejarah_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/sejarah/sejarah', $data);
     }
     public function tambah_sejarah() {

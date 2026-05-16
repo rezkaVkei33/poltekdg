@@ -9,7 +9,11 @@ class Galeri extends MY_Controller {
     }
 
     public function index() {
-        $data['galeri'] = $this->Galeri_model->get_all();
+        $data = [
+            'title' => 'Galeri - Poltek DG',
+            'subtitle' => 'Galeri',
+            'galeri' => $this->Galeri_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/galeri/galeri', $data);
     }
     public function tambah_galeri() {

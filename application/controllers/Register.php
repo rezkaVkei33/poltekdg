@@ -11,7 +11,11 @@ class Register extends MY_Controller {
     }
 
     public function index() {
-        $data['users'] = $this->Auth_model->get_by_users(); 
+        $data = [
+            'title' => 'Register - Poltek DG',
+            'subtitle' => 'Register',
+            'users' => $this->Auth_model->get_by_users()
+        ];
 
         $this->load->view('adminweb/tentang/register/register', $data);
     }

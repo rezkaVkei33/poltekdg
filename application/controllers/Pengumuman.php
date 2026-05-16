@@ -10,7 +10,11 @@ class Pengumuman extends MY_Controller {
     }
 
     public function index() {
-        $data['pengumuman'] = $this->Pengumuman_model->get_all();
+        $data = [
+            'title' => 'Pengumuman - Poltek DG',
+            'subtitle' => 'Pengumuman',
+            'pengumuman' => $this->Pengumuman_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/pengumuman/pengumuman', $data);
     }
     public function tambah_pengumuman(){

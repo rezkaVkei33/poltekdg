@@ -10,7 +10,11 @@ class Kalender extends MY_Controller {
     }
 
     public function index() {
-        $data['kalender_akademik'] = $this->Kalender_model->get_all();
+        $data = [
+            'title' => 'Kalender Akademik - Poltek DG',
+            'subtitle' => 'Kalender Akademik',
+            'kalender_akademik' => $this->Kalender_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/kalender/kalender', $data);
     }
     public function tambah_kalender() {

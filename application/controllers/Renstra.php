@@ -10,7 +10,11 @@ class Renstra extends MY_Controller {
     }
 
     public function index() {
-        $data['renstra'] = $this->Renstra_model->get_all();
+        $data = [
+            'title' => 'Renstra - Poltek DG',
+            'subtitle' => 'Renstra',
+            'renstra' => $this->Renstra_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/renstra/renstra', $data);
     }
     public function tambah_renstra() {

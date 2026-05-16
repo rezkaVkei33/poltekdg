@@ -10,7 +10,11 @@ class Kontak extends MY_Controller {
     }
 
     public function index() {
-        $data['kontak'] = $this->Kontak_model->get_all();
+        $data = [
+            'title' => 'Kontak - Poltek DG',
+            'subtitle' => 'Kontak',
+            'kontak' => $this->Kontak_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/kontak/kontak', $data);
     }
     public function tambah_kontak() {

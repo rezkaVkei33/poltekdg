@@ -4,7 +4,7 @@
     <!-- Header Section -->
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
         <div>
-            <h2 class="fw-semibold" style="color: #023c5e;" id="pageTitle">Data Pengguna</h2>
+            <h2 class="fw-semibold" style="color: #023c5e;" id="pageTitle"><?= $subtitle ?></h2>
         </div>
     </div>
 

@@ -10,7 +10,11 @@ class Prodi extends MY_Controller {
     }
 
     public function index() {
-        $data['prodi'] = $this->Prodi_model->get_all();
+        $data = [
+            'title' => 'Program Studi - Poltek DG',
+            'subtitle' => 'Program Studi',
+            'prodi' => $this->Prodi_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/prodi/prodi', $data);
     }
     public function tambah_prodi() {

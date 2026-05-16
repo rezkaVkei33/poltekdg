@@ -4,7 +4,7 @@
     <!-- Header Section -->
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
         <div>
-            <h2 class="fw-semibold" style="color: #023c5e;" id="pageTitle">DATA VMTS</h2>
+            <h2 class="fw-semibold" style="color: #023c5e;" id="pageTitle"><?= $subtitle ?></h2>
         </div>
         <div>
             <a class="btn btn-primary bg-gradient-info" href="<?= base_url('vmts/tambah_vmts'); ?>">
@@ -39,8 +39,8 @@
                 </thead>
                 <tbody>
                 <?php $no=1; ?>
-                <?php if(!empty($vmts)) : ?>
-                    <?php foreach($vmts as $data): ?>
+                <?php if(!empty($data_vmts)) : ?>
+                    <?php foreach($data_vmts as $data): ?>
                         <tr>
                         <td class="text-center" data-label="No"><?= $no++; ?></td>
                         <td class="trim-text" data-label="Judul VM"><?= $data->nama_vm; ?></td>

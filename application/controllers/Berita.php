@@ -9,7 +9,11 @@ class Berita extends MY_Controller {
     }
 
     public function index() {
-        $data['berita'] = $this->Berita_model->get_all();
+        $data = [
+            'title' => 'Berita - Poltek DG',
+            'subtitle' => 'Berita',
+            'berita' => $this->Berita_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/berita/berita', $data);
     }
     public function tambah_berita() {

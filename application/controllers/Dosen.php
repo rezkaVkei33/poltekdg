@@ -10,7 +10,11 @@ class Dosen extends MY_Controller {
     }
 
     public function index() {
-        $data['dosen'] = $this->Dosen_model->get_all();
+        $data = [
+            'title' => 'Dosen - Poltek DG',
+            'subtitle' => 'Dosen',
+            'dosen' => $this->Dosen_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/dosen/dosen', $data);
     }
 

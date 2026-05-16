@@ -10,7 +10,11 @@ class Kegiatan extends MY_Controller {
     }
     
     public function index() {
-        $data['kegiatan'] = $this->Kegiatan_model->get_all();
+        $data = [
+            'title' => 'Kegiatan - Poltek DG',
+            'subtitle' => 'Kegiatan',
+            'kegiatan' => $this->Kegiatan_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/kegiatan/kegiatan', $data);
     }
     public function tambah_kegiatan() {

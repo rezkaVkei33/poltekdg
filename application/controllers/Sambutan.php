@@ -10,7 +10,11 @@ class Sambutan extends MY_Controller {
     }
 
     public function index(){
-        $data['sambutan'] = $this->Sambutan_model->get_all();
+        $data = [
+            'title' => 'Sambutan - Poltek DG',
+            'subtitle' => 'Sambutan',
+            'sambutan' => $this->Sambutan_model->get_all()
+        ];
         $this->load->view('adminweb/tentang/sambutan/sambutan', $data);
     }
     public function tambah_sambutan(){
