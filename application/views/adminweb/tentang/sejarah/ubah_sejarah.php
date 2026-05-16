@@ -25,54 +25,54 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('index.php/sejarah/update/' . $sejarah->id_sejarah) ?>" enctype="multipart/form-data">
-                                                <!-- TANDA TANGAN -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Nama Penulis</label>
-                                                  <input value="<?= $sejarah->nama_penulis; ?>" type="text" class="form-control" name="nama_penulis" required>
-                                              </div>
-                                              <!-- ALAMAT -->
-                                              <label class="form-label fw-semibold">Alamat :</label>
-                                              <div class="mb-3">
+                    <!-- TANDA TANGAN -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Nama Penulis</label>
+                      <input value="<?= $sejarah->nama_penulis; ?>" type="text" class="form-control" name="nama_penulis" required>
+                  </div>
+                  <!-- ALAMAT -->
+                  <label class="form-label fw-semibold">Alamat :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="alamat" rows="5" required><?= $sejarah->alamat; ?></textarea>
-                                            </div>
-                                              <!-- Tempat-->
-                                            <div class="mb-3">
-                                                <label class="form-label fw-semibold">Telepon</label> 
-                                                <input value="<?= $sejarah->telepon; ?>" type="number" class="form-control" name="telepon">
-                                            </div>
-                                            <!-- Tempat-->
-                                            <div class="mb-3">
-                                                <label class="form-label fw-semibold">Email</label> 
-                                                <input value="<?= $sejarah->email; ?>" type="email" class="form-control" name="email">
-                                            </div>
-                                            <!-- TANGGAL-->
-                                            <label class="form-label fw-semibold">Tanggal Berdiri</label>
-                                            <div class="mb-3">
-                                                <label class="form-label fw-semibold">tanggal</label>
-                                                <input value="<?= $sejarah->tanggal_berdiri; ?>" type="date" class="form-control" name="tanggal_berdiri" required>
-                                              </div>
-                                              <!-- ISI (textarea) -->
-                                                <label class="form-label fw-semibold">Teks :</label>
-                                              <div class="mb-3">
+                    <textarea class="form-control" name="alamat" rows="5" required><?= $sejarah->alamat; ?></textarea>
+                </div>
+                  <!-- Tempat-->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Telepon</label> 
+                    <input value="<?= $sejarah->telepon; ?>" type="number" class="form-control" name="telepon">
+                </div>
+                <!-- Tempat-->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Email</label> 
+                    <input value="<?= $sejarah->email; ?>" type="email" class="form-control" name="email">
+                </div>
+                <!-- TANGGAL-->
+                <label class="form-label fw-semibold">Tanggal Berdiri</label>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">tanggal</label>
+                    <input value="<?= $sejarah->tanggal_berdiri; ?>" type="date" class="form-control" name="tanggal_berdiri" required>
+                  </div>
+                  <!-- ISI (textarea) -->
+                    <label class="form-label fw-semibold">Teks :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" value="<?= $sejarah->teks_sejarah; ?>" name="teks_sejarah" rows="5" required>
-                                                    <?= $sejarah->teks_sejarah; ?>
-                                                </textarea>
-                                              </div>
-                                              <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                <label class="form-label fw-semibold">Gambar Lama</label><br>
-                                                <?php if ($sejarah->gambar): ?>
-                                                    <img src="<?= base_url('uploads/sejarah/' . $sejarah->gambar) ?>" width="100"><br>
-                                                <?php endif; ?>
-                                                <input type="file" name="gambar" class="form-control">
-                                             </div>
+                    <textarea class="form-control" value="<?= $sejarah->teks_sejarah; ?>" name="teks_sejarah" rows="5" required>
+                        <?= $sejarah->teks_sejarah; ?>
+                    </textarea>
+                  </div>
+                  <!-- GAMBAR -->
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold">Gambar Lama</label><br>
+                    <?php if ($sejarah->gambar): ?>
+                        <img src="<?= base_url('uploads/sejarah/' . $sejarah->gambar) ?>" width="100"><br>
+                    <?php endif; ?>
+                    <input type="file" name="gambar" class="form-control">
+                 </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>

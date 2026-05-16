@@ -25,41 +25,41 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('berita/update/' . $berita->id_berita); ?>" enctype="multipart/form-data">
-                                                <!-- JUDUL -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Judul</label>
-                                                  <input type="text" value="<?= $berita->judul; ?>" class="form-control" name="judul" required>
-                                              </div>
-                                              <!-- DESKRIPSI -->
-                                              <label class="form-label fw-semibold">Deskripsi :</label>
-                                              <div class="mb-3">
-                                
-                                                <textarea class="form-control" name="isi" rows="5" required><?= $berita->isi; ?></textarea>
-                                              </div>
-                                              <!-- PENULIS -->
-                                            <div class="mb-3">
-                                                <label class="form-label fw-semibold">Penulis</label>
-                                                <input type="text" value="<?= $berita->penulis; ?>" class="form-control" name="penulis" required>
-                                            </div>
-                                              <!-- TANGGAL TERBIT -->
-                                               <label class="form-label fw-semibold">Tanggal Terbit :</label>
-                                            <div class="mb-3">
-                                
-                                                <input type="date" value="<?= $berita->tanggal_terbit; ?>" class="form-control" name="tanggal_terbit" required>
-                                            </div>
-                                               <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                <label class="form-label fw-semibold">Gambar Lama</label><br>
-                                                <?php if ($berita->gambar): ?>
-                                                    <img src="<?= base_url('uploads/berita/' . $berita->gambar) ?>" width="100"><br>
-                                                <?php endif; ?>
-                                                <input type="file" name="gambar" class="form-control">
-                                             </div>
+                        <!-- JUDUL -->
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Judul</label>
+                        <input type="text" value="<?= $berita->judul; ?>" class="form-control" name="judul" required>
+                    </div>
+                    <!-- DESKRIPSI -->
+                    <label class="form-label fw-semibold">Deskripsi :</label>
+                    <div class="mb-3">
+                                                
+                        <textarea class="form-control" name="isi" rows="5" required><?= $berita->isi; ?></textarea>
+                    </div>
+                    <!-- PENULIS -->
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Penulis</label>
+                        <input type="text" value="<?= $berita->penulis; ?>" class="form-control" name="penulis" required>
+                    </div>
+                    <!-- TANGGAL TERBIT -->
+                    <label class="form-label fw-semibold">Tanggal Terbit :</label>
+                    <div class="mb-3">
+                                                
+                        <input type="date" value="<?= $berita->tanggal_terbit; ?>" class="form-control" name="tanggal_terbit" required>
+                    </div>
+                    <!-- GAMBAR -->
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Gambar Lama</label><br>
+                        <?php if ($berita->gambar): ?>
+                            <img src="<?= base_url('uploads/berita/' . $berita->gambar) ?>" width="100"><br>
+                        <?php endif; ?>
+                        <input type="file" name="gambar" class="form-control">
+                    </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>

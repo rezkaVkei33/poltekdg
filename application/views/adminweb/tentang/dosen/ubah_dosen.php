@@ -25,62 +25,62 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('dosen/update/' . $dosen->id_dosen); ?>" enctype="multipart/form-data">
-                                            <!-- NAMA -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Nama Dosen</label>
-                                                  <input type="text" value="<?= $dosen->nama; ?>" class="form-control" name="nama" required>
-                                              </div>
-                                            <!-- GELAR -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Gelar</label>
-                                                  <input type="text" value="<?= $dosen->gelar; ?>" class="form-control" name="gelar" required>
-                                              </div>
-                                            <!-- BIDANG KEAHLIAN -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Bidang Keahlian</label>
-                                                  <input type="text" value="<?= $dosen->bidang_keahlian; ?>" class="form-control" name="bidang_keahlian" required>
-                                              </div>
-                                              <!-- Email-->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Email</label>
-                                                  <input type="email" value="<?= $dosen->email; ?>" class="form-control" name="email">
-                                              </div>
-                                              <!-- Telepon-->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Telepon</label>
-                                                  <input type="number" value="<?= $dosen->telepon; ?>" class="form-control" name="telepon">
-                                              </div>
-                                            <!-- STATUS -->
-                                            <div class="mb-3">
-                                                <label class="form-label fw-semibold">Status</label>
-                                                <select class="form-select" name="status" required>
-                                                <option value="" disabled selected>Pilih Status</option>
-                                                <option value="Tetap" <?= $dosen->status == 'Tetap' ? 'selected' : '' ?>>Tetap</option>
-                                                <option value="Tidak Tetap" <?= $dosen->status == 'Tidak Tetap' ? 'selected' : '' ?>>Tidak Tetap</option>
-                                                </select>
-                                            </div>
-                                            <!-- PRODI -->
-                                            <div class="mb-3">
-                                            <label class="form-label fw-semibold">Program Studi</label>
-                                                <select class="form-select" name="prodi" required>
-                                                <option value="" disabled selected>Pilih Prodi</option>
-                                                <option value="D3-Sistem Informasi" <?= $dosen->prodi == 'D3-Sistem Informasi' ? 'selected' : '' ?>>D3-Sistem Informasi</option>
-                                                <option value="D3-Perhotelan" <?= $dosen->prodi == 'D3-Perhotelan' ? 'selected' : '' ?>>D3-Perhotelan</option>
-                                            </select>
-                                            </div>
-                                            <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                <label class="form-label fw-semibold">Gambar Lama</label><br>
-                                                <?php if ($dosen->gambar): ?>
-                                                    <img src="<?= base_url('uploads/dosen/' . $dosen->gambar) ?>" width="100"><br>
-                                                <?php endif; ?>
-                                                <input type="file" name="gambar" class="form-control">
-                                             </div>
+                <!-- NAMA -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Nama Dosen</label>
+                      <input type="text" value="<?= $dosen->nama; ?>" class="form-control" name="nama" required>
+                  </div>
+                <!-- GELAR -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Gelar</label>
+                      <input type="text" value="<?= $dosen->gelar; ?>" class="form-control" name="gelar" required>
+                  </div>
+                <!-- BIDANG KEAHLIAN -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Bidang Keahlian</label>
+                      <input type="text" value="<?= $dosen->bidang_keahlian; ?>" class="form-control" name="bidang_keahlian" required>
+                  </div>
+                  <!-- Email-->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Email</label>
+                      <input type="email" value="<?= $dosen->email; ?>" class="form-control" name="email">
+                  </div>
+                  <!-- Telepon-->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Telepon</label>
+                      <input type="number" value="<?= $dosen->telepon; ?>" class="form-control" name="telepon">
+                  </div>
+                <!-- STATUS -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Status</label>
+                    <select class="form-select" name="status" required>
+                    <option value="" disabled selected>Pilih Status</option>
+                    <option value="Tetap" <?= $dosen->status == 'Tetap' ? 'selected' : '' ?>>Tetap</option>
+                    <option value="Tidak Tetap" <?= $dosen->status == 'Tidak Tetap' ? 'selected' : '' ?>>Tidak Tetap</option>
+                    </select>
+                </div>
+                <!-- PRODI -->
+                <div class="mb-3">
+                <label class="form-label fw-semibold">Program Studi</label>
+                    <select class="form-select" name="prodi" required>
+                    <option value="" disabled selected>Pilih Prodi</option>
+                    <option value="D3-Sistem Informasi" <?= $dosen->prodi == 'D3-Sistem Informasi' ? 'selected' : '' ?>>D3-Sistem Informasi</option>
+                    <option value="D3-Perhotelan" <?= $dosen->prodi == 'D3-Perhotelan' ? 'selected' : '' ?>>D3-Perhotelan</option>
+                </select>
+                </div>
+                <!-- GAMBAR -->
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold">Gambar Lama</label><br>
+                    <?php if ($dosen->gambar): ?>
+                        <img src="<?= base_url('uploads/dosen/' . $dosen->gambar) ?>" width="100"><br>
+                    <?php endif; ?>
+                    <input type="file" name="gambar" class="form-control">
+                 </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>

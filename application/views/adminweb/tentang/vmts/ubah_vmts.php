@@ -25,46 +25,46 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('vmts/update/' . $vmts->id_vm) ?>" enctype="multipart/form-data">
-                                                <!-- TANDA TANGAN -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Nama VM</label>
-                                                  <input type="text" value="<?= $vmts->nama_vm; ?>" class="form-control" name="nama_vm" required>
-                                              </div>
-                                              <!-- VISI -->
-                                              <label class="form-label fw-semibold">Visi :</label>
-                                              <div class="mb-3">
+                    <!-- TANDA TANGAN -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Nama VM</label>
+                      <input type="text" value="<?= $vmts->nama_vm; ?>" class="form-control" name="nama_vm" required>
+                  </div>
+                  <!-- VISI -->
+                  <label class="form-label fw-semibold">Visi :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="visi" rows="5" required><?= $vmts->visi; ?></textarea>
-                                              </div>
-                                              <!-- MISI -->
-                                              <label class="form-label fw-semibold">Misi :</label>
-                                              <div class="mb-3">
+                    <textarea class="form-control" name="visi" rows="5" required><?= $vmts->visi; ?></textarea>
+                  </div>
+                  <!-- MISI -->
+                  <label class="form-label fw-semibold">Misi :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="misi" rows="5" required><?= $vmts->misi; ?></textarea>
-                                              </div>
-                                              <!-- TUJUAN -->
-                                              <label class="form-label fw-semibold">Tujuan :</label>
-                                              <div class="mb-3">
+                    <textarea class="form-control" name="misi" rows="5" required><?= $vmts->misi; ?></textarea>
+                  </div>
+                  <!-- TUJUAN -->
+                  <label class="form-label fw-semibold">Tujuan :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="tujuan" rows="5" required><?= $vmts->tujuan; ?></textarea>
-                                              </div>
-                                              <!-- STRATEGI -->
-                                              <label class="form-label fw-semibold">Strategi :</label>
-                                              <div class="mb-3">
+                    <textarea class="form-control" name="tujuan" rows="5" required><?= $vmts->tujuan; ?></textarea>
+                  </div>
+                  <!-- STRATEGI -->
+                  <label class="form-label fw-semibold">Strategi :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="strategi" rows="5" required><?= $vmts->strategi; ?></textarea>
-                                              </div>
-                                              <!-- PROSPEK KERJA -->
-                                              <label class="form-label fw-semibold">Prospek Kerja :</label>
-                                              <div class="mb-3">
+                    <textarea class="form-control" name="strategi" rows="5" required><?= $vmts->strategi; ?></textarea>
+                  </div>
+                  <!-- PROSPEK KERJA -->
+                  <label class="form-label fw-semibold">Prospek Kerja :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="prospek_kerja" rows="5"><?= $vmts->prospek_kerja; ?></textarea>
-                                              </div>
+                    <textarea class="form-control" name="prospek_kerja" rows="5"><?= $vmts->prospek_kerja; ?></textarea>
+                  </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>

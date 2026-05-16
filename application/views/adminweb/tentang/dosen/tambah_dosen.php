@@ -25,60 +25,60 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('dosen/simpan_dosen'); ?>" enctype="multipart/form-data">
-                                            <!-- NAMA -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Nama Dosen</label>
-                                                  <input type="text" class="form-control" name="nama" required>
-                                              </div>
-                                            <!-- GELAR -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Gelar</label>
-                                                  <input type="text" class="form-control" name="gelar" required>
-                                              </div>
-                                            <!-- BIDANG KEAHLIAN -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Bidang Keahlian</label>
-                                                  <input type="text" class="form-control" name="bidang_keahlian" required>
-                                              </div>
-                                              <!-- Email-->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Email</label>
-                                                  <input type="email" class="form-control" name="email">
-                                              </div>
-                                              <!-- Telepon-->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Telepon</label>
-                                                  <input type="number" class="form-control" name="telepon">
-                                              </div>
-                                            <!-- STATUS -->
-                                            <div class="mb-3">
-                                            <label class="form-label fw-semibold">Status</label>
-                                                <select class="form-select" name="status" required>
-                                                <option value="" disabled selected>Pilih Status</option>
-                                                <option value="Tetap">Tetap</option>
-                                                <option value="Tidak Tetap">Tidak Tetap</option>
-                                            </select>
-                                            </div>
-                                            <!-- PRODI -->
-                                            <div class="mb-3">
-                                            <label class="form-label fw-semibold">Program Studi</label>
-                                                <select class="form-select" name="prodi" required>
-                                                <option value="" disabled selected>Pilih Prodi</option>
-                                                <option value="D3-Sistem Informasi">D3-Sistem Informasi</option>
-                                                <option value="Perhotelan">D3-Perhotelan</option>
-                                            </select>
-                                            </div>
-                                            <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Upload Gambar</label>
-                                                  <input type="file" name="gambar" class="form-control">
-                                                  <small class="form-text text-muted">Format gambar: jpg, jpeg, png. Maksimal ukuran: 3MB.</small>
-                                                </div>
+                <!-- NAMA -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Nama Dosen</label>
+                      <input type="text" class="form-control" name="nama" required>
+                  </div>
+                <!-- GELAR -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Gelar</label>
+                      <input type="text" class="form-control" name="gelar" required>
+                  </div>
+                <!-- BIDANG KEAHLIAN -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Bidang Keahlian</label>
+                      <input type="text" class="form-control" name="bidang_keahlian" required>
+                  </div>
+                  <!-- Email-->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Email</label>
+                      <input type="email" class="form-control" name="email">
+                  </div>
+                  <!-- Telepon-->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Telepon</label>
+                      <input type="number" class="form-control" name="telepon">
+                  </div>
+                <!-- STATUS -->
+                <div class="mb-3">
+                <label class="form-label fw-semibold">Status</label>
+                    <select class="form-select" name="status" required>
+                    <option value="" disabled selected>Pilih Status</option>
+                    <option value="Tetap">Tetap</option>
+                    <option value="Tidak Tetap">Tidak Tetap</option>
+                </select>
+                </div>
+                <!-- PRODI -->
+                <div class="mb-3">
+                <label class="form-label fw-semibold">Program Studi</label>
+                    <select class="form-select" name="prodi" required>
+                    <option value="" disabled selected>Pilih Prodi</option>
+                    <option value="D3-Sistem Informasi">D3-Sistem Informasi</option>
+                    <option value="Perhotelan">D3-Perhotelan</option>
+                </select>
+                </div>
+                <!-- GAMBAR -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Upload Gambar</label>
+                      <input type="file" name="gambar" class="form-control">
+                      <small class="form-text text-muted">Format gambar: jpg, jpeg, png. Maksimal ukuran: 3MB.</small>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Simpan Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Simpan Data</button>
             </div>
         </div>
     </div>

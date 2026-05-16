@@ -25,21 +25,21 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('kontak/update/' . $kontak->id_kontak); ?>" enctype="multipart/form-data">
-                                                <!-- KONTAK -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Kontak</label> 
-                                                  <input type="text" value="<?= $kontak->judul_kontak; ?>" class="form-control" name="nama_prodi" required>
-                                              </div>
-                                              <!-- ISI KONTAK -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Isi Kontak</label>
-                                                  <input type="text" value="<?= $kontak->isi_kontak; ?>" class="form-control" name="isi_kontak" required>
-                                              </div>
+                    <!-- KONTAK -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Kontak</label> 
+                      <input type="text" value="<?= $kontak->judul_kontak; ?>" class="form-control" name="nama_prodi" required>
+                  </div>
+                  <!-- ISI KONTAK -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Isi Kontak</label>
+                      <input type="text" value="<?= $kontak->isi_kontak; ?>" class="form-control" name="isi_kontak" required>
+                  </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>

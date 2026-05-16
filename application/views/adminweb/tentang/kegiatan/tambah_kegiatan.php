@@ -25,45 +25,45 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('kegiatan/simpan_kegiatan'); ?>" enctype="multipart/form-data">
-                                                <!-- NAMA KEGIATAN -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Nama Kegiatan</label>
-                                                  <input type="text" class="form-control" name="nama_kegiatan" required>
-                                              </div>
-                                              <!-- DESKRIPSI -->
-                                              <label class="form-label fw-semibold">Deskripsi :</label>
-                                              <div class="mb-3">
+                    <!-- NAMA KEGIATAN -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Nama Kegiatan</label>
+                      <input type="text" class="form-control" name="nama_kegiatan" required>
+                  </div>
+                  <!-- DESKRIPSI -->
+                  <label class="form-label fw-semibold">Deskripsi :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="deskripsi" rows="5" required></textarea>
-                                              </div>
-                                              <!-- TANGGAL MULAI -->
-                                              <label class="form-label fw-semibold">Tanggal Mulai :</label>
-                                              <div class="mb-3">
+                    <textarea class="form-control" name="deskripsi" rows="5" required></textarea>
+                  </div>
+                  <!-- TANGGAL MULAI -->
+                  <label class="form-label fw-semibold">Tanggal Mulai :</label>
+                  <div class="mb-3">
                                 
-                                                <input type="date" class="form-control" name="tanggal_mulai" required>
-                                              </div>
-                                              <!-- TANGGAL SELESAI -->
-                                              <label class="form-label fw-semibold">Tanggal Selesai :</label>
-                                              <div class="mb-3">
+                    <input type="date" class="form-control" name="tanggal_mulai" required>
+                  </div>
+                  <!-- TANGGAL SELESAI -->
+                  <label class="form-label fw-semibold">Tanggal Selesai :</label>
+                  <div class="mb-3">
                                 
-                                                <input type="date" class="form-control" name="tanggal_selesai" required>
-                                              </div>
-                                              <!-- LOKASI -->
-                                            <div class="mb-3">
-                                                <label class="form-label fw-semibold">Lokasi</label>
-                                                <input type="text" class="form-control" name="lokasi" required>
-                                            </div>
-                                              <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Upload Gambar</label>
-                                                  <input type="file" name="gambar" class="form-control">
-                                                  <small class="form-text text-muted">Format gambar: jpg, jpeg, png. Maksimal ukuran: 3MB.</small>
-                                                </div>
+                    <input type="date" class="form-control" name="tanggal_selesai" required>
+                  </div>
+                  <!-- LOKASI -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Lokasi</label>
+                    <input type="text" class="form-control" name="lokasi" required>
+                </div>
+                  <!-- GAMBAR -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Upload Gambar</label>
+                      <input type="file" name="gambar" class="form-control">
+                      <small class="form-text text-muted">Format gambar: jpg, jpeg, png. Maksimal ukuran: 3MB.</small>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Simpan Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Simpan Data</button>
             </div>
         </div>
     </div>

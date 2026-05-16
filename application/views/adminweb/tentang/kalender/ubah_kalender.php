@@ -25,53 +25,53 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('kalender/update/' . $kalender_akademik->id_kalender); ?>" enctype="multipart/form-data"> 
-                                                <!-- JUDUL -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Judul</label>
-                                                  <input value="<?= $kalender_akademik->judul; ?>" type="text" class="form-control" name="judul" required>
-                                              </div>
-                                              <!-- DESKRIPSI -->
-                                              <label class="form-label fw-semibold">Deskripsi :</label>
-                                              <div class="mb-3">
+                        <!-- JUDUL -->
+                      <div class="mb-3">
+                          <label class="form-label fw-semibold">Judul</label>
+                          <input value="<?= $kalender_akademik->judul; ?>" type="text" class="form-control" name="judul" required>
+                      </div>
+                      <!-- DESKRIPSI -->
+                      <label class="form-label fw-semibold">Deskripsi :</label>
+                      <div class="mb-3">
                                  
-                                                <textarea class="form-control" name="deskripsi" rows="5" required><?= $kalender_akademik->deskripsi; ?></textarea>
-                                              </div>
-                                              <!-- TAHUN AKADEMIK -->
-                                            <div class="mb-3">
-                                            <label class="form-label fw-semibold">Tahun Akademik</label>
-                                                <select class="form-select" name="tahun_akademik" required>
-                                                <option value="" disabled selected>Pilih Tahun Akademik</option>
-                                                <option value="2024/2025"<?= $kalender_akademik->tahun_akademik == '2024/2025' ? 'selected' : '' ?>>2024/2025</option>
-                                                <option value="2025/2026"<?= $kalender_akademik->tahun_akademik == '2025/2026' ? 'selected' : '' ?>>2025/2026</option>
-                                                <option value="2026/2027"<?= $kalender_akademik->tahun_akademik == '2026/2027' ? 'selected' : '' ?>>2026/2027</option>
-                                                <option value="2027/2028"<?= $kalender_akademik->tahun_akademik == '2027/2028' ? 'selected' : '' ?>>2027/2028</option>
-                                            </select>
-                                            </div>
-                                            <!-- TANGGAL MULAI -->
-                                             <label class="form-label fw-semibold">Tanggal Mulai :</label>
-                                              <div class="mb-3">
+                        <textarea class="form-control" name="deskripsi" rows="5" required><?= $kalender_akademik->deskripsi; ?></textarea>
+                      </div>
+                      <!-- TAHUN AKADEMIK -->
+                    <div class="mb-3">
+                    <label class="form-label fw-semibold">Tahun Akademik</label>
+                        <select class="form-select" name="tahun_akademik" required>
+                        <option value="" disabled selected>Pilih Tahun Akademik</option>
+                        <option value="2024/2025"<?= $kalender_akademik->tahun_akademik == '2024/2025' ? 'selected' : '' ?>>2024/2025</option>
+                        <option value="2025/2026"<?= $kalender_akademik->tahun_akademik == '2025/2026' ? 'selected' : '' ?>>2025/2026</option>
+                        <option value="2026/2027"<?= $kalender_akademik->tahun_akademik == '2026/2027' ? 'selected' : '' ?>>2026/2027</option>
+                        <option value="2027/2028"<?= $kalender_akademik->tahun_akademik == '2027/2028' ? 'selected' : '' ?>>2027/2028</option>
+                    </select>
+                    </div>
+                    <!-- TANGGAL MULAI -->
+                     <label class="form-label fw-semibold">Tanggal Mulai :</label>
+                      <div class="mb-3">
                                   
-                                                  <input type="date" value="<?= $kalender_akademik->tanggal_mulai; ?>" class="form-control" name="tanggal_mulai" required>
-                                              </div>
-                                               <!-- TANGGAL SELESAI -->
-                                                <label class="form-label fw-semibold">Tanggal Selesai :</label>
-                                              <div class="mb-3">
+                          <input type="date" value="<?= $kalender_akademik->tanggal_mulai; ?>" class="form-control" name="tanggal_mulai" required>
+                      </div>
+                       <!-- TANGGAL SELESAI -->
+                        <label class="form-label fw-semibold">Tanggal Selesai :</label>
+                      <div class="mb-3">
                                   
-                                                  <input type="date" value="<?= $kalender_akademik->tanggal_selesai; ?>" class="form-control" name="tanggal_selesai" required>
-                                              </div>
-                                              <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                <label class="form-label fw-semibold">Gambar Lama</label><br>
-                                                <?php if ($kalender_akademik->gambar): ?>
-                                                    <img src="<?= base_url('uploads/kalender/' . $kalender_akademik->gambar) ?>" width="100"><br>
-                                                <?php endif; ?>
-                                                <input type="file" name="gambar" class="form-control">
-                                             </div>
+                          <input type="date" value="<?= $kalender_akademik->tanggal_selesai; ?>" class="form-control" name="tanggal_selesai" required>
+                      </div>
+                      <!-- GAMBAR -->
+                      <div class="mb-3">
+                        <label class="form-label fw-semibold">Gambar Lama</label><br>
+                        <?php if ($kalender_akademik->gambar): ?>
+                            <img src="<?= base_url('uploads/kalender/' . $kalender_akademik->gambar) ?>" width="100"><br>
+                        <?php endif; ?>
+                        <input type="file" name="gambar" class="form-control">
+                     </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>

@@ -25,36 +25,36 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" action="<?= base_url('index.php/sambutan/update/' . $sambutan->id_sambutan) ?>" method="post" enctype="multipart/form-data">
-                                                  <!-- TANDA TANGAN -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Tanda Tangan</label> 
-                                                  <input type="text" value="<?= $sambutan->tanda_tangan; ?>" class="form-control" name="tanda_tangan" required>
-                                              </div>
-                                                <!-- Tempat-->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Tempat</label>
-                                                  <input type="text" value="<?= $sambutan->tempat; ?>" class="form-control" name="tempat" required>
-                                              </div>
+                          <!-- TANDA TANGAN -->
+                      <div class="mb-3">
+                          <label class="form-label fw-semibold">Tanda Tangan</label> 
+                          <input type="text" value="<?= $sambutan->tanda_tangan; ?>" class="form-control" name="tanda_tangan" required>
+                      </div>
+                        <!-- Tempat-->
+                      <div class="mb-3">
+                          <label class="form-label fw-semibold">Tempat</label>
+                          <input type="text" value="<?= $sambutan->tempat; ?>" class="form-control" name="tempat" required>
+                      </div>
           
-                                              <!-- ISI (textarea) -->
-                                              <div class="mb-3">
+                      <!-- ISI (textarea) -->
+                      <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="teks_sambutan" rows="5" required><?= $sambutan->teks_sambutan; ?></textarea>
-                                              </div>
+                        <textarea class="form-control" name="teks_sambutan" rows="5" required><?= $sambutan->teks_sambutan; ?></textarea>
+                      </div>
             
-                                              <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                <label class="form-label fw-semibold">Gambar Lama</label><br>
-                                                <?php if ($sambutan->gambar): ?>
-                                                    <img src="<?= base_url('uploads/sambutan/' . $sambutan->gambar) ?>" width="100"><br>
-                                                <?php endif; ?>
-                                                <input type="file" name="gambar" class="form-control">
-                                             </div>
+                      <!-- GAMBAR -->
+                      <div class="mb-3">
+                        <label class="form-label fw-semibold">Gambar Lama</label><br>
+                        <?php if ($sambutan->gambar): ?>
+                            <img src="<?= base_url('uploads/sambutan/' . $sambutan->gambar) ?>" width="100"><br>
+                        <?php endif; ?>
+                        <input type="file" name="gambar" class="form-control">
+                     </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>

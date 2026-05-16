@@ -76,34 +76,34 @@
                                     <?php endif; ?>
                                   </tbody>
                                 </table>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-5">
-            <div class="card-vanilla p-4 h-100">
-                <h4 class="fw-semibold mb-3" style="color: #7a561f;"><?= isset($edit) ? 'Ubah Pengguna' : 'Tambah Pengguna' ?></h4>
-                <form action="<?= isset($edit) ? base_url('register/update/' . $edit->id) : base_url('register/simpan_register') ?>" method="post">
-                            <div class="input-group input-group-outline mb-3">
-                              <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
-                              <input type="text" name="nama_lengkap" class="form-control" value="<?= isset($edit) ? $edit->nama_lengkap : '' ?>" required>
                             </div>
-                            <div class="input-group input-group-outline mb-3">
-                              <label for="username" class="form-label">Username</label>
-                              <input type="text" name="username" class="form-control" value="<?= isset($edit) ? $edit->username : '' ?>" required>
-                            </div>
-                            <div class="input-group input-group-outline mb-3">
-                              <label for="password" class="form-label">Password <?= isset($edit) ? '(Kosongkan jika tidak diubah)' : '' ?></label>
-                              <input type="password" name="password" class="form-control" <?= isset($edit) ? '' : 'required' ?>>
-                            </div>
-                            <button type="submit" class="btn btn-primary"><?= isset($edit) ? 'Update' : 'Simpan' ?></button>
-                            <?php if (isset($edit)): ?>
-                            <a href="<?= base_url('register'); ?>" class="btn btn-secondary">Batal</a>
-                            <?php endif; ?>
-                          </form>
-            </div>
-        </div>
-    </div>
-</main>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card-vanilla p-4 h-100">
+                            <h4 class="fw-semibold mb-3" style="color: #7a561f;"><?= isset($edit) ? 'Ubah Pengguna' : 'Tambah Pengguna' ?></h4>
+                            <form action="<?= isset($edit) ? base_url('register/update/' . $edit->id) : base_url('register/simpan_register') ?>" method="post">
+                                        <div class="input-group input-group-outline mb-3">
+                                          <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+                                          <input type="text" name="nama_lengkap" class="form-control" value="<?= isset($edit) ? $edit->nama_lengkap : '' ?>" required>
+                                        </div>
+                                        <div class="input-group input-group-outline mb-3">
+                                          <label for="username" class="form-label">Username</label>
+                                          <input type="text" name="username" class="form-control" value="<?= isset($edit) ? $edit->username : '' ?>" required>
+                                        </div>
+                                        <div class="input-group input-group-outline mb-3">
+                                          <label for="password" class="form-label">Password <?= isset($edit) ? '(Kosongkan jika tidak diubah)' : '' ?></label>
+                                          <input type="password" name="password" class="form-control" <?= isset($edit) ? '' : 'required' ?>>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary"><?= isset($edit) ? 'Update' : 'Simpan' ?></button>
+                                        <?php if (isset($edit)): ?>
+                                        <a href="<?= base_url('register'); ?>" class="btn btn-secondary">Batal</a>
+                                        <?php endif; ?>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </main>
 
 <script>
   document.querySelectorAll('.modal').forEach(function(modal) {

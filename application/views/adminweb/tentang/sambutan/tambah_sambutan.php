@@ -25,34 +25,34 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('sambutan/simpan_sambutan'); ?>" enctype="multipart/form-data">
-                                                <!-- TANDA TANGAN -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Tanda Tangan</label>
-                                                  <input type="text" class="form-control" name="tanda_tangan" required>
-                                              </div>
-                                                <!-- Tempat-->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Tempat</label>
-                                                  <input type="text" class="form-control" name="tempat" required>
-                                              </div>
+                    <!-- TANDA TANGAN -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Tanda Tangan</label>
+                      <input type="text" class="form-control" name="tanda_tangan" required>
+                  </div>
+                    <!-- Tempat-->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Tempat</label>
+                      <input type="text" class="form-control" name="tempat" required>
+                  </div>
           
-                                              <!-- ISI (textarea) -->
-                                              <div class="mb-3">
+                  <!-- ISI (textarea) -->
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="teks_sambutan" rows="5" required></textarea>
-                                              </div>
+                    <textarea class="form-control" name="teks_sambutan" rows="5" required></textarea>
+                  </div>
             
-                                              <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Upload Gambar</label>
-                                                  <input type="file" name="gambar" class="form-control">
-                                                  <small class="form-text text-muted">Format gambar: jpg, jpeg, png. Maksimal ukuran: 3MB.</small>
-                                                </div>
+                  <!-- GAMBAR -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Upload Gambar</label>
+                      <input type="file" name="gambar" class="form-control">
+                      <small class="form-text text-muted">Format gambar: jpg, jpeg, png. Maksimal ukuran: 3MB.</small>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Simpan Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Simpan Data</button>
             </div>
         </div>
     </div>

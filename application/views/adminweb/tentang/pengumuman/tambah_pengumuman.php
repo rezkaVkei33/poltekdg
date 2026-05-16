@@ -25,43 +25,43 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('pengumuman/simpan_pengumuman'); ?>" enctype="multipart/form-data">
-                                                <!-- JUDUL -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Judul</label>
-                                                  <input type="text" class="form-control" name="judul" required>
-                                              </div>
-                                              <!-- DESKRIPSI -->
-                                              <label class="form-label fw-semibold">Deskripsi :</label>
-                                              <div class="mb-3">
+                    <!-- JUDUL -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Judul</label>
+                      <input type="text" class="form-control" name="judul" required>
+                  </div>
+                  <!-- DESKRIPSI -->
+                  <label class="form-label fw-semibold">Deskripsi :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="isi" rows="5" required></textarea>
-                                            </div>
-                                            <!-- TANGGAL PENGUMUMAN -->
-                                             <label class="form-label fw-semibold">Tanggal :</label>
-                                             <div class="mb-3">
+                    <textarea class="form-control" name="isi" rows="5" required></textarea>
+                </div>
+                <!-- TANGGAL PENGUMUMAN -->
+                 <label class="form-label fw-semibold">Tanggal :</label>
+                 <div class="mb-3">
                                   
-                                                  <input type="date" class="form-control" name="tanggal" required>
-                                              </div>
-                                              <!-- PENULIS -->
-                                              <div class="mb-3">
-                                                   <label class="form-label fw-semibold">Penulis</label>
-                                                   <input type="text" class="form-control" name="penulis" required>
-                                               </div>
+                      <input type="date" class="form-control" name="tanggal" required>
+                  </div>
+                  <!-- PENULIS -->
+                  <div class="mb-3">
+                       <label class="form-label fw-semibold">Penulis</label>
+                       <input type="text" class="form-control" name="penulis" required>
+                   </div>
 
-                                              <!-- STATUS -->
-                                              <div class="mb-3">
-                                                <label class="form-label fw-semibold">Status</label>
-                                                <select class="form-select" name="status" required>
-                                                  <option value="" disabled selected>Pilih Status</option>
-                                                  <option value="draft">Draft</option>
-                                                  <option value="publikasi">Publikasi</option>
-                                                </select>
-                                              </div>
+                  <!-- STATUS -->
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold">Status</label>
+                    <select class="form-select" name="status" required>
+                      <option value="" disabled selected>Pilih Status</option>
+                      <option value="draft">Draft</option>
+                      <option value="publikasi">Publikasi</option>
+                    </select>
+                  </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Simpan Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Simpan Data</button>
             </div>
         </div>
     </div>

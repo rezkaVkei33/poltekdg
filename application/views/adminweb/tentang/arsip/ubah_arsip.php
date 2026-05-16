@@ -25,37 +25,37 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('arsip/update/' . $arsip->id_arsip); ?>" enctype="multipart/form-data">
-                                                <!-- NAMA ARSIP -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Nama Arsip</label> 
-                                                  <input type="text" value="<?= $arsip->nama_dokumen; ?>" class="form-control" name="nama_dokumen" required>
-                                              </div>
-                                              <!-- KETERANGAN -->
-                                              <label class="form-label fw-semibold">Keterangan :</label>
-                                              <div class="mb-3">
+                    <!-- NAMA ARSIP -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Nama Arsip</label> 
+                      <input type="text" value="<?= $arsip->nama_dokumen; ?>" class="form-control" name="nama_dokumen" required>
+                  </div>
+                  <!-- KETERANGAN -->
+                  <label class="form-label fw-semibold">Keterangan :</label>
+                  <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="keterangan" rows="5" required><?= $arsip->keterangan; ?></textarea>
-                                            </div>
-                                              <!-- FILE -->
-                                              <div class="mb-3">
-                                                <label class="form-label fw-semibold">Upload File</label>
-                                                <input type="file" name="file_upload" class="form-control">
-                                                <small class="form-text text-muted">Format dokumen: pdf, doc, docx. Maksimal ukuran: 5MB.</small>
-                                              </div>
-                                              <?php if (!empty($arsip->file_upload)): ?>
-                                                <div class="mb-2">
-                                                  <small>File saat ini: 
-                                                    <a href="<?= base_url('uploads/arsip/' . $arsip->file_upload); ?>" target="_blank">
-                                                      <?= $arsip->file_upload; ?>
-                                                    </a>
-                                                  </small>
-                                                </div>
-                                              <?php endif; ?>
+                    <textarea class="form-control" name="keterangan" rows="5" required><?= $arsip->keterangan; ?></textarea>
+                </div>
+                  <!-- FILE -->
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold">Upload File</label>
+                    <input type="file" name="file_upload" class="form-control">
+                    <small class="form-text text-muted">Format dokumen: pdf, doc, docx. Maksimal ukuran: 5MB.</small>
+                  </div>
+                  <?php if (!empty($arsip->file_upload)): ?>
+                    <div class="mb-2">
+                      <small>File saat ini: 
+                        <a href="<?= base_url('uploads/arsip/' . $arsip->file_upload); ?>" target="_blank">
+                          <?= $arsip->file_upload; ?>
+                        </a>
+                      </small>
+                    </div>
+                  <?php endif; ?>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>

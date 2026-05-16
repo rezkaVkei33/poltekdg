@@ -25,30 +25,30 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('prodi/update/' . $prodi->id_prodi); ?>" enctype="multipart/form-data">
-                                                <!-- PROGRAM STUDI -->
-                                              <div class="mb-3">
-                                                  <label class="form-label fw-semibold">Program Studi</label> 
-                                                  <input type="text" value="<?= $prodi->nama_prodi; ?>" class="form-control" name="nama_prodi" required>
-                                              </div>
-                                              <!-- DESKRIPSI -->
-                                              <label class="form-label fw-semibold">Deskripsi :</label>
-                                              <div class="mb-3">
+                        <!-- PROGRAM STUDI -->
+                      <div class="mb-3">
+                          <label class="form-label fw-semibold">Program Studi</label> 
+                          <input type="text" value="<?= $prodi->nama_prodi; ?>" class="form-control" name="nama_prodi" required>
+                      </div>
+                      <!-- DESKRIPSI -->
+                      <label class="form-label fw-semibold">Deskripsi :</label>
+                      <div class="mb-3">
                                 
-                                                <textarea class="form-control" name="deskripsi" rows="5" required><?= $prodi->deskripsi; ?></textarea>
-                                            </div>
-                                               <!-- GAMBAR -->
-                                              <div class="mb-3">
-                                                <label class="form-label fw-semibold">Gambar Lama</label><br>
-                                                <?php if ($prodi->gambar): ?>
-                                                    <img src="<?= base_url('uploads/prodi/' . $prodi->gambar) ?>" width="100"><br>
-                                                <?php endif; ?>
-                                                <input type="file" name="gambar" class="form-control">
-                                             </div>
+                        <textarea class="form-control" name="deskripsi" rows="5" required><?= $prodi->deskripsi; ?></textarea>
+                    </div>
+                       <!-- GAMBAR -->
+                      <div class="mb-3">
+                        <label class="form-label fw-semibold">Gambar Lama</label><br>
+                        <?php if ($prodi->gambar): ?>
+                            <img src="<?= base_url('uploads/prodi/' . $prodi->gambar) ?>" width="100"><br>
+                        <?php endif; ?>
+                        <input type="file" name="gambar" class="form-control">
+                     </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">
-                <button type="button" class="btn btn-outline-poltek" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-poltek" form="dataForm">Ubah Data</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary" form="dataForm">Ubah Data</button>
             </div>
         </div>
     </div>
