@@ -9,11 +9,23 @@ class Arsip extends MY_Controller {
     }
 
     public function index() {
+        $keyword = trim((string) $this->input->get('q', TRUE));
+        $per_page = 10;
+        $total_rows = $this->Arsip_model->count_filtered($keyword);
+        $offset = $this->admin_pagination_offset($total_rows, $per_page);
+
+        $this->pagination->initialize($this->admin_pagination_config(base_url('arsip'), $total_rows, $per_page));
+
         $data = [
             'title' => 'Arsip - Admin PoltekDG',
-            'subtitle' => 'Arsip Dokumen'
+            'subtitle' => 'Arsip Dokumen',
+            'arsip' => $this->Arsip_model->get_paginated($per_page, $offset, $keyword),
+            'keyword' => $keyword,
+            'total_rows' => $total_rows,
+            'per_page' => $per_page,
+            'start_no' => $offset + 1,
+            'pagination_links' => $this->pagination->create_links()
         ];
-        $data['arsip'] = $this->Arsip_model->get_all();
         $this->load->view('adminweb/tentang/arsip/arsip',$data);
     }
     public function tambah_arsip() {

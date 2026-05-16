@@ -9,10 +9,22 @@ class Berita extends MY_Controller {
     }
 
     public function index() {
+        $keyword = trim((string) $this->input->get('q', TRUE));
+        $per_page = 10;
+        $total_rows = $this->Berita_model->count_filtered($keyword);
+        $offset = $this->admin_pagination_offset($total_rows, $per_page);
+
+        $this->pagination->initialize($this->admin_pagination_config(base_url('berita'), $total_rows, $per_page));
+
         $data = [
             'title' => 'Berita - Poltek DG',
             'subtitle' => 'Berita',
-            'berita' => $this->Berita_model->get_all()
+            'berita' => $this->Berita_model->get_paginated($per_page, $offset, $keyword),
+            'keyword' => $keyword,
+            'total_rows' => $total_rows,
+            'per_page' => $per_page,
+            'start_no' => $offset + 1,
+            'pagination_links' => $this->pagination->create_links()
         ];
         $this->load->view('adminweb/tentang/berita/berita', $data);
     }

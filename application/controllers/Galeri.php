@@ -9,10 +9,22 @@ class Galeri extends MY_Controller {
     }
 
     public function index() {
+        $keyword = trim((string) $this->input->get('q', TRUE));
+        $per_page = 10;
+        $total_rows = $this->Galeri_model->count_filtered($keyword);
+        $offset = $this->admin_pagination_offset($total_rows, $per_page);
+
+        $this->pagination->initialize($this->admin_pagination_config(base_url('galeri'), $total_rows, $per_page));
+
         $data = [
             'title' => 'Galeri - Poltek DG',
             'subtitle' => 'Galeri',
-            'galeri' => $this->Galeri_model->get_all()
+            'galeri' => $this->Galeri_model->get_paginated($per_page, $offset, $keyword),
+            'keyword' => $keyword,
+            'total_rows' => $total_rows,
+            'per_page' => $per_page,
+            'start_no' => $offset + 1,
+            'pagination_links' => $this->pagination->create_links()
         ];
         $this->load->view('adminweb/tentang/galeri/galeri', $data);
     }

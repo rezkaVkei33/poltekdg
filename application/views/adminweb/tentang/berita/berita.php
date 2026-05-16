@@ -24,6 +24,7 @@
 
     <!-- Table Card -->
     <div class="card-vanilla p-4">
+        <?php $this->load->view('adminweb/partials/table_search'); ?>
         <div class="table-responsive-custom">
             <table id="dataTable" class="table table-hover align-middle" style="width:100%">
                   <thead style="background-color: #fef8ef; color: #7a561f;">
@@ -39,7 +40,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                <?php $no=1; ?>
+                <?php $no = $start_no ?? 1; ?>
                 <?php if(!empty($berita)) : ?>
                     <?php foreach($berita as $data): ?>
                         <tr>
@@ -91,12 +92,14 @@
                     <?php endforeach; ?>
                     <?php else: ?>
                         <tr>
-                            <td colspan="6" class="text-center text-danger ">Tidak ada Berita.</td>
+                            <td colspan="8" class="text-center text-danger ">Tidak ada Berita.</td>
                         </tr>
                     <?php endif; ?>
                 </tbody>
               </table>
         </div>
+        <?php $row_count = count($berita ?? []); ?>
+        <?php $this->load->view('adminweb/partials/table_pagination', ['row_count' => $row_count]); ?>
     </div>
 </main>
 

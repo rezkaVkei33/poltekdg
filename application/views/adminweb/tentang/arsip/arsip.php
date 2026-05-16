@@ -21,6 +21,7 @@
     <?php endif; ?>
 
     <div class="card-vanilla p-4">
+        <?php $this->load->view('adminweb/partials/table_search'); ?>
         <div class="table-responsive-custom">
             <table id="dataTable" class="table table-hover align-middle" style="width:100%">
                 <thead style="background-color: #fef8ef; color: #7a561f;">
@@ -34,7 +35,7 @@
                     </tr>
                 </thead>
                  <tbody>
-                <?php $no=1; ?>
+                <?php $no = $start_no ?? 1; ?>
                 <?php if(!empty($arsip)) : ?>
                     <?php foreach($arsip as $data): ?>
                         <tr>
@@ -96,6 +97,8 @@
                 </tbody>
             </table>
         </div>
+        <?php $row_count = count($arsip ?? []); ?>
+        <?php $this->load->view('adminweb/partials/table_pagination', ['row_count' => $row_count]); ?>
     </div>
 </main>
 

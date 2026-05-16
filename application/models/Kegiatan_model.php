@@ -7,6 +7,32 @@ class Kegiatan_model extends CI_Model {
         return $this->db->get('kegiatan')->result();
     }
 
+    private function apply_search($keyword)
+    {
+        if ($keyword !== '') {
+            $this->db->group_start()
+                ->like('nama_kegiatan', $keyword)
+                ->or_like('deskripsi', $keyword)
+                ->or_like('lokasi', $keyword)
+                ->group_end();
+        }
+    }
+
+    public function get_paginated($limit, $offset, $keyword = '')
+    {
+        $this->apply_search($keyword);
+        return $this->db->order_by('tanggal_mulai', 'DESC')
+            ->limit($limit, $offset)
+            ->get('kegiatan')
+            ->result();
+    }
+
+    public function count_filtered($keyword = '')
+    {
+        $this->apply_search($keyword);
+        return $this->db->count_all_results('kegiatan');
+    }
+
     public function get_by_id($id) {
         return $this->db->get_where('kegiatan', ['id_kegiatan' => $id])->row();
     }

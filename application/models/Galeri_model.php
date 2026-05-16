@@ -11,6 +11,33 @@ class Galeri_model extends CI_Model {
     public function get_all() {
         return $this->db->get('galeri')->result();
     }
+
+    private function apply_search($keyword)
+    {
+        if ($keyword !== '') {
+            $this->db->group_start()
+                ->like('judul', $keyword)
+                ->or_like('deskripsi', $keyword)
+                ->or_like('status', $keyword)
+                ->group_end();
+        }
+    }
+
+    public function get_paginated($limit, $offset, $keyword = '')
+    {
+        $this->apply_search($keyword);
+        return $this->db->order_by('tanggal_upload', 'DESC')
+            ->limit($limit, $offset)
+            ->get('galeri')
+            ->result();
+    }
+
+    public function count_filtered($keyword = '')
+    {
+        $this->apply_search($keyword);
+        return $this->db->count_all_results('galeri');
+    }
+
     public function insert($data) {
         return $this->db->insert('galeri', $data);
     }
