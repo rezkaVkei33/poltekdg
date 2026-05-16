@@ -22,23 +22,25 @@
                         <?php if (!empty($data_vmts)): ?>
                         <h3 class="fw-bold mb-4"><?= $data_vmts->nama_vm; ?></h3>
 
-                          <div class="section-block mb-4">
-                            <h5 class="text-muted">Visi</h5>
-                            <hr class="mx-auto" style="width: 80px; border: 2px solid #007BFF;">
-                            <p class="text-center mt-3"><?= nl2br($data_vmts->visi) ?></p>
-                          </div>
+                        <div class="grid gap-6 sm:grid-cols-2">
+                          <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
+                            <h5 class="text-xl font-semibold text-gray-900 mb-3">Visi</h5>
+                            <hr class="mb-4" style="border: 2px solid #007BFF; width: 60px;">
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br($data_vmts->visi) ?></p>
+                          </article>
 
-                          <div class="section-block mb-4">
-                            <h5 class="text-muted">Misi</h5>
-                            <hr class="mx-auto" style="width: 80px; border: 2px solid #28A745;">
-                            <p class="text-center mt-3"><?= nl2br($data_vmts->misi) ?></p>
-                          </div>
+                          <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
+                            <h5 class="text-xl font-semibold text-gray-900 mb-3">Misi</h5>
+                            <hr class="mb-4" style="border: 2px solid #28A745; width: 60px;">
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br($data_vmts->misi) ?></p>
+                          </article>
 
-                          <div class="section-block mb-4">
-                            <h5 class="text-muted">Tujuan</h5>
-                            <hr class="mx-auto" style="width: 80px; border: 2px solid #FFC107;">
-                            <p class="text-center mt-3"><?= nl2br($data_vmts->tujuan) ?></p>
-                          </div>
+                          <article class="sm:col-span-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
+                            <h5 class="text-xl font-semibold text-gray-900 mb-3">Tujuan</h5>
+                            <hr class="mb-4" style="border: 2px solid #FFC107; width: 60px;">
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br($data_vmts->tujuan) ?></p>
+                          </article>
+                        </div>
                         </div>
                          <?php else: ?>
                         <div class="alert alert-info text-center">Belum ada VMTS tersedia.</div>
@@ -52,7 +54,7 @@
                         aria-label="Kembali ke Beranda">
                         &#8592; ke Beranda
                         </a>
-                        </div>
+                      </div>
                 </div>
             </section>
         </main>
