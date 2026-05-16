@@ -9,6 +9,10 @@ class Arsip extends MY_Controller {
     }
 
     public function index() {
+        $data = [
+            'title' => 'Arsip - Admin PoltekDG',
+            'subtitle' => 'Arsip Dokumen'
+        ];
         $data['arsip'] = $this->Arsip_model->get_all();
         $this->load->view('adminweb/tentang/arsip/arsip',$data);
     }
