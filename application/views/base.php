@@ -22,9 +22,6 @@
                          <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
                         </div>
-                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Pilih program studi yang sesuai dengan minat dan bakat Anda untuk masa depan yang cerah
-                        </p>
                     </div>
 
                     <div class="flex justify-center">
@@ -110,9 +107,6 @@
                         <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
                         </div>
-                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Ikuti perkembangan terbaru dan informasi penting dari Politeknik Darma Ganesha
-                        </p>
                     </div>
 
                     <!-- News Grid -->
