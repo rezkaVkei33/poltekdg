@@ -38,7 +38,9 @@
           <hr class="mb-3">
         </div>
         <div class="flex-grow-1">
-          <p class="text-justify" style="text-align: justify;"><?= nl2br($sambutan->teks_sambutan) ?></p>
+          <div class="p-4 rounded" style="background: #f8f1c0; border: 2px solid; border-image: linear-gradient(90deg, orange, gold) 1; box-shadow: 0 10px 20px rgba(255,165,0,0.12);">
+            <p class="text-justify mb-0" style="text-align: justify;"><?= nl2br($sambutan->teks_sambutan) ?></p>
+          </div>
         </div>
       </div>
       </div>
