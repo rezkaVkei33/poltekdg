@@ -102,6 +102,101 @@
                 </div>
             </section>
 
+            <!-- Berita Kampus Section -->
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Berita Kampus</h2>
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
+                        </div>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Ikuti perkembangan terbaru dan informasi penting dari Politeknik Darma Ganesha
+                        </p>
+                    </div>
+
+                    <!-- News Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <?php if (!empty($berita)): ?>
+                            <?php foreach($berita as $news): ?>
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 card-hover">
+                                    <div class="relative h-48 overflow-hidden bg-gray-200">
+                                        <img src="<?= base_url($news['gambar']) ?>" alt="<?= $news['judul'] ?>" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                            <?= date('d M', strtotime($news['created_at'])) ?>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2"><?= $news['judul'] ?></h3>
+                                        <p class="text-gray-600 mb-4 line-clamp-3"><?= $news['deskripsi'] ?></p>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-sm text-gray-500"><?= date('d F Y', strtotime($news['created_at'])) ?></span>
+                                            <a href="<?= base_url('base/berita/') ?><?= $news['id'] ?>" class="text-amber-600 font-semibold hover:text-amber-700">Baca →</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <div class="col-span-3 text-center py-12">
+                                <p class="text-gray-500 text-lg">Belum ada berita</p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+
+                    <!-- Pagination -->
+                    <?php if (!empty($pagination)): ?>
+                        <nav aria-label="Page navigation" class="flex justify-center">
+                            <ul class="flex gap-2 items-center">
+                                <!-- Previous Button -->
+                                <?php if ($current_page > 1): ?>
+                                    <li>
+                                        <a href="<?= base_url('base?page=' . ($current_page - 1)) ?>" class="px-4 py-2 rounded-lg border border-gray-300 hover:border-amber-500 hover:text-amber-600 transition-all">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                <?php else: ?>
+                                    <li>
+                                        <span class="px-4 py-2 rounded-lg border border-gray-300 opacity-50 cursor-not-allowed">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                    </li>
+                                <?php endif; ?>
+
+                                <!-- Page Numbers -->
+                                <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                                    <li>
+                                        <?php if ($i == $current_page): ?>
+                                            <span class="px-3 py-2 rounded-lg bg-amber-600 text-white border border-amber-600">
+                                                <?= $i ?>
+                                            </span>
+                                        <?php else: ?>
+                                            <a href="<?= base_url('base?page=' . $i) ?>" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:border-amber-500 hover:text-amber-600 transition-all">
+                                                <?= $i ?>
+                                            </a>
+                                        <?php endif; ?>
+                                    </li>
+                                <?php endfor; ?>
+
+                                <!-- Next Button -->
+                                <?php if ($current_page < $total_pages): ?>
+                                    <li>
+                                        <a href="<?= base_url('base?page=' . ($current_page + 1)) ?>" class="px-4 py-2 rounded-lg border border-gray-300 hover:border-amber-500 hover:text-amber-600 transition-all">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                <?php else: ?>
+                                    <li>
+                                        <span class="px-4 py-2 rounded-lg border border-gray-300 opacity-50 cursor-not-allowed">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span>
+                                    </li>
+                                <?php endif; ?>
+                            </ul>
+                        </nav>
+                    <?php endif; ?>
+                </div>
+            </section>
+
             <!-- Fasilitas Section -->
             <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
 
