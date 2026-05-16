@@ -1,3 +1,50 @@
+  <script>
+                // Brosur Slider
+                const broswurSlider = document.querySelector('.broswur-slider');
+                const broswurSlides = document.querySelectorAll('.broswur-slide');
+                const broswurDots = document.querySelectorAll('.broswur-dot');
+                const broswurPrevBtn = document.querySelector('.broswur-prev');
+                const broswurNextBtn = document.querySelector('.broswur-next');
+
+                let currentBroswurSlide = 0;
+                const totalBroswurSlides = broswurSlides.length;
+
+                function updateBroswurSlider() {
+                    broswurSlider.style.transform = `translateX(-${currentBroswurSlide * 100}%)`;
+                    broswurDots.forEach((dot, index) => {
+                        if (index === currentBroswurSlide) {
+                            dot.classList.add('opacity-100');
+                            dot.classList.remove('opacity-75');
+                        } else {
+                            dot.classList.remove('opacity-100');
+                            dot.classList.add('opacity-75');
+                        }
+                    });
+                }
+
+                broswurPrevBtn.addEventListener('click', () => {
+                    currentBroswurSlide = (currentBroswurSlide - 1 + totalBroswurSlides) % totalBroswurSlides;
+                    updateBroswurSlider();
+                });
+
+                broswurNextBtn.addEventListener('click', () => {
+                    currentBroswurSlide = (currentBroswurSlide + 1) % totalBroswurSlides;
+                    updateBroswurSlider();
+                });
+
+                broswurDots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        currentBroswurSlide = parseInt(dot.getAttribute('data-slide'));
+                        updateBroswurSlider();
+                    });
+                });
+
+                // Auto slide every 5 seconds
+                setInterval(() => {
+                    currentBroswurSlide = (currentBroswurSlide + 1) % totalBroswurSlides;
+                    updateBroswurSlider();
+                }, 5000);
+            </script>
  <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');

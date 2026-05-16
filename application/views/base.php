@@ -49,26 +49,7 @@
                     </div>
                 </div>
             </section>
-            <!-- CTA Section -->
-            <section class="py-16 bg-gradient-to-r from-amber-500 to-orange-600">
-                <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
-                        Siap Memulai Perjalanan Pendidikan Anda?
-                    </h2>
-                    <p class="text-xl text-amber-100 mb-8">
-                        Bergabunglah dengan ribuan mahasiswa yang telah merasakan pendidikan berkualitas di Politeknik Darma Ganesha
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="<?= base_url('base/pendaftaran') ?>" class="bg-white text-amber-600 px-8 py-4 rounded-full hover:bg-gray-100 transition-all font-semibold shadow-lg">
-                            Daftar Online
-                        </a>
-                        <a href="<?= base_url('base/kontak') ?>" class="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-amber-600 transition-all font-semibold">
-                            Hubungi Kami
-                        </a>
-                    </div>
-                </div>
-            </section>
-
+            
             <!-- Brosur Slider Section -->
             <section class="py-16 bg-gradient-to-r from-amber-500 to-orange-600">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,14 +62,6 @@
                             <p class="text-xl text-amber-100 mb-8">
                                 Dapatkan informasi lengkap tentang program studi, fasilitas, dan beasiswa yang tersedia di Politeknik Darma Ganesha
                             </p>
-                            <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="<?= base_url('base/pendaftaran') ?>" class="bg-white text-amber-600 px-8 py-4 rounded-full hover:bg-gray-100 transition-all font-semibold shadow-lg text-center">
-                                    Daftar Online
-                                </a>
-                                <a href="<?= base_url('base/kontak') ?>" class="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-amber-600 transition-all font-semibold text-center">
-                                    Hubungi Kami
-                                </a>
-                            </div>
                         </div>
 
                         <!-- Slider -->
@@ -128,54 +101,6 @@
                     </div>
                 </div>
             </section>
-
-            <script>
-                // Brosur Slider
-                const broswurSlider = document.querySelector('.broswur-slider');
-                const broswurSlides = document.querySelectorAll('.broswur-slide');
-                const broswurDots = document.querySelectorAll('.broswur-dot');
-                const broswurPrevBtn = document.querySelector('.broswur-prev');
-                const broswurNextBtn = document.querySelector('.broswur-next');
-
-                let currentBroswurSlide = 0;
-                const totalBroswurSlides = broswurSlides.length;
-
-                function updateBroswurSlider() {
-                    broswurSlider.style.transform = `translateX(-${currentBroswurSlide * 100}%)`;
-                    broswurDots.forEach((dot, index) => {
-                        if (index === currentBroswurSlide) {
-                            dot.classList.add('opacity-100');
-                            dot.classList.remove('opacity-75');
-                        } else {
-                            dot.classList.remove('opacity-100');
-                            dot.classList.add('opacity-75');
-                        }
-                    });
-                }
-
-                broswurPrevBtn.addEventListener('click', () => {
-                    currentBroswurSlide = (currentBroswurSlide - 1 + totalBroswurSlides) % totalBroswurSlides;
-                    updateBroswurSlider();
-                });
-
-                broswurNextBtn.addEventListener('click', () => {
-                    currentBroswurSlide = (currentBroswurSlide + 1) % totalBroswurSlides;
-                    updateBroswurSlider();
-                });
-
-                broswurDots.forEach(dot => {
-                    dot.addEventListener('click', () => {
-                        currentBroswurSlide = parseInt(dot.getAttribute('data-slide'));
-                        updateBroswurSlider();
-                    });
-                });
-
-                // Auto slide every 5 seconds
-                setInterval(() => {
-                    currentBroswurSlide = (currentBroswurSlide + 1) % totalBroswurSlides;
-                    updateBroswurSlider();
-                }, 5000);
-            </script>
 
             <!-- Fasilitas Section -->
             <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -238,6 +163,6 @@
         <?php $this->load->view('partials/footer') ?>
     </div>
 
-   <?php $this->load->view('partials/scripts') ?>
+<?php $this->load->view('partials/scripts') ?>
 </body>
 </html>
