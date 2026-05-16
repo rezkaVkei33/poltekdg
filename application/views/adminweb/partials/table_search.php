@@ -4,10 +4,11 @@
     </div>
     <form class="d-flex flex-wrap gap-2" method="get" action="<?= current_url(); ?>">
         <div class="input-group">
-            <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+            <button class="btn btn-outline-secondary bg-white" type="submit" aria-label="Cari">
+                <i class="bi bi-search"></i>
+            </button>
             <input type="text" class="form-control" name="q" value="<?= html_escape($keyword ?? ''); ?>" placeholder="Cari data...">
         </div>
-        <button type="submit" class="btn btn-primary bg-gradient-info">Cari</button>
         <?php if (!empty($keyword)): ?>
             <a href="<?= current_url(); ?>" class="btn btn-outline-secondary">Reset</a>
         <?php endif; ?>
