@@ -99,9 +99,10 @@
                         </div>
                         
                         <a href="<?= site_url('base/kontak') ?>" class="block px-3 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 rounded-md">Kontak</a>
-                        <button class="w-full mt-2 bg-gradient-to-r from-amber-400 to-orange-500 text-white px-4 py-2 rounded-full hover:from-amber-500 hover:to-orange-600 transition-all shadow-lg">
-                            Daftar Sekarang
-                        </button>
+                        <div class="grid grid-cols-2 gap-2 mt-2">
+                            <a href="<?= site_url('base/lang/id') ?>" class="text-center bg-amber-400 text-white px-4 py-2 rounded-full hover:from-amber-500 hover:to-orange-600 transition-all shadow-lg">Indonesia</a>
+                            <a href="<?= site_url('base/lang/en') ?>" class="text-center bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition-all shadow-lg">English</a>
+                        </div>
                     </div>
                 </div>
             </div>
