@@ -93,7 +93,7 @@
                             </button>
                             <div id="akademik" class="mobile-dropdown pl-4">
                                 <a href="<?= site_url('base/kalender') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Kalender</a>
-                                <a href="" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">SIAKAD</a>
+                                <!-- <a href="" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">SIAKAD</a> -->
                                 <a href="<?= site_url('base/arsip') ?>" class="block px-3 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-md">Arsip</a>
                             </div>
                         </div>
