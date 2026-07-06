@@ -99,10 +99,36 @@
                         </div>
                         
                         <a href="<?= site_url('base/kontak') ?>" class="block px-3 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 rounded-md">Kontak</a>
-                        <div class="grid grid-cols-2 gap-2 mt-2">
-                            <a href="<?= site_url('base/lang/id') ?>" class="text-center bg-amber-400 text-white px-4 py-2 rounded-full hover:from-amber-500 hover:to-orange-600 transition-all shadow-lg">Indonesia</a>
-                            <a href="<?= site_url('base/lang/en') ?>" class="text-center bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition-all shadow-lg">English</a>
-                        </div>
+                        <!-- Tombol Translate Lingkaran dengan Dropdown -->
+<div class="dropdown d-inline-block">
+  <button class="btn btn-light rounded-circle border p-0 d-flex align-items-center justify-content-center" 
+          type="button" 
+          id="languageDropdown" 
+          data-bs-toggle="dropdown" 
+          aria-expanded="false"
+          style="width: 42px; height: 42px; overflow: hidden;">
+                <!-- Gambar Bendera Inggris (default) -->
+                <img src="https://flagcdn.com/w40/gb.png" 
+                    alt="English" 
+                    width="28" 
+                    height="28" 
+                    class="d-block">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li>
+                <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                    <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" width="24" height="24">
+                    Indonesia
+                </a>
+                </li>
+                <li>
+                <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English" width="24" height="24">
+                    English
+                </a>
+                </li>
+            </ul>
+            </div>
                     </div>
                 </div>
             </div>
