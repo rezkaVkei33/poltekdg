@@ -100,35 +100,15 @@
                         
                         <a href="<?= site_url('base/kontak') ?>" class="block px-3 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 rounded-md">Kontak</a>
                         <!-- Tombol Translate Lingkaran dengan Dropdown -->
-<div class="dropdown d-inline-block">
-  <button class="btn btn-light rounded-circle border p-0 d-flex align-items-center justify-content-center" 
-          type="button" 
-          id="languageDropdown" 
-          data-bs-toggle="dropdown" 
-          aria-expanded="false"
-          style="width: 42px; height: 42px; overflow: hidden;">
-                <!-- Gambar Bendera Inggris (default) -->
-                <img src="https://flagcdn.com/w40/gb.png" 
-                    alt="English" 
-                    width="28" 
-                    height="28" 
-                    class="d-block">
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                <li>
-                <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                    <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" width="24" height="24">
-                    Indonesia
-                </a>
-                </li>
-                <li>
-                <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                    <img src="https://flagcdn.com/w40/gb.png" alt="English" width="24" height="24">
-                    English
-                </a>
-                </li>
-            </ul>
-            </div>
+                        <div class="relative">
+                            <button id="languageToggle" type="button" onclick="toggleLanguageMenu()" class="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-amber-200">
+                                <img src="https://flagcdn.com/w40/gb.png" alt="English" class="w-6 h-6">
+                            </button>
+                            <div id="languageMenu" class="hidden absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-amber-50">Indonesia</a>
+                                <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-amber-50">English</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
