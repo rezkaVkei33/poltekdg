@@ -99,16 +99,28 @@
                         </div>
                         
                         <a href="<?= site_url('base/kontak') ?>" class="block px-3 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 rounded-md">Kontak</a>
-                        <!-- Tombol Translate Lingkaran dengan Dropdown -->
-                        <div class="relative">
-                            <button id="languageToggle" type="button" onclick="toggleLanguageMenu()" class="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-amber-200">
-                                <img src="https://flagcdn.com/w40/gb.png" alt="English" class="w-6 h-6">
-                            </button>
-                            <div id="languageMenu" class="hidden absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                                <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-amber-50">Indonesia</a>
-                                <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-amber-50">English</a>
+                        
+                        <div class="logo">
+                            <a href="#"><img src="https://bluebits.dev/wp-content/uploads/2020/06/cropped-logo-1.png" alt=""></a>
+                        </div> 
+                        <div class="lang-menu">
+                            <div class="selected-lang">
+                                English
                             </div>
-                        </div>
+                            <ul>
+                                <li>
+                                    <a href="#" class="de">German</a>
+                                </li>
+                                <li>
+                                    <a href="" class="en">English</a>
+                                </li>
+                                <li>
+                                    <a href="" class="fr">French</a>
+                                </li>
+                                <li>
+                                    <a href="" class="ar">Arabic</a>
+                                </li>
+                            </ul>
                     </div>
                 </div>
             </div>
