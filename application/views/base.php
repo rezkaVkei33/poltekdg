@@ -49,43 +49,46 @@
             
             <!-- Brosur Slider Section -->
             <section class="py-16 bg-gradient-to-r from-amber-500 to-orange-600">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-12 text-white">
-                        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
-                            Jelajahi Brosur Kampus Kami
-                        </h2>
-                        <p class="text-xl text-amber-100 mx-auto max-w-2xl">
-                            Dapatkan informasi lengkap tentang program studi, fasilitas, dan beasiswa yang tersedia di Politeknik Darma Ganesha
-                        </p>
-                    </div>
-
-                    <!-- Slider -->
-                    <div class="relative">
-                        <div class="broswur-slider-wrapper overflow-hidden rounded-2xl shadow-2xl">
-                            <div class="broswur-slider flex transition-transform duration-500">
-                                <!-- Slide 1 -->
-                                <div class="broswur-slide w-full flex-shrink-0">
-                                    <img src="<?= base_url('assets/images/brosur-1.jpeg') ?>" alt="Brosur Kampus 1" class="w-full h-auto object-cover">
-                                </div>
-                                <!-- Slide 2 -->
-                                <div class="broswur-slide w-full flex-shrink-0">
-                                    <img src="<?= base_url('assets/images/brosur-2.jpeg') ?>" alt="Brosur Kampus 2" class="w-full h-auto object-cover">
-                                </div>
-                            </div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <!-- Text Content -->
+                        <div class="text-white">
+                            <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                                Jelajahi Brosur Kampus Kami
+                            </h2>
+                            <p class="text-xl text-amber-100 mb-8">
+                                Dapatkan informasi lengkap tentang program studi, fasilitas, dan beasiswa yang tersedia di Politeknik Darma Ganesha
+                            </p>
                         </div>
 
-                        <!-- Navigation Buttons -->
-                        <button class="broswur-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-lg">
-                            <i class="fas fa-chevron-left text-amber-600 text-lg"></i>
-                        </button>
-                        <button class="broswur-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-lg">
-                            <i class="fas fa-chevron-right text-amber-600 text-lg"></i>
-                        </button>
+                        <!-- Slider -->
+                        <div class="relative">
+                            <div class="broswur-slider-wrapper overflow-hidden rounded-2xl shadow-2xl">
+                                <div class="broswur-slider flex transition-transform duration-500">
+                                    <!-- Slide 1 -->
+                                    <div class="broswur-slide w-full flex-shrink-0">
+                                        <img src="<?= base_url('assets/images/brosur-1.jpeg') ?>" alt="Brosur Kampus 1" class="w-full h-auto object-cover">
+                                    </div> 
+                                    <!-- Slide 2 -->
+                                    <div class="broswur-slide w-full flex-shrink-0">
+                                        <img src="<?= base_url('assets/images/brosur-2.jpeg') ?>" alt="Brosur Kampus 2" class="w-full h-auto object-cover">
+                                    </div>
+                                </div>
+                            </div>
 
-                        <!-- Dots Navigation -->
-                        <div class="flex justify-center gap-2 mt-4">
-                            <button class="broswur-dot w-3 h-3 rounded-full bg-white opacity-75 hover:opacity-100 transition-all" data-slide="0"></button>
-                            <button class="broswur-dot w-3 h-3 rounded-full bg-white opacity-75 hover:opacity-100 transition-all" data-slide="1"></button>
+                            <!-- Navigation Buttons -->
+                            <button class="broswur-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-lg">
+                                <i class="fas fa-chevron-left text-amber-600 text-lg"></i>
+                            </button>
+                            <button class="broswur-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-lg">
+                                <i class="fas fa-chevron-right text-amber-600 text-lg"></i>
+                            </button>
+
+                            <!-- Dots Navigation -->
+                            <div class="flex justify-center gap-2 mt-4">
+                                <button class="broswur-dot w-3 h-3 rounded-full bg-white opacity-75 hover:opacity-100 transition-all" data-slide="0"></button>
+                                <button class="broswur-dot w-3 h-3 rounded-full bg-white opacity-75 hover:opacity-100 transition-all" data-slide="1"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
