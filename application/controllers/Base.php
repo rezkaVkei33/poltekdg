@@ -83,7 +83,7 @@ class Base extends CI_Controller {
 
     }
     public function pendaftaran() {
-    $data['subtitle'] = 'Formulir PMB';
+    $data['subtitle'] = 'Kontak Tim PMB';
     $this->load->view('base/form_pendaftaran', $data);
 }
 

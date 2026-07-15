@@ -15,22 +15,11 @@
               <div class="flex justify-center mb-6">
                   <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
               </div>
-              <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Silakan klik tombol di bawah ini untuk mengisi <br> formulir pendaftaran secara online melalui Google Form.
-              </p>
-              <p class="mt-4">
-              <a href="https://lnk.ink/PendaftaranMahasiswaBaruPoltegDG" target="_blank" class="btn"
-                style="background: linear-gradient(90deg,#ff7a00 0%,#ffb400 50%,#ffd100 100%); color:#fff; border:0; padding:.5rem 1rem; border-radius:.375rem; box-shadow:0 6px 18px rgba(255,123,0,0.25); text-decoration:none; display:inline-block;"
-                onmouseover="this.style.boxShadow='0 10px 26px rgba(255,123,0,0.35)'; this.style.transform='translateY(-2px)';"
-                onmouseout="this.style.boxShadow='0 6px 18px rgba(255,123,0,0.25)'; this.style.transform='translateY(0)';"
-                aria-label="Formulir Pendaftaran">
-                Formulir Pendaftaran
-              </a>
-              </p>
+              
               <div class="text-center mt-4">
-              <p class="mt-4">Atau scan QR Code berikut menggunakan kamera HP kamu</p>
+              <p class="mt-4">Silahkan scan QR Code berikut untuk mendapatkan informasi lebih lanjut</p>
                 <div class="text-center">
-                  <img src="<?= base_url('uploads/qrcode/qr-pendaftaran.jpeg') ?>" alt="QR Code Formulir PMB" class="img-fluid mt-3 shadow rounded" style="max-width: 250px; display: block; margin-left: auto; margin-right: auto;">
+                  <img src="<?= base_url('assets/images/pmb.jpeg') ?>" alt="QR Code Formulir PMB" class="img-fluid mt-3 shadow rounded" style="max-width: 250px; display: block; margin-left: auto; margin-right: auto;">
                 </div>
               </div>
              
