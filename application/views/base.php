@@ -67,15 +67,11 @@
                                 <div class="broswur-slider flex transition-transform duration-500">
                                     <!-- Slide 1 -->
                                     <div class="broswur-slide w-full flex-shrink-0">
-                                        <img src="#" alt="Brosur Kampus 1" class="w-full h-auto object-cover">
-                                    </div>
+                                        <img src="<?= base_url('assets/images/brosur-1.jpeg') ?>" alt="Brosur Kampus 1" class="w-full h-auto object-cover">
+                                    </div> 
                                     <!-- Slide 2 -->
                                     <div class="broswur-slide w-full flex-shrink-0">
-                                        <img src="#" alt="Brosur Kampus 2" class="w-full h-auto object-cover">
-                                    </div>
-                                    <!-- Slide 3 -->
-                                    <div class="broswur-slide w-full flex-shrink-0">
-                                        <img src="#" alt="Brosur Kampus 3" class="w-full h-auto object-cover">
+                                        <img src="<?= base_url('assets/images/brosur-2.jpeg') ?>" alt="Brosur Kampus 2" class="w-full h-auto object-cover">
                                     </div>
                                 </div>
                             </div>
