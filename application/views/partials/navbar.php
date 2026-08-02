@@ -55,17 +55,17 @@
                 <div class="dropdown relative">
                     <a href="#" class="flex items-center font-medium text-gray-700 transition-colors hover:text-amber-600" aria-label="Pilih bahasa">
                         <i class="mr-2 fas fa-globe-asia"></i>
-                        ID
+                        Language
                         <i class="ml-2 text-xs fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
                         <a href="<?= site_url('language/switch/id') ?>" class="flex items-center">
                             <img src="<?= base_url('assets/images/flag/idn-flag.png') ?>" alt="Bendera Indonesia" class="w-5 mr-3">
-                            Bahasa Indonesia
+                            ID
                         </a>
                         <a href="<?= site_url('language/switch/en') ?>" class="flex items-center">
                             <img src="<?= base_url('assets/images/flag/us-flag.png') ?>" alt="United States flag" class="w-5 mr-3">
-                            English
+                            EN
                         </a>
                     </div>
                 </div>
@@ -119,17 +119,17 @@
                 <!-- Language Dropdown -->
                 <div class="mobile-dropdown-container">
                     <button type="button" onclick="toggleMobileDropdown('language')" class="flex items-center justify-between w-full px-3 py-2 text-gray-700 rounded-md hover:bg-amber-50 hover:text-amber-600">
-                        <span><i class="mr-2 fas fa-globe-asia"></i>Indonesia</span>
+                        <span><i class="mr-2 fas fa-globe-asia"></i>Language</span>
                         <i class="text-xs fas fa-chevron-down"></i>
                     </button>
                     <div id="language" class="mobile-dropdown pl-4">
                         <a href="<?= site_url('language/switch/id') ?>" class="flex items-center px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
                             <img src="<?= base_url('assets/images/flag/idn-flag.png') ?>" alt="Bendera Indonesia" class="w-5 mr-3">
-                            Bahasa Indonesia
+                            ID
                         </a>
                         <a href="<?= site_url('language/switch/en') ?>" class="flex items-center px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
                             <img src="<?= base_url('assets/images/flag/us-flag.png') ?>" alt="United States flag" class="w-5 mr-3">
-                            English
+                            EN
                         </a>
                     </div>
                 </div>
