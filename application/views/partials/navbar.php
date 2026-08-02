@@ -43,7 +43,7 @@
                         <?= lang('academic'); ?> <i class="ml-1 text-xs fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="<?= site_url('base/kalender') ?>"><?= lang('academic_calendar'); ?></a>
+                        <a href="<?= site_url('base/kalender') ?>"><?= lang('calendar'); ?></a>
                         <a href="#">SIAKAD</a>
                         <a href="<?= site_url('base/arsip') ?>"><?= lang('archive'); ?></a>
                     </div>
@@ -55,7 +55,7 @@
  
                 <!-- Language Dropdown -->
                 <div class="dropdown relative">
-                    <a href="#" class="flex items-center font-normal text-gray-700 transition-colors hover:text-amber-600" aria-label="Pilih bahasa">
+                    <a href="#" class="flex items-center font-medium text-gray-700 transition-colors hover:text-amber-600" aria-label="Pilih bahasa">
                         <i class="mr-2 fas fa-globe-asia"></i>
                         <span class="font-normal"><?= lang($current); ?></span>
                         <i class="ml-2 text-xs fas fa-chevron-down"></i>
@@ -122,7 +122,7 @@
                  <?php $current = $this->session->userdata('site_language'); ?>
                 <div class="mobile-dropdown-container">
                     <button type="button" onclick="toggleMobileDropdown('language')" class="flex items-center justify-between w-full px-3 py-2 text-gray-700 rounded-md hover:bg-amber-50 hover:text-amber-600">
-                        <span class="font-normal"><i class="mr-2 fas fa-globe-asia"></i><?= lang($current); ?></span>
+                        <span><i class="mr-2 fas fa-globe-asia"></i><?= lang($current); ?></span>
                         <i class="text-xs fas fa-chevron-down"></i>
                     </button>
                     <div id="language" class="mobile-dropdown pl-4">
