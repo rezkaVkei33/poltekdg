@@ -18,7 +18,7 @@ $lang['announcement']      = 'Pengumuman';
 $lang['gallery']           = 'Galeri';
 $lang['register']          = 'Daftar Sekarang';
 
-$lang['welcome']           = 'Selamat Datang';
+$lang['welcome']           = 'Sambutan';
 
 $lang['language']          = 'Bahasa';
 
