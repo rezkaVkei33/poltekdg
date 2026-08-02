@@ -50,9 +50,57 @@
 
                         <a href="<?= site_url('base/kontak') ?>" class="text-gray-700 hover:text-amber-600 font-medium transition-colors">Kontak</a>
                         
-                        <a href="<?= site_url('base/pendaftaran') ?>" class="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-6 py-2 rounded-full hover:from-amber-500 hover:to-orange-600 transition-all font-medium shadow-lg">
-                            Daftar Sekarang
-                        </a>
+                        <!-- multy language menu  -->
+                         <div class="dropdown">
+                            <a href="#"
+                            class="text-gray-700 hover:text-amber-600 font-medium transition-colors d-flex align-items-center"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                                <i class="fas fa-globe-asia me-2"></i>
+
+                                ID
+
+                                <i class="fas fa-chevron-down ms-2 small"></i>
+
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-3">
+
+                                <li>
+
+                                    <a class="dropdown-item d-flex align-items-center py-2"
+                                    href="<?= site_url('language/switch/id') ?>">
+
+                                        <img src="<?= base_url('assets/images/flags/id.png') ?>"
+                                            width="22"
+                                            class="me-3">
+
+                                        Bahasa Indonesia
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a class="dropdown-item d-flex align-items-center py-2"
+                                    href="<?= site_url('language/switch/en') ?>">
+
+                                        <img src="<?= base_url('assets/images/flags/en.png') ?>"
+                                            width="22"
+                                            class="me-3">
+
+                                        English
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        
                     </div>
 
                     <!-- Mobile Menu Button -->
@@ -100,28 +148,57 @@
                         
                         <a href="<?= site_url('base/kontak') ?>" class="block px-3 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 rounded-md">Kontak</a>
                         
-                        <div class="logo">
-                            <a href="#"><img src="https://bluebits.dev/wp-content/uploads/2020/06/cropped-logo-1.png" alt=""></a>
-                        </div> 
-                        <div class="lang-menu">
-                            <div class="selected-lang">
-                                English
+                        
+                        <!-- multy language menu  -->
+                         <div class="dropdown">
+                                <a href="#"
+                                class="text-gray-700 hover:text-amber-600 font-medium text-decoration-none d-flex align-items-center"
+                                data-bs-toggle="dropdown">
+
+                                    <i class="fas fa-globe me-2"></i>
+
+                                    Indonesia
+
+                                    <i class="fas fa-angle-down ms-2"></i>
+
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+
+                                    <li>
+
+                                        <a class="dropdown-item d-flex align-items-center py-2"
+                                        href="#">
+
+                                            <img src="<?= base_url('assets/images/flags/id.png') ?>"
+                                                width="20"
+                                                class="me-3">
+
+                                            Bahasa Indonesia
+
+                                        </a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a class="dropdown-item d-flex align-items-center py-2"
+                                        href="#">
+
+                                            <img src="<?= base_url('assets/images/flags/us.png') ?>"
+                                                width="20"
+                                                class="me-3">
+
+                                            English
+
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
                             </div>
-                            <ul>
-                                <li>
-                                    <a href="#" class="de">German</a>
-                                </li>
-                                <li>
-                                    <a href="" class="en">English</a>
-                                </li>
-                                <li>
-                                    <a href="" class="fr">French</a>
-                                </li>
-                                <li>
-                                    <a href="" class="ar">Arabic</a>
-                                </li>
-                            </ul>
-                    </div>
+                        
                 </div>
             </div>
         </nav>
