@@ -51,7 +51,7 @@
                         <a href="<?= site_url('base/kontak') ?>" class="text-gray-700 hover:text-amber-600 font-medium transition-colors">Kontak</a>
                         
                         <!-- multy language menu  -->
-                         <div class="dropdown">
+                         <div class="dropdown-menu">
                             <a href="#"
                             class="text-gray-700 hover:text-amber-600 font-medium transition-colors d-flex align-items-center"
                             data-bs-toggle="dropdown"
@@ -72,7 +72,7 @@
                                     <a class="dropdown-item d-flex align-items-center py-2"
                                     href="<?= site_url('language/switch/id') ?>">
 
-                                        <img src="<?= base_url('assets/images/flags/id.png') ?>"
+                                        <img src="<?= base_url('assets/images/flag/idn-flag.png') ?>"
                                             width="22"
                                             class="me-3">
 
@@ -87,7 +87,7 @@
                                     <a class="dropdown-item d-flex align-items-center py-2"
                                     href="<?= site_url('language/switch/en') ?>">
 
-                                        <img src="<?= base_url('assets/images/flags/en.png') ?>"
+                                        <img src="<?= base_url('assets/images/flag/us-flag.png') ?>"
                                             width="22"
                                             class="me-3">
 
@@ -150,7 +150,7 @@
                         
                         
                         <!-- multy language menu  -->
-                         <div class="dropdown">
+                         <div class="mobile-dropdown-container">
                                 <a href="#"
                                 class="text-gray-700 hover:text-amber-600 font-medium text-decoration-none d-flex align-items-center"
                                 data-bs-toggle="dropdown">
@@ -170,7 +170,7 @@
                                         <a class="dropdown-item d-flex align-items-center py-2"
                                         href="#">
 
-                                            <img src="<?= base_url('assets/images/flags/id.png') ?>"
+                                            <img src="<?= base_url('assets/images/flag/idn-flag.png') ?>"
                                                 width="20"
                                                 class="me-3">
 
@@ -185,7 +185,7 @@
                                         <a class="dropdown-item d-flex align-items-center py-2"
                                         href="#">
 
-                                            <img src="<?= base_url('assets/images/flags/us.png') ?>"
+                                            <img src="<?= base_url('assets/images/flag/us-flag.png') ?>"
                                                 width="20"
                                                 class="me-3">
 
@@ -198,7 +198,7 @@
                                 </ul>
 
                             </div>
-                        
+                        </div>
                 </div>
             </div>
         </nav>
