@@ -24,7 +24,7 @@
                         <a href="<?= site_url('base/sambutan'); ?>"><?= lang('welcome'); ?></a>
                         <a href="<?= site_url('base/visi_misi'); ?>"><?= lang('vision_mission'); ?></a>
                         <a href="<?= site_url('base/renstra'); ?>"><?= lang('strategic_plan'); ?></a>
-                        <a href="<?= site_url('base/dosen'); ?>"><?= lang('faculty'); ?></a>
+                        <a href="<?= site_url('base/dosen'); ?>"><?= lang('lecturer'); ?></a>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <a href="<?= site_url('base/prodi_si') ?>"><?= lang('d3_information_system'); ?></a>
-                        <a href="<?= site_url('base/prodi_ph') ?>"><?= lang('d3_hotel_management'); ?></a>
+                        <a href="<?= site_url('base/prodi_ph') ?>"><?= lang('d3_hospitality'); ?></a>
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@
                         <a href="<?= site_url('base/sambutan') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('welcome'); ?></a>
                         <a href="<?= site_url('base/visi_misi') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('vision_mission'); ?></a>
                         <a href="<?= site_url('base/renstra') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('strategic_plan'); ?></a>
-                        <a href="<?= site_url('base/dosen') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('faculty'); ?></a>
+                        <a href="<?= site_url('base/dosen') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('lecturer'); ?></a>
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@
                     </button>
                     <div id="prodi" class="mobile-dropdown pl-4">
                         <a href="<?= site_url('base/prodi_si') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('d3_information_system'); ?></a>
-                        <a href="<?= site_url('base/prodi_ph') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('d3_hotel_management'); ?></a>
+                        <a href="<?= site_url('base/prodi_ph') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('d3_hospitality'); ?></a>
                     </div>
                 </div>
 
@@ -110,7 +110,7 @@
                         <?= lang('academic'); ?> <i class="text-xs fas fa-chevron-down"></i>
                     </button>
                     <div id="akademik" class="mobile-dropdown pl-4">
-                        <a href="<?= site_url('base/kalender') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('academic_calendar'); ?></a>
+                        <a href="<?= site_url('base/kalender') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('calendar'); ?></a>
                         <a href="<?= site_url('base/arsip') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('archive'); ?></a>
                     </div>
                 </div>
