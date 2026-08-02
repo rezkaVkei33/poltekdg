@@ -51,7 +51,7 @@
                         <a href="<?= site_url('base/kontak') ?>" class="text-gray-700 hover:text-amber-600 font-medium transition-colors">Kontak</a>
                         
                         <!-- multy language menu  -->
-                         <div class="dropdown-menu">
+                         <div class="dropdown>
                             <a href="#"
                             class="text-gray-700 hover:text-amber-600 font-medium transition-colors d-flex align-items-center"
                             data-bs-toggle="dropdown"
@@ -198,7 +198,6 @@
                                 </ul>
 
                             </div>
-                        </div>
                 </div>
             </div>
         </nav>
