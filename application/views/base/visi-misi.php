@@ -26,19 +26,19 @@
                           <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
                             <h5 class="text-xl font-semibold text-gray-900 mb-3"><?= lang('vision'); ?></h5>
                             <hr class="mb-4" style="border: 2px solid #007BFF; width: 60px;">
-                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($vmts, 'visi')) ?></p>
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($data_vmts, 'visi')) ?></p>
                           </article>
 
                           <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
                             <h5 class="text-xl font-semibold text-gray-900 mb-3"><?= lang('mission'); ?></h5>
                             <hr class="mb-4" style="border: 2px solid #28A745; width: 60px;">
-                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($vmts, 'misi')) ?></p>
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($data_vmts, 'misi')) ?></p>
                           </article>
 
                           <article class="sm:col-span-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
                             <h5 class="text-xl font-semibold text-gray-900 mb-3"><?= lang('goals'); ?></h5>
                             <hr class="mb-4" style="border: 2px solid #FFC107; width: 60px;">
-                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($vmts, 'tujuan')) ?></p>
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($data_vmts, 'tujuan')) ?></p>
                           </article>
                         </div>
                         </div>
