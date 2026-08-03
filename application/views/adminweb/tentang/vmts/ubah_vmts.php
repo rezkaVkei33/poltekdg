@@ -60,6 +60,36 @@
                                 
                     <textarea class="form-control" name="prospek_kerja" rows="5"><?= $vmts->prospek_kerja; ?></textarea>
                   </div>
+                  <!-- VISI -->
+                  <label class="form-label fw-semibold">Visi EN :</label>
+                  <div class="mb-3">
+                                
+                    <textarea class="form-control" name="visi_en" rows="5" required><?= $vmts->visi_en; ?></textarea>
+                  </div>
+                  <!-- MISI -->
+                  <label class="form-label fw-semibold">Misi EN :</label>
+                  <div class="mb-3">
+                                
+                    <textarea class="form-control" name="misi_en" rows="5" required><?= $vmts->misi_en; ?></textarea>
+                  </div>
+                  <!-- TUJUAN -->
+                  <label class="form-label fw-semibold">Tujuan EN :</label>
+                  <div class="mb-3">
+                                
+                    <textarea class="form-control" name="tujuan_en" rows="5" required><?= $vmts->tujuan_en; ?></textarea>
+                  </div>
+                  <!-- STRATEGI -->
+                  <label class="form-label fw-semibold">Strategi EN :</label>
+                  <div class="mb-3">
+                                
+                    <textarea class="form-control" name="strategi_en" rows="5" required><?= $vmts->strategi_en; ?></textarea>
+                  </div>
+                  <!-- PROSPEK KERJA -->
+                  <label class="form-label fw-semibold">Prospek Kerja EN :</label>
+                  <div class="mb-3">
+                                
+                    <textarea class="form-control" name="prospek_kerja_en" rows="5" required><?= $vmts->prospek_kerja_en; ?></textarea>
+                  </div>
                 </form>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4">

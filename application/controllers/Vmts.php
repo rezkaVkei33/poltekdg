@@ -29,7 +29,12 @@ class Vmts extends MY_Controller {
             'misi' => $this->input->post('misi'),
             'tujuan' => $this->input->post('tujuan'),
             'strategi' => $this->input->post('strategi'),
-            'prospek_kerja' => $this->input->post('prospek_kerja')
+            'prospek_kerja' => $this->input->post('prospek_kerja'),
+            'visi_en' => $this->input->post('visi_en'),
+            'misi_en' => $this->input->post('misi_en'),
+            'tujuan_en' => $this->input->post('tujuan_en'),
+            'strategi_en' => $this->input->post('strategi_en'),
+            'prospek_kerja_en' => $this->input->post('prospek_kerja_en')
         );
 
         $this->Vmts_model->insert($data);
@@ -52,8 +57,13 @@ class Vmts extends MY_Controller {
             'visi' => $this->input->post('visi'),
             'misi' => $this->input->post('misi'),
             'tujuan' => $this->input->post('tujuan'),
+            'prospek_kerja' => $this->input->post('prospek_kerja'),
             'strategi' => $this->input->post('strategi'),
-            'prospek_kerja' => $this->input->post('prospek_kerja')
+            'visi_en' => $this->input->post('visi_en'),
+            'misi_en' => $this->input->post('misi_en'),
+            'tujuan_en' => $this->input->post('tujuan_en'),
+            'strategi_en' => $this->input->post('strategi_en'),
+            'prospek_kerja_en' => $this->input->post('prospek_kerja_en')
         );
 
         $this->Vmts_model->update($id, $data);

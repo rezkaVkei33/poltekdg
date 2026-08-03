@@ -39,19 +39,19 @@
                 <!-- MISI -->
                 <label class="form-label fw-semibold">Misi :</label>
                 <div class="mb-3">
-                                
+                  
                   <textarea class="form-control" name="misi" rows="5" required></textarea>
                 </div>
                 <!-- TUJUAN -->
                 <label class="form-label fw-semibold">Tujuan :</label>
                 <div class="mb-3">
-                                
+                  
                   <textarea class="form-control" name="tujuan" rows="5" required></textarea>
                 </div>
                 <!-- STRATEGI -->
                 <label class="form-label fw-semibold">Strategi :</label>
                 <div class="mb-3">
-                                
+                  
                   <textarea class="form-control" name="strategi" rows="5" required></textarea>
                 </div>
                 <!-- PROSPEK KERJA -->
@@ -59,6 +59,36 @@
                 <div class="mb-3">
                                 
                   <textarea class="form-control" name="prospek_kerja" rows="5" required></textarea>
+                </div>
+                <!-- VISI -->
+                <label class="form-label fw-semibold">Visi EN :</label>
+                <div class="mb-3">
+                                
+                  <textarea class="form-control" name="visi_en" rows="5" required></textarea>
+                </div>
+                <!-- MISI -->
+                <label class="form-label fw-semibold">Misi EN :</label>
+                <div class="mb-3">
+                                
+                  <textarea class="form-control" name="misi_en" rows="5" required></textarea>
+                </div>
+                <!-- TUJUAN -->
+                <label class="form-label fw-semibold">Tujuan EN :</label>
+                <div class="mb-3">
+                                
+                  <textarea class="form-control" name="tujuan_en" rows="5" required></textarea>
+                </div>
+                <!-- STRATEGI -->
+                <label class="form-label fw-semibold">Strategi EN :</label>
+                <div class="mb-3">
+                                
+                  <textarea class="form-control" name="strategi_en" rows="5" required></textarea>
+                </div>
+                <!-- PROSPEK KERJA -->
+                <label class="form-label fw-semibold">Prospek Kerja EN :</label>
+                <div class="mb-3">
+                                
+                  <textarea class="form-control" name="prospek_kerja_en" rows="5" required></textarea>
                 </div>
               </form>
             </div>
