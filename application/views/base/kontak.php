@@ -12,12 +12,12 @@
             <section class="py-16 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Kontak Kami</h2>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"><?= lang('contact') ?></h2>
                         <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
                         </div>
                         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Bisa Hubungi Kami Melalui:
+                            <?= lang('call') ?>
                         </p>
                         <div class="text-center mt-4">
                         <?php if (!empty($data_kontak)): ?>
@@ -35,7 +35,7 @@
                         onmouseover="this.style.boxShadow='0 10px 26px rgba(0, 123, 255, 0.35)'; this.style.transform='translateY(-2px)';"
                         onmouseout="this.style.boxShadow='0 6px 18px rgba(0, 123, 255, 0.25)'; this.style.transform='translateY(0)';"
                         aria-label="Kembali ke Beranda">
-                        &#8592; ke Beranda
+                        &#8592;<?= lang('back_home'); ?>
                         </a>
                         </div>
                 </div>

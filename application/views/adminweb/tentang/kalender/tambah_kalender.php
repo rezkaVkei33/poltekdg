@@ -36,6 +36,12 @@
                                 
                         <textarea class="form-control" name="deskripsi" rows="5" required></textarea>
                       </div>
+                      <!-- DESKRIPSI -->
+                      <label class="form-label fw-semibold">Deskripsi (EN) :</label>
+                      <div class="mb-3">
+                                
+                        <textarea class="form-control" name="deskripsi_en" rows="5" required></textarea>
+                      </div>
                       <!-- TAHUN AKADEMIK -->
                     <div class="mb-3">
                     <label class="form-label fw-semibold">Tahun Akademik</label>

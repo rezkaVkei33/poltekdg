@@ -47,6 +47,7 @@ class Kalender extends MY_Controller {
         $data = array(
             'judul' => $this->input->post('judul'),
             'deskripsi' => $this->input->post('deskripsi'),
+            'deskripsi_en' => $this->input->post('deskripsi_en'),
             'tahun_akademik' => $this->input->post('tahun_akademik'),
             'gambar' => $gambar,
             'tanggal_mulai' => $this->input->post('tanggal_mulai'),
@@ -96,6 +97,7 @@ class Kalender extends MY_Controller {
         $data = array(
             'judul' => $this->input->post('judul'),
             'deskripsi' => $this->input->post('deskripsi'),
+            'deskripsi_en' => $this->input->post('deskripsi_en'),
             'tahun_akademik' => $this->input->post('tahun_akademik'),
             'gambar' => $gambar,
             'tanggal_mulai' => $this->input->post('tanggal_mulai'),

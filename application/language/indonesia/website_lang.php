@@ -30,11 +30,26 @@ $lang['mission'] = 'Misi';
 $lang['goals'] = 'Tujuan';
 
 // dosen
-$lang['lecturer'] = 'dosen kami';
+$lang['our_lecturer'] = 'dosen kami';
 $lang['content'] = 'Dibimbing oleh dosen dan pakar berpengalaman di bidangnya';
 
 // prodi
 $lang['study_program'] = 'Program Studi';
+
+// kalender akademik 
+$lang['calendar_academic'] = 'Kalender Akademik';
+$lang['explanation'] = 'Keterangan';
+$lang['start_date'] = 'Tanggal Mulai';
+$lang['end_date'] = 'Tanggal Selesai';
+$lang['academic_year'] = 'Tahun Akademik';
+
+// kontak 
+$lang['contact'] = 'Kontak Kami';
+$lang['call'] = 'Bisa Hubungi Kami Melalui:';
+
+// kontak pmb
+$lang['contact_pmb'] = 'Kontak PMB';
+$lang['scan_qrcode'] = 'Silahkan scan QR Code berikut untuk mendapatkan informasi lebih lanjut';
 
 $lang['language']          = 'Bahasa';
 

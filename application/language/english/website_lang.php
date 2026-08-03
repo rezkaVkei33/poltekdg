@@ -32,11 +32,29 @@ $lang['goals'] = 'Goals';
 $lang['strategy'] = 'Strategy';
 
 // dosen 
-$lang['lecturer'] = 'our lecturer';
+$lang['our_lecturer'] = 'our lecturer';
 $lang['content'] = 'Guided by experienced lecturers and experts in their fields';
 
 // prodi
 $lang['study_program'] = 'Study Program';
+
+
+// kalender akademik 
+$lang['academic_calendar'] = 'Academic Calendar';
+$lang['explanation'] = 'Explanation';
+$lang['start_date'] = 'Start Date';
+$lang['end_date'] = 'End Date';
+$lang['academic_year'] = 'Academic Year';
+
+// kontak
+$lang['contact'] = 'Contact Us';
+$lang['call'] = 'You can contact us via:';
+
+// pendaftaran
+$lang['contact_pmb'] = 'Contact the Admissions Team';
+$lang['scan_qrcode'] = 'Scan the QR Code to contact the Admissions Team';
+
+
 
 $lang['language']          = 'Language';
 
