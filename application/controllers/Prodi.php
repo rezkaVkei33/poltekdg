@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require_once(APPPATH . 'core/MY_Admin_Controller.php');
+
 class Prodi extends MY_Controller {
 
     public function __construct() {
