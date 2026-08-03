@@ -20,11 +20,10 @@ $lang['register']          = 'Register';
 $lang['archive']          = 'Archive';
 
 
-
 $lang['welcome']           = 'Welcome';
 
 $lang['language']          = 'Language';
 
-$lang['indonesia']         = 'Indonesia';
+$lang['indonesia']         = 'ID';
 
-$lang['english']           = 'English';
+$lang['english']           = 'Eng';

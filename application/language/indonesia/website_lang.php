@@ -22,6 +22,6 @@ $lang['welcome']           = 'Sambutan';
 
 $lang['language']          = 'Bahasa';
 
-$lang['indonesia']         = 'Indonesia';
+$lang['indonesia']         = 'ID';
 
-$lang['english']           = 'English';
+$lang['english']           = 'Eng';

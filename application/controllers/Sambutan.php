@@ -51,6 +51,7 @@ class Sambutan extends MY_Controller {
         // Validasi input
         $data = array(
             'teks_sambutan' => $this->input->post('teks_sambutan'),
+            'teks_sambutan_en' => $this->input->post('teks_sambutan_en'),
             'tempat' => $this->input->post('tempat'),
             'tanda_tangan' => $this->input->post('tanda_tangan'),
             'gambar' => $gambar,
@@ -107,6 +108,7 @@ class Sambutan extends MY_Controller {
         // Validasi input
         $data = array(
             'teks_sambutan' => $this->input->post('teks_sambutan'),
+            'teks_sambutan_en' => $this->input->post('teks_sambutan_en'),
             'tempat' => $this->input->post('tempat'),
             'tanda_tangan' => $this->input->post('tanda_tangan'),
             'tanggal_update' => date('Y-m-d H:i:s')

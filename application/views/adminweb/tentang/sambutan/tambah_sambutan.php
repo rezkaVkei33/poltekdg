@@ -41,6 +41,10 @@
                                 
                     <textarea class="form-control" name="teks_sambutan" rows="5" required></textarea>
                   </div>
+                  <!-- ISI (textarea) -->
+                  <div class="mb-3">             
+                    <textarea class="form-control" name="teks_sambutan_en" rows="5" required></textarea>
+                  </div>
             
                   <!-- GAMBAR -->
                   <div class="mb-3">
