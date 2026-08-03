@@ -61,13 +61,13 @@
                         <i class="ml-2 text-xs fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="<?= site_url('language/change/indonesia'); ?>" class="flex items-center gap-3 flex-nowrap whitespace-nowrap">
+                        <a href="<?= site_url('language/change/indonesia'); ?>" class="inline-flex items-center gap-3 whitespace-nowrap">
                             <img src="<?= base_url('assets/images/flag/idn-flag.png') ?>" alt="Bendera Indonesia" class="w-5 h-5 object-contain flex-shrink-0">
-                            <span><?= lang('indonesia'); ?></span>
+                            <span class="text-left"><?= lang('indonesia'); ?></span>
                         </a>
-                        <a href="<?= site_url('language/change/english'); ?>" class="flex items-center gap-3 flex-nowrap whitespace-nowrap">
+                        <a href="<?= site_url('language/change/english'); ?>" class="inline-flex items-center gap-3 whitespace-nowrap">
                             <img src="<?= base_url('assets/images/flag/us-flag.png') ?>" alt="United States flag" class="w-5 h-5 object-contain flex-shrink-0">
-                            <span><?= lang('english'); ?></span>
+                            <span class="text-left"><?= lang('english'); ?></span>
                         </a>
                     </div>
                 </div>
@@ -126,13 +126,13 @@
                         <i class="text-xs fas fa-chevron-down"></i>
                     </button>
                     <div id="language" class="mobile-dropdown pl-4">
-                        <a href="<?= site_url('language/change/indonesia'); ?>" class="flex items-center gap-3 flex-nowrap whitespace-nowrap px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
+                        <a href="<?= site_url('language/change/indonesia'); ?>" class="flex items-center gap-2 px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
                             <img src="<?= base_url('assets/images/flag/idn-flag.png') ?>" alt="Bendera Indonesia" class="w-5 h-5 object-contain flex-shrink-0">
-                            <span><?= lang('indonesia'); ?></span>
+                            <span class="ml-1"><?= lang('indonesia'); ?></span>
                         </a>
-                        <a href="<?= site_url('language/change/english'); ?>" class="flex items-center gap-3 flex-nowrap whitespace-nowrap px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
+                        <a href="<?= site_url('language/change/english'); ?>" class="flex items-center gap-2 px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
                             <img src="<?= base_url('assets/images/flag/us-flag.png') ?>" alt="United States flag" class="w-5 h-5 object-contain flex-shrink-0">
-                            <span><?= lang('english'); ?></span>
+                            <span class="ml-1"><?= lang('english'); ?></span>
                         </a>
                     </div>
                 </div>
