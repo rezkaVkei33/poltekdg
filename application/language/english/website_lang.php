@@ -20,7 +20,9 @@ $lang['register']          = 'Register';
 $lang['archive']          = 'Archive';
 
 
-$lang['welcome']           = 'Welcome';
+$lang['welcome']            = "Director's Welcome";
+$lang['no_welcome_message'] = 'No welcome message available.';
+$lang['back_home']          = 'Back to Home';
 
 $lang['language']          = 'Language';
 

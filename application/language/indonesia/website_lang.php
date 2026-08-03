@@ -18,7 +18,9 @@ $lang['announcement']      = 'Pengumuman';
 $lang['gallery']           = 'Galeri';
 $lang['register']          = 'Daftar Sekarang';
 
-$lang['welcome']           = 'Sambutan';
+$lang['welcome']            = 'Sambutan Direktur';
+$lang['no_welcome_message'] = 'Belum ada sambutan tersedia.';
+$lang['back_home']          = 'Kembali ke Beranda';
 
 $lang['language']          = 'Bahasa';
 

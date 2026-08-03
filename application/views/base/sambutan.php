@@ -12,7 +12,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
               <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                <?= strtoupper($subtitle ?? 'Sambutan Direktur') ?>
+                <?= strtoupper($subtitle ?? lang('welcome')) ?>
               </h2>
               <div class="flex justify-center mb-6">
                   <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
@@ -39,7 +39,7 @@
         </div>
         <div class="flex-grow-1">
           <div class="p-4 rounded" style="background: #f8f1c0; border: 2px solid; border-image: linear-gradient(90deg, orange, gold) 1; box-shadow: 0 10px 20px rgba(255,165,0,0.12);">
-            <p class="text-justify mb-0" style="text-align: justify;"><?= nl2br($sambutan->teks_sambutan) ?></p>
+            <p class="text-justify mb-0" style="text-align: justify;"><?= nl2br(trans($sambutan, 'teks_sambutan')) ?></p>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
     </div>
     <?php endforeach; ?>
     <?php else: ?>
-      <div class="alert alert-info">Belum ada sambutan tersedia.</div>
+      <div class="alert alert-info"><?= lang('no_welcome_message'); ?></div>
     <?php endif; ?>
                      
                       <div class="text-center mt-4">
@@ -55,7 +55,7 @@
                         onmouseover="this.style.boxShadow='0 10px 26px rgba(0, 123, 255, 0.35)'; this.style.transform='translateY(-2px)';"
                         onmouseout="this.style.boxShadow='0 6px 18px rgba(0, 123, 255, 0.25)'; this.style.transform='translateY(0)';"
                         aria-label="Kembali ke Beranda">
-                        &#8592; ke Beranda
+                        &#8592; ← <?= lang('back_home'); ?>
                         </a>
                         </div>
                 </div>
