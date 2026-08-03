@@ -13,7 +13,7 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12">
                         <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                          <?= strtoupper($subtitle ?? 'VMTS - Poltek DG') ?>
+                          <?= strtoupper($subtitle ?? lang('vmts')) ?>
                         </h2>
                         <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
@@ -24,21 +24,21 @@
 
                         <div class="grid gap-6 sm:grid-cols-2">
                           <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
-                            <h5 class="text-xl font-semibold text-gray-900 mb-3">Visi</h5>
+                            <h5 class="text-xl font-semibold text-gray-900 mb-3"><?= lang('vision'); ?></h5>
                             <hr class="mb-4" style="border: 2px solid #007BFF; width: 60px;">
-                            <p class="text-gray-700 leading-relaxed"><?= nl2br($data_vmts->visi) ?></p>
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($vmts, 'visi')) ?></p>
                           </article>
 
                           <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
-                            <h5 class="text-xl font-semibold text-gray-900 mb-3">Misi</h5>
+                            <h5 class="text-xl font-semibold text-gray-900 mb-3"><?= lang('mission'); ?></h5>
                             <hr class="mb-4" style="border: 2px solid #28A745; width: 60px;">
-                            <p class="text-gray-700 leading-relaxed"><?= nl2br($data_vmts->misi) ?></p>
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($vmts, 'misi')) ?></p>
                           </article>
 
                           <article class="sm:col-span-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-200">
-                            <h5 class="text-xl font-semibold text-gray-900 mb-3">Tujuan</h5>
+                            <h5 class="text-xl font-semibold text-gray-900 mb-3"><?= lang('goals'); ?></h5>
                             <hr class="mb-4" style="border: 2px solid #FFC107; width: 60px;">
-                            <p class="text-gray-700 leading-relaxed"><?= nl2br($data_vmts->tujuan) ?></p>
+                            <p class="text-gray-700 leading-relaxed"><?= nl2br(trans($vmts, 'tujuan')) ?></p>
                           </article>
                         </div>
                         </div>

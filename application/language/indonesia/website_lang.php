@@ -1,5 +1,5 @@
 <?php
-
+// navbar 
 $lang['home']              = 'Beranda';
 $lang['about']             = 'Tentang';
 $lang['study_program']     = 'Program Studi';
@@ -18,9 +18,17 @@ $lang['announcement']      = 'Pengumuman';
 $lang['gallery']           = 'Galeri';
 $lang['register']          = 'Daftar Sekarang';
 
+// sambutan 
 $lang['welcome']            = 'Sambutan Direktur';
 $lang['no_welcome_message'] = 'Belum ada sambutan tersedia.';
 $lang['back_home']          = 'Kembali ke Beranda';
+
+// VMTS 
+$lang['vmts'] = 'Visi, Misi dan Tujuan';
+$lang['vision'] = 'Visi';
+$lang['mission'] = 'Misi';
+$lang['goals'] = 'Tujuan';
+
 
 $lang['language']          = 'Bahasa';
 

@@ -1,5 +1,5 @@
 <?php
-
+// navbar 
 $lang['home']              = 'Home';
 $lang['about']             = 'About';
 $lang['study_program']     = 'Study Program';
@@ -19,10 +19,17 @@ $lang['register']          = 'Register';
 
 $lang['archive']          = 'Archive';
 
-
+// sambutan 
 $lang['welcome']            = "Director's Welcome";
 $lang['no_welcome_message'] = 'No welcome message available.';
 $lang['back_home']          = 'Back to Home';
+
+// VMTS
+$lang['vmts'] = 'Vision, Mission and Goals';
+$lang['vision'] = 'Vision';
+$lang['mission'] = 'Mission';
+$lang['goals'] = 'Goals';
+$lang['strategy'] = 'Strategy';
 
 $lang['language']          = 'Language';
 
