@@ -20,40 +20,40 @@ class Base extends MY_Controller {
     }
     public function sambutan()
     {
-        $data['title'] = 'Sambutan Direktur - Poltek DG';
-        $data['subtitle'] = 'Sambutan Direktur';
+        $data['title'] = lang('title_welcome');
+        $data['subtitle'] = lang('welcome');
         $data['data_sambutan'] = $this->Base_model->get_sambutan(); 
         $this->load->view('base/sambutan', $data);
 
     }
     public function kalender()
     {
-        $data['title'] = 'Kalender - Poltek DG';
-        $data['subtitle'] = 'Kalender Akademik';
+        $data['title'] = lang('title_calendar');
+        $data['subtitle'] = lang('calendar_academic');
         $data['data_kalender'] = $this->Base_model->get_kalender(); 
         $this->load->view('base/kalender', $data);
 
     }
     public function visi_misi()
     {
-        $data['title'] = 'VMTS - Poltek DG';
-        $data['subtitle'] = 'VMTS Poltek DG';
+        $data['title'] = lang('title_vmts');
+        $data['subtitle'] = lang('vmts');
         $data['data_vmts'] = $this->Base_model->get_vmts('Politeknik Darma Ganesha'); 
         $this->load->view('base/visi-misi', $data);
 
     }
     public function dosen()
     {
-        $data['title'] = 'Dosen - Poltek DG';
-        $data['subtitle'] = 'Dosen Poltek DG';
+        $data['title'] = lang('title_lecturer');
+        $data['subtitle'] = lang('our_lecturer');
         $data['data_dosen'] = $this->Base_model->get_dosen(); 
         $this->load->view('base/dosen', $data);
 
     }
     public function kontak()
     {
-        $data['title'] = 'Kontak - Poltek DG';
-        $data['subtitle'] = 'Kontak';
+        $data['title'] = lang('title_contact');
+        $data['subtitle'] = lang('contact');
         $data['data_kontak'] = $this->Base_model->get_kontak(); 
         $this->load->view('base/kontak', $data);
 
@@ -68,22 +68,23 @@ class Base extends MY_Controller {
     }
     public function prodi_si()
     {
-        $data['title'] = 'Program Studi - Poltek DG';
-        $data['subtitle'] = 'Program Studi';
+        $data['title'] = lang('title_study_program');
+        $data['subtitle'] = lang('study_program');
         $data['data_prodi_si'] = $this->Base_model->get_prodi_si('D3 Sistem Informasi'); 
         $this->load->view('base/prodi-si', $data);
 
     }
     public function prodi_ph()
     {
-        $data['title'] = 'Program Studi - Poltek DG';
-        $data['subtitle'] = 'Program Studi';
+        $data['title'] = lang('title_study_program');
+        $data['subtitle'] = lang('study_program');
         $data['data_prodi_ph'] = $this->Base_model->get_prodi_ph('D3 Perhotelan'); 
         $this->load->view('base/prodi-ph', $data);
 
     }
     public function pendaftaran() {
-    $data['subtitle'] = 'Kontak Tim PMB';
+    $data['title'] = lang('title_registration');
+    $data['subtitle'] = lang('contact_pmb');
     $this->load->view('base/form_pendaftaran', $data);
 }
 
