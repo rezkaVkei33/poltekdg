@@ -29,6 +29,12 @@ $lang['vision'] = 'Visi';
 $lang['mission'] = 'Misi';
 $lang['goals'] = 'Tujuan';
 
+// dosen
+$lang['lecturer'] = 'dosen kami';
+$lang['content'] = 'Dibimbing oleh dosen dan pakar berpengalaman di bidangnya';
+
+// prodi
+$lang['study_program'] = 'Program Studi';
 
 $lang['language']          = 'Bahasa';
 

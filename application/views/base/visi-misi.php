@@ -52,7 +52,7 @@
                         onmouseover="this.style.boxShadow='0 10px 26px rgba(0, 123, 255, 0.35)'; this.style.transform='translateY(-2px)';"
                         onmouseout="this.style.boxShadow='0 6px 18px rgba(0, 123, 255, 0.25)'; this.style.transform='translateY(0)';"
                         aria-label="Kembali ke Beranda">
-                        &#8592; ke Beranda
+                        &#8592; <?= lang('back_home'); ?>
                         </a>
                       </div>
                 </div>

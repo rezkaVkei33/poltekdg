@@ -13,7 +13,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
               <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                <?= strtoupper($subtitle ?? 'Prodi Sistem Informasi') ?> <?= strtoupper($data_prodi_ph->nama_prodi) ?>
+                <?= strtoupper($subtitle ?? lang('study_program')) ?> <?= strtoupper(trans($data_prodi_ph, 'nama_prodi')) ?>
               </h2>
               <div class="flex justify-center mb-6">
                   <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
@@ -32,12 +32,12 @@
       </div>
       <div class="col-md-8 col-12 d-flex flex-column justify-content-start">
         <div class="mb-2">
-          <h3 class="fw-bold"><?= strtoupper($data_prodi_ph->nama_prodi) ?></h3>
+          <h3 class="fw-bold"><?= strtoupper(trans($data_prodi_ph, 'nama_prodi')) ?></h3>
           <small class="text-muted">Update | <?= date('l, j F Y', strtotime($data_prodi_ph->tanggal_update)) ?></small>
           <hr class="mb-3">
         </div>
         <div class="flex-grow-1">
-          <p class="text-justify" style="text-align: justify;"><?= nl2br($data_prodi_ph->deskripsi) ?></p>
+          <p class="text-justify" style="text-align: justify;"><?= nl2br(trans($data_prodi_ph, 'deskripsi')) ?></p>
         </div>
       </div>
       </div>

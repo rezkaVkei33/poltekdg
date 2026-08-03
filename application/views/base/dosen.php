@@ -12,12 +12,12 @@
             <section class="py-16 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Dosen Kami</h2>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"><?= strtoupper($subtitle ?? lang('lecturer')) ?></h2>
                         <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
                         </div>
                         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Dibimbing oleh para dosen berpengalaman dan ahli di bidangnya
+                            <?= lang('content') ?>
                         </p>
                     </div>
                     <?php if (!empty($data_dosen)): ?>

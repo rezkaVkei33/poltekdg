@@ -45,6 +45,8 @@ class Prodi extends MY_Controller {
         $data = array(
             'nama_prodi' => $this->input->post('nama_prodi'),
             'deskripsi' => $this->input->post('deskripsi'),
+            'nama_prodi_en' => $this->input->post('nama_prodi_en'),
+            'deskripsi_en' => $this->input->post('deskripsi_en'),
             'gambar' => $gambar,
         );
 
@@ -92,6 +94,8 @@ class Prodi extends MY_Controller {
         $data = array(
             'nama_prodi' => $this->input->post('nama_prodi'),
             'deskripsi' => $this->input->post('deskripsi'),
+            'nama_prodi_en' => $this->input->post('nama_prodi_en'),
+            'deskripsi_en' => $this->input->post('deskripsi_en'),
             'gambar' => $gambar,
         );
 

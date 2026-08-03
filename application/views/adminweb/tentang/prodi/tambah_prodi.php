@@ -25,17 +25,28 @@
             </div>
             <div class="modal-body p-4">
                 <form id="dataForm" method="POST" action="<?= base_url('prodi/simpan_prodi'); ?>" enctype="multipart/form-data">
-                    <!-- PROGRAM STUDI -->
+                <!-- PROGRAM STUDI -->
                   <div class="mb-3">
                       <label class="form-label fw-semibold">Program Studi</label>
                       <input type="text" class="form-control" name="nama_prodi" required>
                   </div>
-                  <!-- DESKRIPSI -->
+                <!-- DESKRIPSI -->
                   <label class="form-label fw-semibold">Deskripsi :</label>
                   <div class="mb-3">
                                 
                     <textarea class="form-control" name="deskripsi" rows="5" required></textarea>
-                </div>
+                  </div>
+                <!-- PROGRAM STUDI -->
+                  <div class="mb-3">
+                      <label class="form-label fw-semibold">Program Studi (EN)</label>
+                      <input type="text" class="form-control" name="nama_prodi_en" required>
+                  </div>
+                <!-- DESKRIPSI -->
+                  <label class="form-label fw-semibold">Deskripsi (EN) :</label>
+                  <div class="mb-3">
+                                
+                    <textarea class="form-control" name="deskripsi_en" rows="5" required></textarea>
+                  </div>
                   <!-- GAMBAR -->
                   <div class="mb-3">
                       <label class="form-label fw-semibold">Upload Gambar</label>

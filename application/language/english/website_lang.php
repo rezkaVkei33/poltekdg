@@ -31,6 +31,13 @@ $lang['mission'] = 'Mission';
 $lang['goals'] = 'Goals';
 $lang['strategy'] = 'Strategy';
 
+// dosen 
+$lang['lecturer'] = 'our lecturer';
+$lang['content'] = 'Guided by experienced lecturers and experts in their fields';
+
+// prodi
+$lang['study_program'] = 'Study Program';
+
 $lang['language']          = 'Language';
 
 $lang['indonesia']         = 'ID';
