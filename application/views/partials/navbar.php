@@ -61,11 +61,11 @@
                         <i class="ml-2 text-xs fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="<?= site_url('language/change/indonesia'); ?>" class="flex items-center gap-3">
+                        <a href="<?= site_url('language/change/indonesia'); ?>" class="flex items-center gap-3 flex-nowrap whitespace-nowrap">
                             <img src="<?= base_url('assets/images/flag/idn-flag.png') ?>" alt="Bendera Indonesia" class="w-5 h-5 object-contain flex-shrink-0">
                             <span><?= lang('indonesia'); ?></span>
                         </a>
-                        <a href="<?= site_url('language/change/english'); ?>" class="flex items-center gap-3">
+                        <a href="<?= site_url('language/change/english'); ?>" class="flex items-center gap-3 flex-nowrap whitespace-nowrap">
                             <img src="<?= base_url('assets/images/flag/us-flag.png') ?>" alt="United States flag" class="w-5 h-5 object-contain flex-shrink-0">
                             <span><?= lang('english'); ?></span>
                         </a>
@@ -119,24 +119,23 @@
                 <a href="<?= site_url('base/kontak') ?>" class="block px-3 py-2 text-gray-700 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('contact'); ?></a>
 
                 <!-- Language Dropdown -->
-                 <?php $current = $this->session->userdata('site_language'); ?>
+                <?php $current = $this->session->userdata('site_language'); ?>
                 <div class="mobile-dropdown-container">
                     <button type="button" onclick="toggleMobileDropdown('language')" class="flex items-center justify-between w-full px-3 py-2 text-gray-700 rounded-md hover:bg-amber-50 hover:text-amber-600">
                         <span><i class="mr-2 fas fa-globe-asia"></i><?= lang($current); ?></span>
                         <i class="text-xs fas fa-chevron-down"></i>
                     </button>
                     <div id="language" class="mobile-dropdown pl-4">
-                        <a href="<?= site_url('language/change/indonesia'); ?>" class="flex items-center gap-3 px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
+                        <a href="<?= site_url('language/change/indonesia'); ?>" class="flex items-center gap-3 flex-nowrap whitespace-nowrap px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
                             <img src="<?= base_url('assets/images/flag/idn-flag.png') ?>" alt="Bendera Indonesia" class="w-5 h-5 object-contain flex-shrink-0">
                             <span><?= lang('indonesia'); ?></span>
                         </a>
-                        <a href="<?= site_url('language/change/english'); ?>" class="flex items-center gap-3 px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
+                        <a href="<?= site_url('language/change/english'); ?>" class="flex items-center gap-3 flex-nowrap whitespace-nowrap px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600">
                             <img src="<?= base_url('assets/images/flag/us-flag.png') ?>" alt="United States flag" class="w-5 h-5 object-contain flex-shrink-0">
                             <span><?= lang('english'); ?></span>
                         </a>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </nav>
