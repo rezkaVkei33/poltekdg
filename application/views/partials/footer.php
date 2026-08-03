@@ -33,8 +33,8 @@
                     <div class="hidden md:block">
                         <h4 class="text-lg font-semibold mb-4"><?= lang('study_program') ?></h4> 
                         <ul class="space-y-2">
-                            <li><a href="<?= base_url('base/prodi_si'); ?>" class="text-gray-300 hover:text-white transition-colors">D3 Sistem Informasi</a></li>
-                            <li><a href="<?= base_url('base/prodi_ph'); ?>" class="text-gray-300 hover:text-white transition-colors">D3 Perhotelan</a></li>
+                            <li><a href="<?= base_url('base/prodi_si'); ?>" class="text-gray-300 hover:text-white transition-colors"><?= lang('d3_information_system') ?></a></li>
+                            <li><a href="<?= base_url('base/prodi_ph'); ?>" class="text-gray-300 hover:text-white transition-colors"><?= lang('d3_hospitality') ?></a></li>
                         </ul>
                     </div>
 

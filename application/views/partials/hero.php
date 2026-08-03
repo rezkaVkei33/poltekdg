@@ -15,7 +15,7 @@
                                 </span>
                             </h1>
                             <h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-white mb-2 md:mb-4 drop-shadow-lg">
-                               " <?= lang('future') ?> "
+                               "<?= lang('future') ?>"
                             </h1>
                             <p class="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-8 leading-relaxed max-w-2xl drop-shadow-lg">
                                 <?= lang('leading') ?>
