@@ -13,7 +13,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
               <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                <?= strtoupper($subtitle ?? lang('study_program')) ?> <?= strtoupper(trans($data_prodi_ph, 'nama_prodi')) ?>
+                <?= strtoupper($subtitle ?? lang('study_program')) ?> <br> <?= strtoupper(trans($data_prodi_ph, 'nama_prodi')) ?>
               </h2>
               <div class="flex justify-center mb-6">
                   <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
