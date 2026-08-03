@@ -15,14 +15,14 @@ class Language extends MY_Controller
     /**
      * Ganti bahasa
      */
-    public function change($language = 'indonesia')
+    public function change($language = 'english')
     {
 
         $language = strtolower($language);
 
         if (!in_array($language, $this->available)) {
 
-            $language = 'indonesia';
+            $language = 'english';
 
         }
 
