@@ -29,7 +29,7 @@ class Base extends MY_Controller {
     public function kalender()
     {
         $data['title'] = lang('title_calendar');
-        $data['subtitle'] = lang('calendar_academic');
+        $data['subtitle'] = lang('academic_calendar');
         $data['data_kalender'] = $this->Base_model->get_kalender(); 
         $this->load->view('base/kalender', $data);
 

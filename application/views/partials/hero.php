@@ -9,20 +9,20 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                         <div class="z-10">
                             <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight drop-shadow-lg">
-                                Bersama  
+                                <?= lang('together_with') ?>
                                 <span class="text-black/60 drop-shadow-lg font-bold rounded px-2 shadow-[0_0_8px_2px_rgba(255,255,255,0.8)] inline-block w-fit">
                                     Poltek DG
                                 </span>
                             </h1>
                             <h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-white mb-2 md:mb-4 drop-shadow-lg">
-                               " Membangun Masa Depan "
+                               " <?= lang('future') ?> "
                             </h1>
                             <p class="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-8 leading-relaxed max-w-2xl drop-shadow-lg">
-                                Program Studi Unggulan Berbasis Teknologi dan Pariwisata
+                                <?= lang('leading') ?>
                             </p>
                             <div class="flex flex-col sm:flex-row gap-4">
                                 <a href="<?= base_url('base/pendaftaran') ?>" class="bg-gray-900 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-gray-800 transition-all font-semibold shadow-lg text-center">
-                                    DAFTAR SEKARANG !!
+                                    <?= lang('apply_now') ?>
                                 </a>
                             </div>
                         </div>

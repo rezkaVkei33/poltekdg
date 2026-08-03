@@ -10,8 +10,7 @@
                             <h3 class="text-lg md:text-xl font-bold">Politeknik Darma Ganesha</h3>
                         </div>
                         <p class="text-gray-300 mb-3 text-sm md:text-base leading-relaxed">
-                            Institusi pendidikan tinggi yang berkomitmen menghasilkan lulusan berkualitas 
-                            dalam bidang Teknologi Informasi dan Pariwisata.
+                            <?= lang('footer_description') ?>
                         </p>
                         <div class="flex space-x-4">
                             <ul class="space-y-2 text-gray-300">
@@ -32,7 +31,7 @@
                     </div>
 
                     <div class="hidden md:block">
-                        <h4 class="text-lg font-semibold mb-4">Program Studi</h4> 
+                        <h4 class="text-lg font-semibold mb-4"><?= lang('study_program') ?></h4> 
                         <ul class="space-y-2">
                             <li><a href="<?= base_url('base/prodi_si'); ?>" class="text-gray-300 hover:text-white transition-colors">D3 Sistem Informasi</a></li>
                             <li><a href="<?= base_url('base/prodi_ph'); ?>" class="text-gray-300 hover:text-white transition-colors">D3 Perhotelan</a></li>
@@ -40,27 +39,28 @@
                     </div>
 
                     <div class="hidden md:block">
-                        <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                        <h4 class="text-lg font-semibold mb-4"><?= lang('contact') ?></h4>
                         <ul class="space-y-2 text-gray-300">
                             <li class="flex items-center">
                                 <i class="fas fa-map-marker-alt mr-2"></i>
                                 <p class="mb-1 text-white">
-                                <strong>Kampus A:</strong> Jl. Mufakat No 9 Air Merbau Tanjung Pandan (Gedung Hitam-Putih)
+                                <strong><?= lang('campus_a') ?>:</strong> Jl. Mufakat No 9 Air Merbau Tanjung Pandan (Gedung Hitam-Putih)
                                 </p>
                             </li>
                             <li class="flex items-center">
                                 <i class="fas fa-map-marker-alt mr-2"></i>
                                  <p class="mb-3 text-white">
-                                <strong>Kampus B:</strong> Jalan Wisma Ria II, Lalang, Manggar, Belitung Timur (Gedung Eks. Pergib Manggar)
+                                <strong><?= lang('campus_b') ?>:</strong> Jalan Wisma Ria II, Lalang, Manggar, Belitung Timur (Gedung Eks. Pergib Manggar)
                                 </p>
                             </li>
                             <li class="flex items-center">
                                 <i class="fas fa-phone mr-2"></i>
-                                <p><strong class="text-white">No. Telp Direktur:</strong> <a href="tel:081287119043" class="text-white text-decoration-none">0812-8711-9043</a></p>
+                                <p><strong class="text-white"><?= lang('director_phone') ?>:</strong> <a href="tel:081287119043" class="text-white text-decoration-none">+62 812-8711-9043</a></p>
                             </li>
                             <li class="flex items-center">
                                 <i class="fas fa-envelope mr-2"></i>
-                                darmaganeshapoliteknik@gmail.com
+                                <p class="text-white"><?= lang('email') ?>:</p>
+                                <a href="mailto:darmaganeshapoliteknik@gmail.com" class="text-white text-decoration-none">darmaganeshapoliteknik@gmail.com</a>
                             </li>
                         </ul>
                     </div>

@@ -18,7 +18,7 @@
             <section class="py-16 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Program Studi</h2>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"><?= lang('study_program'); ?></h2>
                          <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
                         </div>
@@ -30,17 +30,17 @@
                                 <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                                     <i class="fas fa-database text-white text-2xl"></i>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Sistem Informasi</h3>
-                                <p class="text-gray-600 mb-4">Fokus pada analisis sistem dan manajemen data</p>
-                                <a href="<?= base_url('base/prodi_si') ?>" class="text-purple-600 font-semibold hover:text-purple-700">Pelajari →</a>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2"><?= lang('d3_information_system') ?></h3>
+                                <p class="text-gray-600 mb-4"><?= lang('prodi_si_desc') ?></p>
+                                <a href="<?= base_url('base/prodi_si') ?>" class="text-purple-600 font-semibold hover:text-purple-700"><?= lang('learn_more') ?> →</a>
                             </div>
                             <div class="card-hover bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center border border-blue-200">
                                 <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                                     <i class="fas fa-hotel text-white text-2xl"></i>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Perhotelan</h3>
-                                <p class="text-gray-600 mb-4">Fokus pada manajemen hotel, hospitality, dan layanan pariwisata</p>
-                                <a href="<?= base_url('base/prodi_ph') ?>" class="text-blue-600 font-semibold hover:text-blue-700">Pelajari →</a>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2"><?= lang('d3_hospitality') ?></h3>
+                                <p class="text-gray-600 mb-4"><?= lang('prodi_hospitality_desc') ?></p>
+                                <a href="<?= base_url('base/prodi_ph') ?>" class="text-blue-600 font-semibold hover:text-blue-700"><?= lang('learn_more') ?> →</a>
                             </div>
                         </div>
                     </div>
@@ -54,10 +54,10 @@
                         <!-- Text Content -->
                         <div class="text-white">
                             <h2 class="text-3xl lg:text-4xl font-bold mb-4">
-                                Jelajahi Brosur Kampus Kami
+                                <?= lang('explore_brochure') ?>
                             </h2>
                             <p class="text-xl text-amber-100 mb-8">
-                                Dapatkan informasi lengkap tentang program studi, fasilitas, dan beasiswa yang tersedia di Politeknik Darma Ganesha
+                                <?= lang('brochure_description') ?>
                             </p>
                         </div>
 
@@ -98,7 +98,7 @@
             <section class="py-16 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Berita Kampus</h2>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"><?= lang('campus_news') ?></h2>
                         <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
                         </div>
@@ -127,7 +127,7 @@
                             <?php endforeach; ?>
                         <?php else: ?>
                             <div class="col-span-3 text-center py-12">
-                                <p class="text-gray-500 text-lg">Belum ada berita</p>
+                                <p class="text-gray-500 text-lg"><?= lang('no_news') ?></p>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -191,32 +191,32 @@
 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Fasilitas Modern</h2>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"><?= lang('modern_facilities') ?></h2>
                          <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
                         </div>
                         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Nikmati fasilitas lengkap dan modern untuk mendukung proses pembelajaran yang optimal
+                            <?= lang('modern_facilities_desc') ?>
                         </p>
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-8">
                         <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                             <i class="fas fa-laptop-code text-4xl text-blue-500 mb-4"></i>
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Lab Komputer</h3>
-                            <p class="text-gray-600">Laboratorium komputer dengan perangkat terbaru dan software berlisensi</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3"><?= lang('computer_lab') ?></h3>
+                            <p class="text-gray-600"><?= lang('computer_lab_desc') ?></p>
                         </div>
 
                         <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                             <i class="fas fa-wifi text-4xl text-purple-500 mb-4"></i>
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">WiFi Campus</h3>
-                            <p class="text-gray-600">Akses internet cepat dan stabil di seluruh area kampus</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3"><?= lang('campus_wifi') ?></h3>
+                            <p class="text-gray-600"><?= lang('campus_wifi_desc') ?></p>
                         </div>
 
                         <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                             <i class="fas fa-book text-4xl text-green-500 mb-4"></i>
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Perpustakaan</h3>
-                            <p class="text-gray-600">Koleksi buku dan jurnal lengkap dengan sistem digital</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3"><?= lang('library') ?></h3>
+                            <p class="text-gray-600"><?= lang('library_desc') ?></p>
                         </div>
                     </div>
                 </div>
@@ -226,17 +226,17 @@
             <section class="py-16 bg-gradient-to-r from-amber-500 to-orange-600">
                 <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                     <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
-                        Siap Memulai Perjalanan Pendidikan Anda?
+                        <?= lang('ready_to_start') ?>
                     </h2>
                     <p class="text-xl text-amber-100 mb-8">
-                        Bergabunglah dengan ribuan mahasiswa yang telah merasakan pendidikan berkualitas di Politeknik Darma Ganesha
+                        <?= lang('join_students') ?>
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="<?= base_url('base/pendaftaran') ?>" class="bg-white text-amber-600 px-8 py-4 rounded-full hover:bg-gray-100 transition-all font-semibold shadow-lg">
-                            Daftar Online
+                            <?= lang('apply_online') ?>
                         </a>
                         <a href="<?= base_url('base/kontak') ?>" class="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-amber-600 transition-all font-semibold">
-                            Hubungi Kami
+                            <?= lang('contact_us') ?>
                         </a>
                     </div>
                 </div>
