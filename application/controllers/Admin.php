@@ -6,6 +6,8 @@ class Admin extends MY_Controller {
     public function __construct() {
         parent::__construct();
 
+        $this->checkLogin();
+
         // load model
         $this->load->model('Prodi_model');
         $this->load->model('Dosen_model');

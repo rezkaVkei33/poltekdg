@@ -7,6 +7,8 @@ class Kunjungan extends MY_Controller {
     {
         parent::__construct();
 
+        $this->checkLogin();
+
         $this->load->model('Visitor_model');
     }
 

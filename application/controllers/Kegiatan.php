@@ -5,6 +5,8 @@ class Kegiatan extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
+
+        $this->checkLogin();
         
         $this->load->model('Kegiatan_model');
     }

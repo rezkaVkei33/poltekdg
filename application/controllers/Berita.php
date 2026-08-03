@@ -5,6 +5,9 @@ class Berita extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
+
+        $this->checkLogin();
+        
         $this->load->model('Berita_model');
     }
 

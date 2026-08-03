@@ -22,13 +22,6 @@ class MY_Controller extends CI_Controller
 
 
         $this->initializeLanguage();
-        
-        /**
-         * ======================================================
-         * LOGIN
-         * ======================================================
-         */
-        $this->checkLogin();
     }
 
 
