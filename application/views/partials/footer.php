@@ -60,7 +60,7 @@
                             <li class="flex items-center">
                                 <i class="fas fa-envelope mr-2"></i>
                                 <p class="text-white"><?= lang('email') ?>:</p>
-                                <a href="mailto:darmaganeshapoliteknik@gmail.com" class="text-white text-decoration-none">darmaganeshapoliteknik@gmail.com</a>
+                                <a href="mailto:darmaganeshapoliteknik@gmail.com" class="text-white text-decoration-none"> email: darmaganeshapoliteknik@gmail.com</a>
                             </li>
                         </ul>
                     </div>
