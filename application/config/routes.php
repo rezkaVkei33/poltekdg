@@ -18,6 +18,7 @@ $route['arsip'] = 'arsip';
 $route['kontak'] = 'kontak';
 $route['kunjungan'] = 'kunjungan';
 $route['vmts'] = 'vmts';
+$route['brosur'] = 'brosur';
 $route['login'] = 'login/index';
 $route['logout'] = 'login/logout';
 $route['admin'] = 'admin/index';
@@ -32,6 +33,5 @@ $route['barsip'] = 'base/arsip';
 $route['bprodi/(:any)'] = 'base/prodi/$1';
 $route['bkontak'] = 'base/kontak';
 $route['pendaftaran'] = 'base/pendaftaran';
-
 
 

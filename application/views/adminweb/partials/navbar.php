@@ -75,6 +75,7 @@
                         <li><a class="dropdown-item" href="<?= base_url('kalender'); ?>"><i class="bi bi-calendar3 me-2"></i>Kalender Akademik</a></li>
                         <li><a class="dropdown-item" href="<?= base_url('prodi'); ?>"><i class="bi bi-book me-2"></i>Program Studi</a></li>
                         <li><a class="dropdown-item" href="<?= base_url('arsip'); ?>"><i class="bi bi-archive me-2"></i>Arsip</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('brosur'); ?>"><i class="bi bi-file-earmark-image me-2"></i>Brosur</a></li>
                     </ul>
                 </li>
                 
