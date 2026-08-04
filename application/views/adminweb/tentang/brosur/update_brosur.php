@@ -18,6 +18,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
             </div>
             <div class="modal-body p-4">
+                <?php if ($this->session->flashdata('error')): ?>
+                    <div class="alert alert-danger"><?= html_escape($this->session->flashdata('error')); ?></div>
+                <?php endif; ?>
                 <form id="dataForm" method="post" action="<?= base_url('brosur/update'); ?>" enctype="multipart/form-data">
                     <?php $this->load->view('adminweb/tentang/brosur/_form', ['brosur' => $brosur]); ?>
                 </form>

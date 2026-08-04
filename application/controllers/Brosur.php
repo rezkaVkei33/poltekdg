@@ -147,7 +147,7 @@ class Brosur extends MY_Controller
                     $this->delete_image($uploaded_filename);
                 }
                 $this->delete_image($filename);
-                $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke format WebP.');
+                $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD pada PHP hosting aktif.');
                 return FALSE;
             }
 
@@ -173,15 +173,35 @@ class Brosur extends MY_Controller
             return $filename;
         }
 
-        if (!is_executable('/usr/bin/convert')) {
+        if (!function_exists('imagewebp') || !function_exists('imagecreatefromstring')) {
             return FALSE;
         }
 
-        $command = '/usr/bin/convert ' . escapeshellarg($source)
-            . ' -quality 82 ' . escapeshellarg($target) . ' 2>&1';
-        exec($command, $output, $exit_code);
+        $image_content = @file_get_contents($source);
+        if ($image_content === FALSE) {
+            return FALSE;
+        }
 
-        if ($exit_code !== 0 || !file_exists($target)) {
+        $image = @imagecreatefromstring($image_content);
+        if ($image === FALSE) {
+            return FALSE;
+        }
+
+        // Pertahankan transparansi saat gambar PNG dikonversi ke WebP.
+        if (function_exists('imagepalettetotruecolor')) {
+            imagepalettetotruecolor($image);
+        }
+        if (function_exists('imagealphablending')) {
+            imagealphablending($image, TRUE);
+        }
+        if (function_exists('imagesavealpha')) {
+            imagesavealpha($image, TRUE);
+        }
+
+        $is_converted = imagewebp($image, $target, 82);
+        imagedestroy($image);
+
+        if (!$is_converted || !file_exists($target)) {
             return FALSE;
         }
 
