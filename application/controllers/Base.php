@@ -90,5 +90,16 @@ class Base extends MY_Controller {
     $this->load->view('base/form_pendaftaran', $data);
 }
 
+    public function berita($id)
+    {
+        $data['berita'] = $this->Base_model->get_berita_by_id($id);
+        if (!$data['berita']) {
+            show_404();
+        }
+
+        $data['title'] = trans($data['berita'], 'judul') . ' - Poltek DG';
+        $this->load->view('base/berita_detail', $data);
+    }
+
         
 }

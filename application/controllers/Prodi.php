@@ -26,7 +26,7 @@ class Prodi extends MY_Controller {
         $this->load->model('Prodi_model');
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/prodi/';
-        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['allowed_types'] = 'jpg|jpeg|png|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE;
 
@@ -36,7 +36,13 @@ class Prodi extends MY_Controller {
         if(!empty($_FILES['gambar']['name'])){
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/prodi/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('prodi/tambah_prodi');
+                    return;
+                }
             } else {
                 $this->session->set_flashdata('error', $this->upload->display_errors());
                 redirect('prodi/tambah_prodi');
@@ -68,7 +74,7 @@ class Prodi extends MY_Controller {
         $this->load->model('Prodi_model');
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/prodi/';
-        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['allowed_types'] = 'jpg|jpeg|png|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE;
 
@@ -80,7 +86,13 @@ class Prodi extends MY_Controller {
         if(!empty($_FILES['gambar']['name'])){
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/prodi/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('prodi/ubah_prodi/' . $id);
+                    return;
+                }
 
                 // Hapus gambar lama jika ada
                 if (!empty($prodi->gambar) && file_exists('./uploads/prodi/' . $prodi->gambar)) {

@@ -41,7 +41,7 @@ class Dosen extends MY_Controller {
 
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/dosen/';
-        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE;
 
@@ -52,7 +52,13 @@ class Dosen extends MY_Controller {
         if(!empty($_FILES['gambar']['name'])){
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/dosen/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('dosen/tambah_dosen');
+                    return;
+                }
             } else {
                 $this->session->set_flashdata('error', $this->upload->display_errors());
                 redirect('dosen/tambah_dosen');
@@ -90,7 +96,7 @@ class Dosen extends MY_Controller {
 
         // konfirmasi upload gambar
         $config['upload_path'] = './uploads/dosen/';
-        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE;
 
@@ -102,7 +108,13 @@ class Dosen extends MY_Controller {
             // proses upload gambar
             if($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/dosen/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('dosen/ubah_dosen/' . $id);
+                    return;
+                }
 
                 // hapus gambar lama jika ada
                 if(!empty($dosen->gambar) && file_exists('./uploads/dosen/' . $dosen->gambar)) {

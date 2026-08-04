@@ -36,6 +36,14 @@
                                 
                                                 <textarea class="form-control" name="isi" rows="5" required></textarea>
                                               </div>
+                                              <div class="mb-3">
+                                                  <label class="form-label fw-semibold">Judul (English)</label>
+                                                  <input type="text" class="form-control" name="judul_en">
+                                              </div>
+                                              <div class="mb-3">
+                                                  <label class="form-label fw-semibold">Isi (English)</label>
+                                                  <textarea class="form-control" name="isi_en" rows="5"></textarea>
+                                              </div>
                                               <!-- PENULIS -->
                                             <div class="mb-3">
                                                 <label class="form-label fw-semibold">Penulis</label>
@@ -50,8 +58,8 @@
                                               <!-- GAMBAR -->
                                               <div class="mb-3">
                                                   <label class="form-label fw-semibold">Upload Gambar</label>
-                                                  <input type="file" name="gambar" class="form-control">
-                                                  <small class="form-text text-muted">Format gambar: jpg, jpeg, png. Maksimal ukuran: 3MB.</small>
+                                                  <input type="file" name="gambar" class="form-control" accept="image/jpeg,image/png,image/gif,image/webp">
+                                                  <small class="form-text text-muted">Gambar akan dikonversi ke WebP. Maksimal ukuran: 3MB.</small>
                                                 </div>
                 </form>
             </div>

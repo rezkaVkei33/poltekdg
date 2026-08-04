@@ -38,7 +38,7 @@ class Berita extends MY_Controller {
         $this->load->model('Berita_model');
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/berita/';
-        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE;
         $this->load->library('upload', $config);
@@ -47,7 +47,13 @@ class Berita extends MY_Controller {
         if(!empty($_FILES['gambar']['name'])){
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/berita/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('berita/tambah_berita');
+                    return;
+                }
             } else {
                 $this->session->set_flashdata('error', $this->upload->display_errors());
                 redirect('berita/tambah_berita');
@@ -58,6 +64,8 @@ class Berita extends MY_Controller {
         $data = array(
             'judul' => $this->input->post('judul'),
             'isi' => $this->input->post('isi'),
+            'judul_en' => $this->input->post('judul_en'),
+            'isi_en' => $this->input->post('isi_en'),
             'penulis' => $this->input->post('penulis'),
             'tanggal_terbit' => $this->input->post('tanggal_terbit'),
             'gambar' => $gambar,
@@ -80,7 +88,7 @@ class Berita extends MY_Controller {
         $this->load->model('Berita_model');
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/berita/';
-        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE;
         $this->load->library('upload', $config);
@@ -89,7 +97,13 @@ class Berita extends MY_Controller {
         if(!empty($_FILES['gambar']['name'])){
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/berita/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('berita/ubah_berita/' . $id);
+                    return;
+                }
             } else {
                 $this->session->set_flashdata('error', $this->upload->display_errors());
                 redirect('berita/ubah_berita/' . $id);
@@ -101,6 +115,8 @@ class Berita extends MY_Controller {
         $data = array(
             'judul' => $this->input->post('judul'),
             'isi' => $this->input->post('isi'),
+            'judul_en' => $this->input->post('judul_en'),
+            'isi_en' => $this->input->post('isi_en'),
             'penulis' => $this->input->post('penulis'),
             'tanggal_terbit' => $this->input->post('tanggal_terbit'),
             'tanggal_update' => date('Y-m-d H:i:s')
@@ -108,6 +124,10 @@ class Berita extends MY_Controller {
 
         if ($gambar) {
             $data['gambar'] = $gambar;
+            $berita_lama = $this->Berita_model->get_by_id($id);
+            if ($berita_lama && !empty($berita_lama->gambar) && file_exists('./uploads/berita/' . $berita_lama->gambar)) {
+                unlink('./uploads/berita/' . $berita_lama->gambar);
+            }
         }
 
         $this->Berita_model->update($id, $data);

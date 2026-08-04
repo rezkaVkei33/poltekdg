@@ -36,6 +36,14 @@
                                                 
                         <textarea class="form-control" name="isi" rows="5" required><?= $berita->isi; ?></textarea>
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Judul (English)</label>
+                        <input type="text" value="<?= html_escape($berita->judul_en); ?>" class="form-control" name="judul_en">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Isi (English)</label>
+                        <textarea class="form-control" name="isi_en" rows="5"><?= html_escape($berita->isi_en); ?></textarea>
+                    </div>
                     <!-- PENULIS -->
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Penulis</label>
@@ -53,7 +61,7 @@
                         <?php if ($berita->gambar): ?>
                             <img src="<?= base_url('uploads/berita/' . $berita->gambar) ?>" width="100"><br>
                         <?php endif; ?>
-                        <input type="file" name="gambar" class="form-control">
+                        <input type="file" name="gambar" class="form-control" accept="image/jpeg,image/png,image/gif,image/webp">
                     </div>
                 </form>
             </div>

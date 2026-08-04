@@ -24,7 +24,7 @@
       <div class="col-md-4 col-12 d-flex justify-content-center align-items-center">
         <div class="mx-auto d-flex justify-content-center align-items-center"
          style="background: #fff; box-shadow: 0 8px 24px rgba(255,140,0,0.18);">
-          <img src="<?= base_url('uploads/prodi/' . $data_prodi_ph->gambar) ?>"
+          <img src="<?= base_url('uploads/prodi/' . $data_prodi_ph->gambar) ?>" loading="lazy" decoding="async"
            alt="Foto Prodi Sistem Informasi"
            class="img-fluid d-block mx-auto rounded shadow"
            style="max-width: 100%; max-height: 220px; object-fit: contain; border: 3px solid; border-image: linear-gradient(90deg, orange, gold) 1;">

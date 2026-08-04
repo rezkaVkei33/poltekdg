@@ -29,7 +29,7 @@ class Sambutan extends MY_Controller {
 
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/sambutan/';
-        $config['allowed_types'] = 'jpg|jpeg|png|gif'; // Format gambar yang diizinkan
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|webp'; // Format gambar yang diizinkan
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE; // Enkripsi nama file untuk menghindari duplikasi
         
@@ -41,7 +41,13 @@ class Sambutan extends MY_Controller {
             // Proses upload gambar
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/sambutan/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('sambutan/tambah_sambutan');
+                    return;
+                }
             }
             else{
                 $this->session->set_flashdata('error', $this->upload->display_errors());
@@ -80,7 +86,7 @@ class Sambutan extends MY_Controller {
 
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/sambutan/';
-        $config['allowed_types'] = 'jpg|jpeg|png|gif'; 
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE; 
 
@@ -93,7 +99,13 @@ class Sambutan extends MY_Controller {
             // Proses upload gambar
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/sambutan/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('sambutan/ubah_sambutan/' . $id);
+                    return;
+                }
 
                 // hapus file gambar lama jika ada
                 if(!empty($sambutan->gambar) && file_exists('./uploads/sambutan/' . $sambutan->gambar)) {

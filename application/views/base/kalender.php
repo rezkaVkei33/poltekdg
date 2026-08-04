@@ -21,7 +21,7 @@
                           <?php foreach ($data_kalender as $kalender): ?>
                           <!-- Gambar Full Width -->
                           <div class="mb-4 text-center">
-                            <img src="<?= base_url('uploads/kalender/' . $kalender->gambar) ?>" 
+                            <img src="<?= base_url('uploads/kalender/' . $kalender->gambar) ?>" loading="lazy" decoding="async"
                                 alt="Kalender Akademik" 
                                 class="img-fluid rounded shadow" 
                                 style="width: 100%; object-fit: cover;">

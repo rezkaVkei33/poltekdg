@@ -25,7 +25,7 @@
         <div class="border rounded shadow-lg mx-auto"
              style="overflow: hidden; width: 180px; min-width: 150px; max-width: 220px; background: #fff;
                     border: 3px solid; border-image: linear-gradient(90deg, orange, gold) 1; box-shadow: 0 8px 24px rgba(255,140,0,0.18);">
-          <img src="<?= base_url('uploads/sambutan/' . $sambutan->gambar) ?>"
+          <img src="<?= base_url('uploads/sambutan/' . $sambutan->gambar) ?>" loading="lazy" decoding="async"
                alt="Foto Sambutan"
                class="img-fluid"
                style="width: 100%; height: auto; display: block;">

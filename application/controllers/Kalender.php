@@ -26,7 +26,7 @@ class Kalender extends MY_Controller {
         $this->load->model('Kalender_model');
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/kalender/';
-        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['allowed_types'] = 'jpg|jpeg|png|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE;
 
@@ -35,7 +35,13 @@ class Kalender extends MY_Controller {
         if(!empty($_FILES['gambar']['name'])){
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/kalender/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('kalender/tambah_kalender');
+                    return;
+                }
             } else {
                 $this->session->set_flashdata('error', $this->upload->display_errors());
                 redirect('kalender/tambah_kalender');
@@ -70,7 +76,7 @@ class Kalender extends MY_Controller {
 
         // konfigurasi upload gambar
         $config['upload_path'] = './uploads/kalender/';
-        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['allowed_types'] = 'jpg|jpeg|png|webp';
         $config['max_size'] = 3072; // 3MB
         $config['encrypt_name'] = TRUE;
 
@@ -81,7 +87,13 @@ class Kalender extends MY_Controller {
         if(!empty($_FILES['gambar']['name'])){
             if ($this->upload->do_upload('gambar')) {
                 $upload_data = $this->upload->data();
-                $gambar = $upload_data['file_name'];
+                $gambar = convert_image_to_webp('./uploads/kalender/', $upload_data['file_name']);
+                if ($gambar === FALSE) {
+                    @unlink($upload_data['full_path']);
+                    $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke WebP. Pastikan ekstensi GD PHP aktif.');
+                    redirect('kalender/ubah_kalender/' . $id);
+                    return;
+                }
                 // hapus gambar lama jika ada
                 if(!empty($kalender->gambar) && file_exists('./uploads/kalender/' . $kalender->gambar)) {
                     unlink('./uploads/kalender/' . $kalender->gambar);

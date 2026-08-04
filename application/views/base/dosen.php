@@ -25,7 +25,7 @@
                             <?php foreach ($data_dosen as $dosen): ?>
                                 <div class="card-hover bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 text-center border border-purple-200">
                                     <div class="w-full h-52 mb-4 rounded-xl overflow-hidden flex items-start justify-center bg-purple-100 border border-purple-300" style="border-top-left-radius: 1.25rem; border-top-right-radius: 1.25rem;">
-                                        <img src="<?= base_url('uploads/dosen/' . ($dosen->gambar ?? 'default.png')) ?>" alt="Dosen Sistem Informasi" class="object-cover w-full h-full object-top">
+                                        <img src="<?= base_url('uploads/dosen/' . ($dosen->gambar ?? 'default.png')) ?>" alt="Dosen Sistem Informasi" class="object-cover w-full h-full object-top" loading="lazy" decoding="async">
                                     </div>
                                     <h3 class="text-xl font-bold text-gray-800 mb-2"><?= $dosen->nama ?><?= $dosen->gelar ? ', ' . $dosen->gelar : '' ?></h3>
                                     <p class="text-gray-600 mb-4"><?= $dosen->bidang_keahlian ?></p>

@@ -62,9 +62,14 @@ class Base_model extends CI_Model {
                     ->result(); // <-- jadi array of object
     }
 
-    public function get_berita($limit = 6){
+    public function get_berita($limit = 9){
         return $this->db->order_by('tanggal_terbit', 'DESC')
                     ->limit($limit)->get('berita')->result();
+    }
+
+    public function get_berita_by_id($id)
+    {
+        return $this->db->get_where('berita', ['id_berita' => (int) $id])->row();
     }
 
     public function get_kegiatan($limit = 5){

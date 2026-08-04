@@ -19,7 +19,7 @@
               <div class="text-center mt-4">
               <p class="mt-4"><?= lang('scan_qrcode') ?></p>
                 <div class="text-center">
-                  <img src="<?= base_url('assets/images/pmb.jpeg') ?>" alt="QR Code Formulir PMB" class="img-fluid mt-3 shadow rounded" style="max-width: 250px; display: block; margin-left: auto; margin-right: auto;">
+                  <img src="<?= base_url('assets/images/pmb.jpeg') ?>" alt="QR Code Formulir PMB" class="img-fluid mt-3 shadow rounded" style="max-width: 250px; display: block; margin-left: auto; margin-right: auto;" loading="lazy" decoding="async">
                 </div>
               </div>
              
