@@ -18,6 +18,22 @@
         * {
             font-family: 'Inter', sans-serif;
         }
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .mobile-layout,
+        .mobile-content {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+        }
         
         .dropdown {
             position: relative;
@@ -105,7 +121,6 @@
             
             .mobile-content {
                 flex: 1;
-                overflow-y: auto;
                 padding-bottom: 2rem;
             }
             
@@ -212,4 +227,3 @@
                 display: block;
             }
                 </style>
-    
