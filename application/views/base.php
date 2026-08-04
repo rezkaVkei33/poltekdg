@@ -65,47 +65,24 @@
             }
             ?>
             <?php if (!empty($brosur_images)): ?>
-            <!-- Brosur Slider Section -->
+            <!-- Brosur Section -->
             <section class="py-16 bg-gradient-to-r from-amber-500 to-orange-600">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                        <!-- Text Content -->
-                        <div class="text-white">
+                    <div class="text-center text-white max-w-3xl mx-auto">
                             <h2 class="text-3xl lg:text-4xl font-bold mb-4">
                                 <?= html_escape($brosur_title ?: lang('explore_brochure')); ?>
                             </h2>
-                            <p class="text-xl text-amber-100 mb-8">
+                            <p class="text-lg lg:text-xl text-amber-100">
                                 <?= html_escape($brosur_description ?: lang('brochure_description')); ?>
                             </p>
-                        </div>
+                    </div>
 
-                        <!-- Slider -->
-                        <div class="relative">
-                            <div class="broswur-slider-wrapper overflow-hidden rounded-2xl shadow-2xl">
-                                <div class="broswur-slider flex transition-transform duration-500">
-                                    <?php foreach ($brosur_images as $index => $image): ?>
-                                        <div class="broswur-slide w-full flex-shrink-0">
-                                            <img src="<?= base_url('uploads/brosur/' . rawurlencode($image)); ?>" alt="<?= html_escape($brosur_title ?: 'Brosur Kampus'); ?> - <?= $index + 1; ?>" class="w-full h-auto object-cover" loading="lazy" decoding="async">
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            </div>
-
-                            <!-- Navigation Buttons -->
-                            <button class="broswur-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-lg">
-                                <i class="fas fa-chevron-left text-amber-600 text-lg"></i>
-                            </button>
-                            <button class="broswur-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-lg">
-                                <i class="fas fa-chevron-right text-amber-600 text-lg"></i>
-                            </button>
-
-                            <!-- Dots Navigation -->
-                            <div class="flex justify-center gap-2 mt-4">
-                                <?php foreach ($brosur_images as $index => $image): ?>
-                                    <button class="broswur-dot w-3 h-3 rounded-full bg-white opacity-75 hover:opacity-100 transition-all" data-slide="<?= $index; ?>" aria-label="Tampilkan brosur <?= $index + 1; ?>"></button>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
+                    <div class="mt-10 flex flex-wrap justify-center gap-4 lg:gap-6">
+                        <?php foreach ($brosur_images as $index => $image): ?>
+                            <a href="<?= base_url('uploads/brosur/' . rawurlencode($image)); ?>" target="_blank" class="block w-40 sm:w-48 lg:w-56 overflow-hidden rounded-xl border-2 border-white/50 bg-white/10 shadow-lg transition-transform duration-300 hover:scale-105" aria-label="Lihat brosur <?= $index + 1; ?> ukuran penuh">
+                                <img src="<?= base_url('uploads/brosur/' . rawurlencode($image)); ?>" alt="<?= html_escape($brosur_title ?: 'Brosur Kampus'); ?> - <?= $index + 1; ?>" class="block h-56 sm:h-64 lg:h-72 w-full object-cover" loading="lazy" decoding="async">
+                            </a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </section>
