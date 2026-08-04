@@ -10,6 +10,7 @@
                 const totalBroswurSlides = broswurSlides.length;
 
                 function updateBroswurSlider() {
+                    if (!broswurSlider || totalBroswurSlides === 0) return;
                     broswurSlider.style.transform = `translateX(-${currentBroswurSlide * 100}%)`;
                     broswurDots.forEach((dot, index) => {
                         if (index === currentBroswurSlide) {
@@ -22,28 +23,30 @@
                     });
                 }
 
-                broswurPrevBtn.addEventListener('click', () => {
-                    currentBroswurSlide = (currentBroswurSlide - 1 + totalBroswurSlides) % totalBroswurSlides;
-                    updateBroswurSlider();
-                });
-
-                broswurNextBtn.addEventListener('click', () => {
-                    currentBroswurSlide = (currentBroswurSlide + 1) % totalBroswurSlides;
-                    updateBroswurSlider();
-                });
-
-                broswurDots.forEach(dot => {
-                    dot.addEventListener('click', () => {
-                        currentBroswurSlide = parseInt(dot.getAttribute('data-slide'));
+                if (broswurSlider && totalBroswurSlides > 1) {
+                    broswurPrevBtn.addEventListener('click', () => {
+                        currentBroswurSlide = (currentBroswurSlide - 1 + totalBroswurSlides) % totalBroswurSlides;
                         updateBroswurSlider();
                     });
-                });
 
-                // Auto slide every 5 seconds
-                setInterval(() => {
-                    currentBroswurSlide = (currentBroswurSlide + 1) % totalBroswurSlides;
-                    updateBroswurSlider();
-                }, 5000);
+                    broswurNextBtn.addEventListener('click', () => {
+                        currentBroswurSlide = (currentBroswurSlide + 1) % totalBroswurSlides;
+                        updateBroswurSlider();
+                    });
+
+                    broswurDots.forEach(dot => {
+                        dot.addEventListener('click', () => {
+                            currentBroswurSlide = parseInt(dot.getAttribute('data-slide'));
+                            updateBroswurSlider();
+                        });
+                    });
+
+                    // Auto slide every 5 seconds
+                    setInterval(() => {
+                        currentBroswurSlide = (currentBroswurSlide + 1) % totalBroswurSlides;
+                        updateBroswurSlider();
+                    }, 5000);
+                }
             </script>
  <script>
         function toggleMobileMenu() {

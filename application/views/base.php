@@ -47,6 +47,24 @@
                 </div>
             </section>
             
+            <?php
+            $brosur_images = [];
+            if (!empty($brosur)) {
+                foreach (['img_1', 'img_2', 'img_3'] as $field) {
+                    if (!empty($brosur->{$field})) {
+                        $brosur_images[] = $brosur->{$field};
+                    }
+                }
+            }
+            $is_english = ($current_language ?? 'indonesia') === 'english';
+            $brosur_title = '';
+            $brosur_description = '';
+            if (!empty($brosur)) {
+                $brosur_title = $is_english ? $brosur->judul_en : $brosur->judul;
+                $brosur_description = $is_english ? $brosur->deskripsi_en : $brosur->deskripsi;
+            }
+            ?>
+            <?php if (!empty($brosur_images)): ?>
             <!-- Brosur Slider Section -->
             <section class="py-16 bg-gradient-to-r from-amber-500 to-orange-600">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,10 +72,10 @@
                         <!-- Text Content -->
                         <div class="text-white">
                             <h2 class="text-3xl lg:text-4xl font-bold mb-4">
-                                <?= lang('explore_brochure') ?>
+                                <?= html_escape($brosur_title ?: lang('explore_brochure')); ?>
                             </h2>
                             <p class="text-xl text-amber-100 mb-8">
-                                <?= lang('brochure_description') ?>
+                                <?= html_escape($brosur_description ?: lang('brochure_description')); ?>
                             </p>
                         </div>
 
@@ -65,14 +83,11 @@
                         <div class="relative">
                             <div class="broswur-slider-wrapper overflow-hidden rounded-2xl shadow-2xl">
                                 <div class="broswur-slider flex transition-transform duration-500">
-                                    <!-- Slide 1 -->
-                                    <div class="broswur-slide w-full flex-shrink-0">
-                                        <img src="<?= base_url('assets/images/brosur-1.jpeg') ?>" alt="Brosur Kampus 1" class="w-full h-auto object-cover">
-                                    </div> 
-                                    <!-- Slide 2 -->
-                                    <div class="broswur-slide w-full flex-shrink-0">
-                                        <img src="<?= base_url('assets/images/brosur-2.jpeg') ?>" alt="Brosur Kampus 2" class="w-full h-auto object-cover">
-                                    </div>
+                                    <?php foreach ($brosur_images as $index => $image): ?>
+                                        <div class="broswur-slide w-full flex-shrink-0">
+                                            <img src="<?= base_url('uploads/brosur/' . rawurlencode($image)); ?>" alt="<?= html_escape($brosur_title ?: 'Brosur Kampus'); ?> - <?= $index + 1; ?>" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
 
@@ -86,13 +101,15 @@
 
                             <!-- Dots Navigation -->
                             <div class="flex justify-center gap-2 mt-4">
-                                <button class="broswur-dot w-3 h-3 rounded-full bg-white opacity-75 hover:opacity-100 transition-all" data-slide="0"></button>
-                                <button class="broswur-dot w-3 h-3 rounded-full bg-white opacity-75 hover:opacity-100 transition-all" data-slide="1"></button>
+                                <?php foreach ($brosur_images as $index => $image): ?>
+                                    <button class="broswur-dot w-3 h-3 rounded-full bg-white opacity-75 hover:opacity-100 transition-all" data-slide="<?= $index; ?>" aria-label="Tampilkan brosur <?= $index + 1; ?>"></button>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <?php endif; ?>
 
             <!-- Berita Kampus Section -->
             <section class="py-16 bg-white">

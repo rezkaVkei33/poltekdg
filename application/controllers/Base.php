@@ -16,6 +16,8 @@ class Base extends MY_Controller {
         $data['data_berita'] = $this->Base_model->get_berita();
         $data['data_kegiatan'] = $this->Base_model->get_kegiatan();
         $data['galeri'] = $this->Base_model->get_galeri();
+        $data['brosur'] = $this->Base_model->get_brosur();
+        $data['current_language'] = $this->currentLanguage();
         $this->load->view('base', $data);
     }
     public function sambutan()

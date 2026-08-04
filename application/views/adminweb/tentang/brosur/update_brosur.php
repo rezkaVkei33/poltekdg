@@ -18,7 +18,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
             </div>
             <div class="modal-body p-4">
-                <form id="dataForm" method="post" action="<?= base_url('brosur/update/' . $brosur->id_brousur); ?>" enctype="multipart/form-data">
+                <form id="dataForm" method="post" action="<?= base_url('brosur/update'); ?>" enctype="multipart/form-data">
                     <?php $this->load->view('adminweb/tentang/brosur/_form', ['brosur' => $brosur]); ?>
                 </form>
             </div>

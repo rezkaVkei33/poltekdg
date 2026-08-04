@@ -15,22 +15,10 @@ class Brosur extends MY_Controller
 
     public function index()
     {
-        $keyword = trim((string) $this->input->get('q', TRUE));
-        $per_page = 10;
-        $total_rows = $this->Brosur_model->count_filtered($keyword);
-        $offset = $this->admin_pagination_offset($total_rows, $per_page);
-
-        $this->pagination->initialize($this->admin_pagination_config(base_url('brosur'), $total_rows, $per_page));
-
         $data = [
             'title' => 'Brosur - Admin PoltekDG',
             'subtitle' => 'Brosur',
-            'brosur' => $this->Brosur_model->get_paginated($per_page, $offset, $keyword),
-            'keyword' => $keyword,
-            'total_rows' => $total_rows,
-            'per_page' => $per_page,
-            'start_no' => $offset + 1,
-            'pagination_links' => $this->pagination->create_links()
+            'brosur' => $this->Brosur_model->get_single()
         ];
 
         $this->load->view('adminweb/tentang/brosur/brosur', $data);
@@ -38,11 +26,22 @@ class Brosur extends MY_Controller
 
     public function tambah_brosur()
     {
+        if ($this->Brosur_model->get_single()) {
+            redirect('brosur/ubah_brosur');
+            return;
+        }
+
         $this->load->view('adminweb/tentang/brosur/tambah_brosur');
     }
 
     public function simpan_brosur()
     {
+        if ($this->Brosur_model->get_single()) {
+            $this->session->set_flashdata('error', 'Hanya satu data brosur yang dapat disimpan. Silakan ubah data yang ada.');
+            redirect('brosur');
+            return;
+        }
+
         $images = $this->upload_images();
         if ($images === FALSE) {
             redirect('brosur/tambah_brosur');
@@ -54,9 +53,9 @@ class Brosur extends MY_Controller
         redirect('brosur');
     }
 
-    public function ubah_brosur($id)
+    public function ubah_brosur()
     {
-        $data['brosur'] = $this->Brosur_model->get_by_id((int) $id);
+        $data['brosur'] = $this->Brosur_model->get_single();
 
         if (!$data['brosur']) {
             show_404();
@@ -65,16 +64,16 @@ class Brosur extends MY_Controller
         $this->load->view('adminweb/tentang/brosur/update_brosur', $data);
     }
 
-    public function update($id)
+    public function update()
     {
-        $brosur = $this->Brosur_model->get_by_id((int) $id);
+        $brosur = $this->Brosur_model->get_single();
         if (!$brosur) {
             show_404();
         }
 
         $images = $this->upload_images();
         if ($images === FALSE) {
-            redirect('brosur/ubah_brosur/' . $id);
+            redirect('brosur/ubah_brosur');
             return;
         }
 
@@ -85,7 +84,7 @@ class Brosur extends MY_Controller
             }
         }
 
-        if ($this->Brosur_model->update((int) $id, $data)) {
+        if ($this->Brosur_model->update($data)) {
             foreach ($this->image_fields as $field) {
                 if (!empty($images[$field]) && !empty($brosur->{$field})) {
                     $this->delete_image($brosur->{$field});
@@ -97,27 +96,6 @@ class Brosur extends MY_Controller
                 $this->delete_image($filename);
             }
             $this->session->set_flashdata('error', 'Brosur gagal diperbarui.');
-        }
-
-        redirect('brosur');
-    }
-
-    public function hapus_brosur($id)
-    {
-        $brosur = $this->Brosur_model->get_by_id((int) $id);
-        if (!$brosur) {
-            $this->session->set_flashdata('error', 'Brosur tidak ditemukan.');
-            redirect('brosur');
-            return;
-        }
-
-        if ($this->Brosur_model->delete((int) $id)) {
-            foreach ($this->image_fields as $field) {
-                $this->delete_image($brosur->{$field});
-            }
-            $this->session->set_flashdata('success', 'Brosur berhasil dihapus.');
-        } else {
-            $this->session->set_flashdata('error', 'Brosur gagal dihapus.');
         }
 
         redirect('brosur');
@@ -162,7 +140,18 @@ class Brosur extends MY_Controller
                 return FALSE;
             }
 
-            $images[$field] = $this->upload->data('file_name');
+            $filename = $this->upload->data('file_name');
+            $webp_filename = $this->convert_to_webp($filename);
+            if ($webp_filename === FALSE) {
+                foreach ($images as $uploaded_filename) {
+                    $this->delete_image($uploaded_filename);
+                }
+                $this->delete_image($filename);
+                $this->session->set_flashdata('error', 'Gambar tidak dapat dikonversi ke format WebP.');
+                return FALSE;
+            }
+
+            $images[$field] = $webp_filename;
         }
 
         return $images;
@@ -173,5 +162,33 @@ class Brosur extends MY_Controller
         if (!empty($filename) && file_exists($this->upload_path . $filename)) {
             unlink($this->upload_path . $filename);
         }
+    }
+
+    private function convert_to_webp($filename)
+    {
+        $source = $this->upload_path . $filename;
+        $target = $this->upload_path . pathinfo($filename, PATHINFO_FILENAME) . '.webp';
+
+        if (strtolower(pathinfo($filename, PATHINFO_EXTENSION)) === 'webp') {
+            return $filename;
+        }
+
+        if (!is_executable('/usr/bin/convert')) {
+            return FALSE;
+        }
+
+        $command = '/usr/bin/convert ' . escapeshellarg($source)
+            . ' -quality 82 ' . escapeshellarg($target) . ' 2>&1';
+        exec($command, $output, $exit_code);
+
+        if ($exit_code !== 0 || !file_exists($target)) {
+            return FALSE;
+        }
+
+        if ($source !== $target) {
+            unlink($source);
+        }
+
+        return basename($target);
     }
 }

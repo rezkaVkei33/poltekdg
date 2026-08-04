@@ -31,6 +31,11 @@ class Base_model extends CI_Model {
         return $this->db->get_where('galeri', ['status' => 'tampil'])->result_array();
     }
 
+    public function get_brosur()
+    {
+        return $this->db->limit(1)->get('brosur')->row();
+    }
+
     public function get_vmts($nama_vm){
         return $this->db
                 ->get_where('vmts', ['nama_vm' => $nama_vm])
