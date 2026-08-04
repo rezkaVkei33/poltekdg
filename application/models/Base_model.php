@@ -62,9 +62,52 @@ class Base_model extends CI_Model {
                     ->result(); // <-- jadi array of object
     }
 
-    public function get_berita($limit = 9){
-        return $this->db->order_by('tanggal_terbit', 'DESC')
-                    ->limit($limit)->get('berita')->result();
+    private $berita_unggulan_ids = [6, 7, 8];
+
+    /**
+     * Berita unggulan selalu berada paling atas (ID 6, 7, 8). Berita lainnya
+     * diurutkan dari tanggal terbit terbaru, bukan tanggal pembaruan.
+     */
+    public function get_berita($limit = 6)
+    {
+        $unggulan = $this->get_berita_unggulan();
+        $sisa = max(0, (int) $limit - count($unggulan));
+
+        if ($sisa === 0) {
+            return array_slice($unggulan, 0, $limit);
+        }
+
+        $lainnya = $this->db
+            ->where_not_in('id_berita', $this->berita_unggulan_ids)
+            ->order_by('tanggal_terbit', 'DESC')
+            ->order_by('id_berita', 'DESC')
+            ->limit($sisa)
+            ->get('berita')
+            ->result();
+
+        return array_merge($unggulan, $lainnya);
+    }
+
+    public function get_semua_berita()
+    {
+        return array_merge(
+            $this->get_berita_unggulan(),
+            $this->db
+                ->where_not_in('id_berita', $this->berita_unggulan_ids)
+                ->order_by('tanggal_terbit', 'DESC')
+                ->order_by('id_berita', 'DESC')
+                ->get('berita')
+                ->result()
+        );
+    }
+
+    private function get_berita_unggulan()
+    {
+        return $this->db
+            ->where_in('id_berita', $this->berita_unggulan_ids)
+            ->order_by('id_berita', 'ASC')
+            ->get('berita')
+            ->result();
     }
 
     public function get_berita_by_id($id)

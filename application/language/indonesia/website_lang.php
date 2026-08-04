@@ -14,6 +14,9 @@ $lang['archive']          = 'Arsip';
 
 $lang['contact']           = 'Kontak';
 $lang['news']              = 'Berita';
+$lang['all_news']          = 'Semua Berita';
+$lang['read_more']         = 'Baca Selengkapnya';
+$lang['featured_news']     = 'Berita Unggulan';
 $lang['announcement']      = 'Pengumuman';
 $lang['gallery']           = 'Galeri';
 $lang['register']          = 'Daftar Sekarang';

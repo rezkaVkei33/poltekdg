@@ -96,6 +96,7 @@
                         <div class="flex justify-center mb-6">
                             <div class="w-16 h-1 rounded-full" style="background: linear-gradient(to right, orange, yellow);"></div>
                         </div>
+                        <a href="<?= site_url('base/semua_berita'); ?>" class="inline-flex items-center text-amber-700 font-semibold hover:text-amber-800"><?= lang('all_news'); ?> →</a>
                     </div>
 
                     <!-- News Grid -->
@@ -106,6 +107,7 @@
                                 $judul_berita = trans($news, 'judul');
                                 $isi_berita = trans($news, 'isi');
                                 $tanggal_berita = !empty($news->tanggal_terbit) ? $news->tanggal_terbit : $news->tanggal_update;
+                                $berita_unggulan = in_array((int) $news->id_berita, [6, 7, 8], TRUE);
                                 ?>
                                 <a href="<?= site_url('base/berita/' . $news->id_berita); ?>" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 card-hover focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Baca berita: <?= html_escape($judul_berita); ?>">
                                     <div class="relative h-48 overflow-hidden bg-gradient-to-br from-amber-100 to-orange-200">
@@ -117,13 +119,16 @@
                                         <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                                             <?= date('d M', strtotime($tanggal_berita)); ?>
                                         </div>
+                                        <?php if ($berita_unggulan): ?>
+                                            <div class="absolute top-4 left-4 bg-gray-900/80 text-white px-3 py-1 rounded-full text-xs font-semibold"><?= lang('featured_news'); ?></div>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="p-6">
                                         <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2"><?= html_escape($judul_berita); ?></h3>
                                         <p class="text-gray-600 mb-4 line-clamp-3"><?= html_escape(word_limiter(strip_tags($isi_berita), 24)); ?></p>
                                         <div class="flex justify-between items-center">
                                             <span class="text-sm text-gray-500"><?= date('d F Y', strtotime($tanggal_berita)); ?></span>
-                                            <span class="text-amber-600 font-semibold">Baca →</span>
+                                            <span class="text-amber-600 font-semibold"><?= lang('read_more'); ?> →</span>
                                         </div>
                                     </div>
                                 </a>

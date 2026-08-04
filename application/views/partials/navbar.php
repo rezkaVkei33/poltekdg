@@ -49,6 +49,8 @@
                     </div>
                 </div>
 
+                <a href="<?= site_url('base/semua_berita'); ?>" class="font-medium text-gray-700 transition-colors hover:text-amber-600"><?= lang('news'); ?></a>
+
                 <a href="<?= site_url('base/kontak') ?>" class="font-medium text-gray-700 transition-colors hover:text-amber-600"><?= lang('contact'); ?></a>
 
                 <?php $current = $this->session->userdata('site_language'); ?>
@@ -115,6 +117,8 @@
                         <a href="<?= site_url('base/arsip') ?>" class="block px-3 py-2 text-gray-600 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('archive'); ?></a>
                     </div>
                 </div>
+
+                <a href="<?= site_url('base/semua_berita') ?>" class="block px-3 py-2 text-gray-700 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('news'); ?></a>
 
                 <a href="<?= site_url('base/kontak') ?>" class="block px-3 py-2 text-gray-700 rounded-md hover:bg-amber-50 hover:text-amber-600"><?= lang('contact'); ?></a>
 

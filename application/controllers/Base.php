@@ -101,5 +101,12 @@ class Base extends MY_Controller {
         $this->load->view('base/berita_detail', $data);
     }
 
+    public function semua_berita()
+    {
+        $data['title'] = lang('news') . ' - Poltek DG';
+        $data['data_berita'] = $this->Base_model->get_semua_berita();
+        $this->load->view('base/semua_berita', $data);
+    }
+
         
 }
