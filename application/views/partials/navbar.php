@@ -7,8 +7,8 @@
                 <div class="flex items-center justify-center w-10 h-10 rounded-lg">
                     <img src="<?= base_url('assets/images/LogoPoltek.png') ?>" alt="Logo Politeknik Darma Ganesha" class="object-contain w-8 h-8">
                 </div>
-                <div class="hidden sm:block">
-                    <h1 class="text-xl font-bold text-gray-800">POLTEKDG</h1>
+                <div class="block">
+                    <h1 class="text-lg font-bold text-gray-800 sm:text-xl">POLTEKDG</h1>
                 </div>
             </div>
 
