@@ -51,3 +51,46 @@ if (!function_exists('trans'))
             : '';
     }
 }
+
+/**
+ * Token URL publik untuk berita. Hasil enkripsi memakai IV acak, sehingga ID
+ * internal tidak terlihat dan token yang sama dapat berbeda pada setiap render.
+ */
+if (!function_exists('berita_token'))
+{
+    function berita_token($id)
+    {
+        $id = (int) $id;
+        if ($id < 1) {
+            return '';
+        }
+
+        $CI =& get_instance();
+        $CI->load->library('encryption');
+        $encrypted = $CI->encryption->encrypt((string) $id);
+
+        // Base64 URL-safe: tidak mengandung /, +, atau =.
+        return rtrim(strtr($encrypted, '+/', '-_'), '=');
+    }
+}
+
+if (!function_exists('berita_id_from_token'))
+{
+    function berita_id_from_token($token)
+    {
+        if (!is_string($token) || $token === '' || !preg_match('/^[A-Za-z0-9_-]+$/', $token)) {
+            return FALSE;
+        }
+
+        $encrypted = strtr($token, '-_', '+/');
+        $encrypted .= str_repeat('=', (4 - strlen($encrypted) % 4) % 4);
+
+        $CI =& get_instance();
+        $CI->load->library('encryption');
+        $id = $CI->encryption->decrypt($encrypted);
+
+        return is_string($id) && ctype_digit($id) && (int) $id > 0
+            ? (int) $id
+            : FALSE;
+    }
+}

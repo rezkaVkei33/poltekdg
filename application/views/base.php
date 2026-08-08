@@ -109,7 +109,7 @@
                                 $tanggal_berita = !empty($news->tanggal_terbit) ? $news->tanggal_terbit : $news->tanggal_update;
                                 $berita_unggulan = in_array((int) $news->id_berita, [6, 7, 8], TRUE);
                                 ?>
-                                <a href="<?= site_url('base/berita/' . $news->id_berita); ?>" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 card-hover focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Baca berita: <?= html_escape($judul_berita); ?>">
+                                <a href="<?= site_url('base/berita/' . berita_token($news->id_berita)); ?>" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 card-hover focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Baca berita: <?= html_escape($judul_berita); ?>">
                                     <div class="relative h-48 overflow-hidden bg-gradient-to-br from-amber-100 to-orange-200">
                                         <?php if (!empty($news->gambar)): ?>
                                             <img src="<?= base_url('uploads/berita/' . rawurlencode($news->gambar)); ?>" alt="<?= html_escape($judul_berita); ?>" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">

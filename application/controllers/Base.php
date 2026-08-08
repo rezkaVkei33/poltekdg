@@ -90,8 +90,13 @@ class Base extends MY_Controller {
     $this->load->view('base/form_pendaftaran', $data);
 }
 
-    public function berita($id)
+    public function berita($token)
     {
+        $id = berita_id_from_token($token);
+        if ($id === FALSE) {
+            show_404();
+        }
+
         $data['berita'] = $this->Base_model->get_berita_by_id($id);
         if (!$data['berita']) {
             show_404();
